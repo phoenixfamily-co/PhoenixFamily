@@ -92,14 +92,19 @@
                 </div>
                 <!-- فرم تغییر زبان -->
                 <div class="ms-3">
-                    <button id="language-toggle" class="btn btn-custom">
-                        {% if LANGUAGE_CODE == "fa" %}
+                <form method="post" action="{% url 'set_language' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{% if LANGUAGE_CODE == 'fa' %}en{% else %}fa{% endif %}">
+                    <button type="submit" class="btn btn-custom">
+                        {% if LANGUAGE_CODE == 'fa' %}
                             EN
                         {% else %}
                             FA
                         {% endif %}
                     </button>
+                </form>
                 </div>
+
             </div>
         </div>
     </nav>
@@ -126,36 +131,6 @@
                     localStorage.setItem("theme", "light");
                     toggleButton.textContent = "{% trans 'Dark Mode' %}";
                 }
-            });
-        });
-    </script>
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const languageButton = document.getElementById("language-toggle");
-
-            languageButton.addEventListener("click", function () {
-                const newLanguage = "{% if LANGUAGE_CODE == 'fa' %}en{% else %}fa{% endif %}";
-
-                // ساخت یک فرم و ارسال درخواست
-                const form = document.createElement("form");
-                form.method = "POST";
-                form.action = "{% url 'set_language' %}";
-
-                const csrfInput = document.createElement("input");
-                csrfInput.type = "hidden";
-                csrfInput.name = "csrfmiddlewaretoken";
-                csrfInput.value = "{{ csrf_token }}";
-
-                const languageInput = document.createElement("input");
-                languageInput.type = "hidden";
-                languageInput.name = "language";
-                languageInput.value = newLanguage;
-
-                form.appendChild(csrfInput);
-                form.appendChild(languageInput);
-
-                document.body.appendChild(form);
-                form.submit();
             });
         });
     </script>
