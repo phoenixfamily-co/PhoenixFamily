@@ -106,11 +106,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-STATIC_ROOT = '/home/your_user_name/phoenixfamily.co/static'
-MEDIA_ROOT = '/home/username/phoenixfamily.co/media'
+STATIC_ROOT = '/home/abbaslot/phoenixfamily.co/static'
+MEDIA_ROOT = '/home/abbaslot/phoenixfamily.co/media'
 
-# STATIC_ROOT = '/home/your_user_name/public_html/static'
-# MEDIA_ROOT = '/home/username/public_html/media'
+# STATIC_ROOT = '/home/abbaslot/public_html/static'
+# MEDIA_ROOT = '/home/abbaslot/public_html/media'
 
 STATIC_URL = 'static/'
 
