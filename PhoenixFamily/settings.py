@@ -53,6 +53,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.i18n',  # فعال‌سازی پردازشگر i18n
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -98,9 +99,12 @@ LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', 'English'),
-    ('fa', 'Farsi'),
-    ('ar', 'Arabic'),
+    ('fa', 'فارسی'),
+    ('ar', 'العربية'),
+]
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/',
 ]
 
 TIME_ZONE = 'UTC'
