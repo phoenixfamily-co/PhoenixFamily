@@ -94,12 +94,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('fa', _('Farsi')),
-    ('ar', _('Arabic')),
+    ('en', 'English'),
+    ('fa', 'Farsi'),
+    ('ar', 'Arabic'),
 ]
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
