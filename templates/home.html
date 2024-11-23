@@ -107,9 +107,9 @@
                    <form action="{% url 'set_language' %}" method="post">
                     {% csrf_token %}
                     <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
-                        <option value="en" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>English</option>
+                        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
                         <option value="fa" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %} style="text-align: right;">فارسی</option>
-                        <option value="ar" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} style="text-align: right;">العربیة</option>
+                        <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %} style="text-align: right;">العربیة</option>
                     </select>
                    </form>
                 </div>
