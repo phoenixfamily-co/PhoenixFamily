@@ -114,6 +114,21 @@
              border-color: #d32f2f;
         }
 
+         .form-check-input:checked::before {
+    background-color: #fff; /* رنگ داخل سوییچ (سفید) */
+}
+
+/* رنگ داخلی دکمه در حالت غیرفعال */
+.form-check-input::before {
+    background-color: #fff; /* داخل دکمه */
+}
+
+/* غیرفعال کردن حاشیه پیش‌فرض */
+.form-check-input:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
     </style>
 </head>
 <body>
