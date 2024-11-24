@@ -68,17 +68,6 @@
              text-underline-offset: 3px;
         }
 
-        .btn-custom {
-            background-color: var(--btn-bg);
-            color: var(--btn-text);
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--btn-hover);
-        }
-
         .form-select {
             background-color: var(--navbar-bg);
             color: var(--text-color);
@@ -96,68 +85,10 @@
             background-color: #FF6659 !important; /* قرمز روشن */
             color: #fff !important; /* متن سفید */
         }
-        .theme-toggle {
-            display: inline-block;
-            position: relative;
-            width: 60px;
-            height: 30px;
-            overflow: hidden; /* جلوگیری از خروج محتوا از تاگل */
-
-        }
-
   input[type="checkbox"] {
     display: none;
   }
 
-  .toggle {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: var(--toggle-bg-light);
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  input[type="checkbox"]:checked + .toggle {
-    background-color: var(--toggle-bg-dark);
-  }
-
-  .toggle-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    transition: all 0.3s;
-      font-size: 18px; /* تنظیم اندازه آیکون */
-
-  }
-
-  .sun {
-    right: 8px;
-    color: #fff;
-      opacity: 1;
-
-  }
-
-  .moon {
-    left: 15px;
-    color: #fff;
-    opacity: 0;
-  }
-
-  input[type="checkbox"]:checked + .toggle .sun {
-    opacity: 0;
-    transform: translateY(-50%) translateX(20px);
-  }
-
-  input[type="checkbox"]:checked + .toggle .moon {
-    opacity: 1;
-    transform: translateY(-50%) translateX(-20px);
-  }
 
     </style>
 </head>
@@ -179,27 +110,26 @@
                 </ul>
                 <!-- دکمه تغییر تم -->
                 <div class="ms-3">
-                <div class="theme-toggle">
-                    <input type="checkbox" id="theme-switch" />
-                    <label for="theme-switch" class="toggle">
-                         <span class="toggle-icon moon">
-                            <i class="fa-regular fa-moon" style="color: #ffffff"></i>
-                        </span>
-                        <span class="toggle-icon sun">
-                            <i class="fa-regular fa-sun" style="color: #ffffff"></i>
-                        </span>
-                    </label>
-                </div>
+                    <li class="nav-item align-items-center d-flex" >
+                      <i class="fas fa-sun"></i>
+                      <!-- Default switch -->
+                      <div class="ms-2 form-check form-switch">
+                          <label for="theme-switch"></label><input class="form-check-input" type="checkbox" role="switch" id="theme-switch" />
+                      </div>
+                        <i class="fas fa-moon"></i>
+                    </li>
             </div>
                 <!-- فرم تغییر زبان -->
                  <div class="ms-3">
                    <form action="{% url 'set_language' %}" method="post">
                     {% csrf_token %}
-                    <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
-                        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                        <option value="fa" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
-                        <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
-                    </select>
+                       <label>
+                           <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
+                               <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                               <option value="fa" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
+                               <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
+                           </select>
+                       </label>
                    </form>
                 </div>
 
