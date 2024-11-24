@@ -240,26 +240,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const themeSwitch = document.getElementById("theme-switch");
-        const currentTheme = localStorage.getItem("theme");
+  const themeSwitch = document.getElementById("theme-switch");
+  const currentTheme = localStorage.getItem("theme") || "light";
 
-        // تنظیم حالت تم بر اساس localStorage
-        if (currentTheme === "dark") {
-            document.body.classList.add("dark-mode");
-            themeSwitch.checked = true; // سوئیچ به حالت فعال
-        }
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeSwitch.checked = true;
+  }
 
-        // تغییر تم هنگام کلیک
-        themeSwitch.addEventListener("change", function () {
-            if (themeSwitch.checked) {
-                document.body.classList.add("dark-mode");
-                localStorage.setItem("theme", "dark");
-            } else {
-                document.body.classList.remove("dark-mode");
-                localStorage.setItem("theme", "light");
-            }
-        });
-    });
+  themeSwitch.addEventListener("change", function () {
+    if (this.checked) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
     </script>
 </body>
 </html>
