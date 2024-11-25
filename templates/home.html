@@ -149,6 +149,16 @@
             order: 2; /* سوییچ همیشه در وسط */
         }
 
+        .option-ltr {
+            text-align: left;
+            direction: ltr;
+        }
+
+        .option-rtl {
+            text-align: right;
+            direction: rtl;
+        }
+
     </style>
 </head>
 <body>
@@ -183,11 +193,11 @@
                    <form action="{% url 'set_language' %}" method="post">
                     {% csrf_token %}
                        <label>
-                           <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
-                               <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                               <option value="fa" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
-                               <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
-                           </select>
+                                   <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
+                                       <option value="en" class="option-ltr" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                                       <option value="fa" class="option-rtl" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
+                                       <option value="ar" class="option-rtl" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
+                                   </select>
                        </label>
                    </form>
                 </div>
