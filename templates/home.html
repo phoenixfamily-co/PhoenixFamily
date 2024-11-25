@@ -176,6 +176,49 @@ footer .copyright {
         font-size: 1.2rem; /* اندازه آیکون */
         transition: color 0.3s ease; /* تغییر رنگ روان */
     }
+
+            .container {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--navbar-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            width: 400px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .spinner-border {
+            width: 50px;
+            height: 50px;
+            border-width: 4px;
+            color: var(--btn-bg);
+        }
+
+        .btn {
+            margin-top: 20px;
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--btn-hover);
+        }
     </style>
 </head>
 <body>
@@ -222,6 +265,14 @@ footer .copyright {
             </div>
         </div>
     </nav>
+
+
+    <div class="container">
+        <h1>در حال طراحی و توسعه</h1>
+        <p>این سایت در حال طراحی و توسعه است. خیلی زود برمی‌گردیم!</p>
+        <div class="spinner-border" role="status"></div>
+        <p>منتظر باشید...</p>
+    </div>
 
    <footer class="mt-5">
     <div class="container py-4">
