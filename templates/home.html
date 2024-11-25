@@ -177,48 +177,53 @@ footer .copyright {
         transition: color 0.3s ease; /* تغییر رنگ روان */
     }
 
-            .container {
-            text-align: center;
-            padding: 30px;
-            background-color: var(--navbar-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 80%;
-            width: 400px;
-            transition: background-color 0.3s ease;
-        }
+       .center-container {
+           text-align: center;
+           padding: 30px;
+           background-color: var(--navbar-bg);
+           border-radius: 8px;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+           max-width: 80%;
+           width: 400px;
+           transition: background-color 0.3s ease;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%); /* این باعث می‌شود که بخش در وسط صفحه باشد */
+           z-index: 1000; /* اطمینان از اینکه این بخش بالاتر از سایر محتویات صفحه قرار می‌گیرد */
+       }
 
-        .container h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+.center-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-        .container p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
+.center-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
 
-        .spinner-border {
-            width: 50px;
-            height: 50px;
-            border-width: 4px;
-            color: var(--btn-bg);
-        }
+.center-container .spinner-border {
+    width: 50px;
+    height: 50px;
+    border-width: 4px;
+    color: var(--btn-bg);
+}
 
-        .btn {
-            margin-top: 20px;
-            background-color: var(--btn-bg);
-            color: var(--btn-text);
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.center-container .btn {
+    margin-top: 20px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        .btn:hover {
-            background-color: var(--btn-hover);
-        }
+.center-container .btn:hover {
+    background-color: var(--btn-hover);
+}
     </style>
 </head>
 <body>
@@ -267,12 +272,14 @@ footer .copyright {
     </nav>
 
 
-    <div class="container">
-        <h1>در حال طراحی و توسعه</h1>
-        <p>این سایت در حال طراحی و توسعه است. خیلی زود برمی‌گردیم!</p>
-        <div class="spinner-border" role="status"></div>
-        <p>منتظر باشید...</p>
-    </div>
+      <div class="center-container">
+        <h1>{% trans "We are under construction!" %}</h1>
+        <p>{% trans "This website is currently being developed. Please check back later." %}</p>
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <a href="#" class="btn">{% trans "Contact Us" %}</a>
+      </div>
 
    <footer class="mt-5">
     <div class="container py-4">
