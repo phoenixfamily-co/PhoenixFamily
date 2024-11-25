@@ -149,8 +149,14 @@
             order: 2; /* سوییچ همیشه در وسط */
         }
 
-        .option-ltr {
-            text-align: left;
+        html[dir="rtl"].form-select.option-ltr{
+             text-align: left;
+            direction: ltr;
+
+        }
+
+        html[dir="ltr"].form-select.option-ltr{
+             text-align: left;
             direction: ltr;
         }
 
