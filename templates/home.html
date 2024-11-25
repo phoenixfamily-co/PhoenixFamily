@@ -156,14 +156,21 @@
         }
 
         html[dir="ltr"].form-select.option-ltr{
-             text-align: left;
+            text-align: left;
             direction: ltr;
         }
 
-        .option-rtl {
+        html[dir="rtl"].form-select.option-rtl{
+            text-align: right;
+            direction: rtl;
+
+        }
+
+        html[dir="ltr"].form-select.option-rtl{
             text-align: right;
             direction: rtl;
         }
+
 
     </style>
 </head>
