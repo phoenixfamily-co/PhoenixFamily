@@ -124,52 +124,7 @@
             flex-direction: row-reverse;
         }
 
-        .nav-item .fa-sun {
-            order: 1; /* موقعیت خورشید همیشه در سمت راست */
-        }
 
-        .nav-item .fa-moon {
-            order: 3; /* موقعیت ماه همیشه در سمت چپ */
-        }
-
-        .nav-item .form-check {
-            order: 2; /* موقعیت سوییچ در وسط */
-        }
-
-        /* جلوگیری از تاثیر راست به چپ */
-        body[dir="rtl"] .nav-item .fa-sun {
-            order: 3; /* خورشید سمت چپ برای زبان راست به چپ */
-        }
-
-        body[dir="rtl"] .nav-item .fa-moon {
-            order: 1; /* ماه سمت راست برای زبان راست به چپ */
-        }
-
-        body[dir="rtl"] .nav-item .form-check {
-            order: 2; /* سوییچ همیشه در وسط */
-        }
-
-        html[dir="rtl"].form-select.option-ltr{
-             text-align: left;
-            direction: ltr;
-
-        }
-
-        html[dir="ltr"].form-select.option-ltr{
-            text-align: left;
-            direction: ltr;
-        }
-
-        html[dir="rtl"].form-select.option-rtl{
-            text-align: right;
-            direction: rtl;
-
-        }
-
-        html[dir="ltr"].form-select.option-rtl{
-            text-align: right;
-            direction: rtl;
-        }
 
 
     </style>
