@@ -165,8 +165,8 @@
                        <label>
                                    <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
                                        <option value="en"  {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                                       <option value="fa" class="option-rtl" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
-                                       <option value="ar" class="option-rtl" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
+                                       <option value="fa" style="text-align: right" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
+                                       <option value="ar" style="text-align: right"  {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
                                    </select>
                        </label>
                    </form>
