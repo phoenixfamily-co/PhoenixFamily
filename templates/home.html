@@ -114,11 +114,15 @@
              border-color: #d32f2f;
         }
 
-         .nav-item.align-items-center {
-             display: flex;
-             align-items: center;
-             gap: 0.5rem;
-         }
+        .nav-item.align-items-center {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        html[dir="rtl"] .nav-item.align-items-center {
+            flex-direction: row-reverse;
+        }
 
         .nav-item .fa-sun {
             order: 1; /* موقعیت خورشید همیشه در سمت راست */
