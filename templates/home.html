@@ -160,6 +160,13 @@
         color: var(--text-color);
     }
 
+    footer .copyright {
+        color: var(--text-color); /* رنگ متن بر اساس تم */
+        font-size: 0.9rem; /* اندازه متن */
+        margin: 0; /* حاشیه‌ی متن */
+        transition: color 0.3s ease; /* تغییر روان */
+    }
+
     </style>
 </head>
 <body>
@@ -241,7 +248,7 @@
         <!-- کپی‌رایت -->
         <div class="row mt-4">
             <div class="col-12 text-center">
-                <p class="mb-0 text-muted">
+                <p class="mb-0 text-muted copyright">
                     &copy; 2024 {% trans "Your Company Name" %}. {% trans "All rights reserved." %}
                 </p>
             </div>
