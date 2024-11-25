@@ -114,6 +114,37 @@
              border-color: #d32f2f;
         }
 
+         .nav-item.align-items-center {
+             display: flex;
+             align-items: center;
+             gap: 0.5rem;
+         }
+
+        .nav-item .fa-sun {
+            order: 1; /* موقعیت خورشید همیشه در سمت راست */
+        }
+
+        .nav-item .fa-moon {
+            order: 3; /* موقعیت ماه همیشه در سمت چپ */
+        }
+
+        .nav-item .form-check {
+            order: 2; /* موقعیت سوییچ در وسط */
+        }
+
+        /* جلوگیری از تاثیر راست به چپ */
+        body[dir="rtl"] .nav-item .fa-sun {
+            order: 3; /* خورشید سمت چپ برای زبان راست به چپ */
+        }
+
+        body[dir="rtl"] .nav-item .fa-moon {
+            order: 1; /* ماه سمت راست برای زبان راست به چپ */
+        }
+
+        body[dir="rtl"] .nav-item .form-check {
+            order: 2; /* سوییچ همیشه در وسط */
+        }
+
     </style>
 </head>
 <body>
@@ -134,13 +165,13 @@
                 </ul>
                 <!-- دکمه تغییر تم -->
                 <div class="ms-3">
-                    <li class="nav-item align-items-center d-flex" >
-                      <i class="fas fa-sun"></i>
-                      <!-- Default switch -->
-                      <div class="ms-2 form-check form-switch">
-                          <label for="theme-switch"></label><input class="form-check-input" type="checkbox" role="switch" id="theme-switch" />
+                    <li class="nav-item align-items-center d-flex">
+                        <i class="fas fa-sun"></i>
+                        <div class="ms-2 form-check form-switch">
+                          <label for="theme-switch"></label>
+                          <input class="form-check-input" type="checkbox" role="switch" id="theme-switch" />
                       </div>
-                        <i class="fas fa-moon"></i>
+                      <i class="fas fa-moon"></i>
                     </li>
             </div>
                 <!-- فرم تغییر زبان -->
