@@ -170,6 +170,12 @@ footer .copyright {
     opacity: 0.8; /* شفافیت متن مشابه text-muted */
 
 }
+
+    footer .contact-icon {
+        color: var(--primary-light); /* رنگ آیکون‌ها به رنگ لوگو */
+        font-size: 1.2rem; /* اندازه آیکون */
+        transition: color 0.3s ease; /* تغییر رنگ روان */
+    }
     </style>
 </head>
 <body>
@@ -231,10 +237,10 @@ footer .copyright {
             <div class="col-md-4 text-center mb-3 mb-md-0">
                 <h6 class="mb-2">{% trans "Contact Us" %}</h6>
                 <p class="mb-1">
-                    <i class="fas fa-phone-alt text-primary me-2"></i>{% trans "Phone" %}: +123 456 7890
+                    <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: +989022981378
                 </p>
                 <p class="mb-0">
-                    <i class="fas fa-envelope text-primary me-2"></i>{% trans "Email" %}: info@yourcompany.com
+                    <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: info@phoenixfamily.co
                 </p>
             </div>
 
