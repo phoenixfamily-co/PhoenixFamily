@@ -134,6 +134,11 @@
         background-color: var(--navbar-bg);
         color: var(--text-color);
     }
+           footer {
+        background-color: var(--navbar-bg); /* رنگ فوتر مطابق با رنگ نوبار */
+        color: var(--text-color); /* متن همخوان با حالت تم */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
     footer a {
         color: var(--text-color);
@@ -141,10 +146,14 @@
     }
 
     footer a:hover {
-        color: var(--nav-link-hover);
+        color: var(--nav-link-hover); /* رنگ لینک‌ها هنگام هاور */
     }
 
     footer i {
+        color: var(--text-color);
+    }
+
+    footer p {
         color: var(--text-color);
     }
 
@@ -195,7 +204,7 @@
         </div>
     </nav>
 
-    <footer class="bg-light border-top mt-5">
+   <footer class="border-top mt-5">
     <div class="container py-4">
         <div class="row align-items-center">
             <!-- لوگوی شرکت -->
@@ -219,10 +228,10 @@
             <!-- شبکه‌های اجتماعی -->
             <div class="col-md-4 text-center text-md-end">
                 <h6 class="mb-2">{% trans "Follow Us" %}</h6>
-                <a href="#" class="text-dark me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#" class="text-dark me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" class="text-dark"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
             </div>
         </div>
 
