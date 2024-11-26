@@ -232,6 +232,18 @@ footer .copyright {
     border-width: 4px;
     color: var(--btn-bg);
 }
+
+html[dir="rtl"] .social-icons {
+    display: flex;
+    justify-content: center; /* برای وسط‌چین کردن آیکون‌ها */
+    gap: 10px; /* فاصله بین آیکون‌ها */
+    direction: rtl; /* جهت متن و آیکون‌ها به راست */
+}
+
+html[dir="rtl"] .social-icons a {
+    margin-left: 0; /* حذف margin چپ اضافی */
+    margin-right: 10px; /* فاصله مناسب برای راست به چپ */
+}
     </style>
 </head>
 <body>
@@ -311,7 +323,7 @@ footer .copyright {
             <!-- شبکه‌های اجتماعی -->
             <div class="col-md-4 text-center right">
                 <h6 class="mb-2">{% trans "Follow Us" %}</h6>
-                <div>
+                <div class="social-icons">
                 <a href="//instagram.com/phoenixfamily.co?igsh=ZzRpb2owOHdnMWd5" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="//t.me/Abbas_lotfinasab" class="text-light me-3"><i class="fab fa-telegram fa-lg"></i></a>
                 <a href="//wa.link/9x7e5p" class="text-light me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
