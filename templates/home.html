@@ -254,6 +254,11 @@ html[dir="rtl"] .logo-container {
 html[dir="ltr"] .logo-container {
     text-align: center; /* وسط چین کردن محتوا */
 }
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+
     </style>
 </head>
 <body>
@@ -264,7 +269,9 @@ html[dir="ltr"] .logo-container {
             <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color:#000; font-size:28px"></i>
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
