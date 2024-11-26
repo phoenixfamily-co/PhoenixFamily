@@ -8,5 +8,10 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('', include('Home.urls')),  # مسیر URLهای اپلیکیشن Home
+    path('', include('About.urls', namespace='about')),  # مسیر URLهای اپلیکیشن About
+    path('', include('Blog.urls', namespace='blogs')),  # مسیر URLهای اپلیکیشن Blog
+    path('', include('Contact.urls', namespace='contact')),  # مسیر URLهای اپلیکیشن Contact
+    path('', include('Home.urls'), namespace='home'),  # مسیر URLهای اپلیکیشن Home
+    path('', include('Product.urls', namespace='products')),  # مسیر URLهای اپلیکیشن Product
+    path('', include('User.urls', namespace='user')),  # مسیر URLهای اپلیکیشن User
 )

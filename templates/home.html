@@ -272,8 +272,6 @@ footer .copyright {
             outline: none !important;
             box-shadow: none !important;
         }
-
-
     </style>
 </head>
 <body>
@@ -290,12 +288,11 @@ footer .copyright {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">{% trans "Home" %}</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">{% trans "Products" %}</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">{% trans "Contact Us" %}</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">{% trans "About Us" %}</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">{% trans "Blogs" %}</a></li>
-
+                <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'products:product-view' %}">{% trans "Products" %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
             </ul>
             <!-- دکمه تغییر تم -->
             <div class="ms-3 d-flex align-items-center">
