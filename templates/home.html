@@ -164,25 +164,6 @@
         color: var(--text-color);
     }
 
-    /* تنظیم رنگ دکمه منوی کشویی در حالت لایت */
-.navbar-light .navbar-toggler {
-    border-color: var(--navbar-toggler-border-color); /* رنگ حاشیه */
-    background-color: var(--navbar-toggler-bg-color); /* رنگ پس‌زمینه */
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-color: var(--navbar-toggler-icon-color); /* رنگ ایکون منو */
-}
-
-/* تنظیم رنگ دکمه منوی کشویی در حالت دارک */
-        .navbar-dark .navbar-toggler {
-            border-color: var(--navbar-toggler-border-color-dark); /* رنگ حاشیه در حالت دارک */
-            background-color: var(--navbar-toggler-bg-color-dark); /* رنگ پس‌زمینه در حالت دارک */
-        }
-
-        .navbar-dark .navbar-toggler-icon {
-            background-color: var(--navbar-toggler-icon-color-dark); /* رنگ ایکون منو در حالت دارک */
-        }
 footer .copyright {
     color: var(--text-color-muted); /* رنگ متن مشابه text-muted */
     font-size: 0.875rem; /* اندازه متن شبیه text-muted */
@@ -215,49 +196,51 @@ footer .copyright {
            z-index: 1000; /* اطمینان از اینکه این بخش بالاتر از سایر محتویات صفحه قرار می‌گیرد */
        }
 
-.center-container h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+        .center-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
-.center-container p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
+        .center-container p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
 
-.center-container .spinner-border {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    border-width: 4px;
-    color: var(--btn-bg);
-}
+        .center-container .spinner-border {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            border-width: 4px;
+            color: var(--btn-bg);
+        }
 
-html[dir="rtl"] .social-icons {
-    display: flex;
-    justify-content: center; /* برای وسط‌چین کردن آیکون‌ها */
-    gap: 10px; /* فاصله بین آیکون‌ها */
-    direction: rtl; /* جهت متن و آیکون‌ها به راست */
-}
+        html[dir="rtl"] .social-icons {
+            display: flex;
+            justify-content: center; /* برای وسط‌چین کردن آیکون‌ها */
+            gap: 10px; /* فاصله بین آیکون‌ها */
+            direction: rtl; /* جهت متن و آیکون‌ها به راست */
+        }
 
-html[dir="rtl"] .social-icons a {
-    margin-left: 0; /* حذف margin چپ اضافی */
-    margin-right: 10px; /* فاصله مناسب برای راست به چپ */
-}
+        html[dir="rtl"] .social-icons a {
+            margin-left: 0; /* حذف margin چپ اضافی */
+            margin-right: 10px; /* فاصله مناسب برای راست به چپ */
+        }
 
-html[dir="rtl"] .logo-container {
-    text-align: right; /* راست چین کردن محتوا */
-    margin-right: 20px; /* فاصله از سمت راست */
-}
+        html[dir="rtl"] .logo-container {
+            text-align: right; /* راست چین کردن محتوا */
+            margin-right: 20px; /* فاصله از سمت راست */
+        }
 
-/* برای زبان‌های چپ به راست (LTR) */
-html[dir="ltr"] .logo-container {
-    text-align: center; /* وسط چین کردن محتوا */
-}
+        /* برای زبان‌های چپ به راست (LTR) */
+        html[dir="ltr"] .logo-container {
+            text-align: center; /* وسط چین کردن محتوا */
+        }
 
-.navbar-toggler-icon {
-  background-image: none;
-}
+        .custom-toggler{
+            color: var(--text-color);
+            font-size: 20px;
+        }
+
 
     </style>
 </head>
@@ -270,7 +253,7 @@ html[dir="ltr"] .logo-container {
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
             <span class="navbar-toggler-icon">
-                <i class="fas fa-bars" style="color:#000; font-size:28px"></i>
+                <i class="fa-solid fa-bars custom-toggler"></i>
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
