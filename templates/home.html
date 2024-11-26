@@ -244,6 +244,16 @@ html[dir="rtl"] .social-icons a {
     margin-left: 0; /* حذف margin چپ اضافی */
     margin-right: 10px; /* فاصله مناسب برای راست به چپ */
 }
+
+html[dir="rtl"] .logo-container {
+    text-align: right; /* راست چین کردن محتوا */
+    margin-right: 20px; /* فاصله از سمت راست */
+}
+
+/* برای زبان‌های چپ به راست (LTR) */
+html[dir="ltr"] .logo-container {
+    text-align: center; /* وسط چین کردن محتوا */
+}
     </style>
 </head>
 <body>
@@ -303,11 +313,11 @@ html[dir="rtl"] .social-icons a {
     <div class="container py-4">
         <div class="row align-items-center">
             <!-- لوگوی شرکت -->
-            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                <a href="#">
-                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
-                </a>
-            </div>
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0 logo-container">
+    <a href="#">
+        <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
+    </a>
+</div>
 
             <!-- اطلاعات تماس -->
             <div class="col-md-4 text-center mb-3 mb-md-0">
