@@ -242,7 +242,19 @@ footer .copyright {
 
         .custom-toggler{
             color: var(--text-color);
+            border: 0;
             font-size: 24px;
+        }
+
+        .navbar-toggler {
+            border: none !important; /* حذف بردر دور دکمه */
+            outline: none !important; /* حذف کادر زمانی که روی دکمه کلیک می‌کنید */
+            background-color: transparent; /* حذف پس‌زمینه */
+            box-shadow: none !important; /* حذف هرگونه سایه */
+        }
+        .navbar-toggler:focus {
+            outline: none !important;
+            box-shadow: none !important;
         }
 
 
