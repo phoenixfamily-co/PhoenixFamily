@@ -272,6 +272,47 @@ footer .copyright {
             outline: none !important;
             box-shadow: none !important;
         }
+
+        .contact-section {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .contact-info p {
+          margin: 0 0 10px;
+          font-size: 1rem;
+        }
+
+        .contact-info a {
+          color: #f05454;
+          text-decoration: none;
+        }
+
+        .contact-info a:hover {
+          text-decoration: underline;
+        }
+
+        form .form-control {
+          background-color: #1f1f1f;
+          color: #fff;
+          border: 1px solid #444;
+        }
+
+        form .form-control:focus {
+          background-color: #2b2b2b;
+          border-color: #f05454;
+          outline: none;
+        }
+
+        .btn-primary {
+          background-color: #f05454;
+          border: none;
+        }
+
+        .btn-primary:hover {
+          background-color: #ff6b6b;
+        }
+
     </style>
 </head>
 <body>
@@ -324,15 +365,52 @@ footer .copyright {
     </div>
 </nav>
 
-
-
-      <div class="center-container">
-        <h1>{% trans "We are under construction!" %}</h1>
-        <p>{% trans "This website is currently being developed. Please check back later." %}</p>
-        <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row">
+      <!-- اطلاعات تماس -->
+      <div class="col-md-6 contact-info mb-4">
+        <h4 class="mb-3">تماس با ما</h4>
+        <p><i class="fas fa-phone-alt me-2"></i> +989022981378</p>
+        <p><i class="fas fa-envelope me-2"></i> info@phoenixfamily.co</p>
+        <p><i class="fab fa-telegram me-2"></i> <a href="//t.me/YourTelegram">تلگرام ما</a></p>
+        <p><i class="fab fa-whatsapp me-2"></i> <a href="//wa.link/YourWhatsApp">واتس‌اپ ما</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> آدرس: خیابان نمونه، تهران</p>
       </div>
+
+      <!-- فرم تماس -->
+      <div class="col-md-6">
+        <form method="POST" action="#" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="name" class="form-label">نام</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">ایمیل</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">شماره تلفن</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">پیام</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="file" class="form-label">آپلود فایل</label>
+            <input type="file" class="form-control" id="file" name="file">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">ارسال پیام</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
    <footer class="mt-5">
     <div class="container py-4">
