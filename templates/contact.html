@@ -370,38 +370,37 @@ footer .copyright {
     <div class="row">
       <!-- اطلاعات تماس -->
       <div class="col-md-6 contact-info mb-4">
-        <h4 class="mb-3">تماس با ما</h4>
+        <h4 class="mb-3">{% trans 'Contact Us' %}</h4>
         <p><i class="fas fa-phone-alt me-2"></i> +989022981378</p>
         <p><i class="fas fa-envelope me-2"></i> info@phoenixfamily.co</p>
-        <p><i class="fab fa-telegram me-2"></i> <a href="//t.me/YourTelegram">تلگرام ما</a></p>
-        <p><i class="fab fa-whatsapp me-2"></i> <a href="//wa.link/YourWhatsApp">واتس‌اپ ما</a></p>
-        <p><i class="fas fa-map-marker-alt me-2"></i> آدرس: خیابان نمونه، تهران</p>
+        <p><i class="fab fa-telegram me-2"></i> <a href="//t.me/Abbas_lotfinasab">{% trans 'Telegram' %}</a></p>
+        <p><i class="fab fa-whatsapp me-2"></i> <a href="//wa.link/9x7e5p">{% trans 'Whatsapp' %}</a></p>
       </div>
 
       <!-- فرم تماس -->
       <div class="col-md-6">
         <form method="POST" action="#" enctype="multipart/form-data">
           <div class="mb-3">
-            <label for="name" class="form-label">نام</label>
+            <label for="name" class="form-label">{% trans 'Name' %}</label>
             <input type="text" class="form-control" id="name" name="name" required>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">ایمیل</label>
+            <label for="email" class="form-label">{% trans 'Email' %}</label>
             <input type="email" class="form-control" id="email" name="email" required>
           </div>
           <div class="mb-3">
-            <label for="phone" class="form-label">شماره تلفن</label>
+            <label for="phone" class="form-label">{% trans 'Phone' %}</label>
             <input type="tel" class="form-control" id="phone" name="phone" required>
           </div>
           <div class="mb-3">
-            <label for="message" class="form-label">پیام</label>
+            <label for="message" class="form-label">{% trans 'Message' %}</label>
             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
           </div>
           <div class="mb-3">
-            <label for="file" class="form-label">آپلود فایل</label>
+            <label for="file" class="form-label">{% trans 'Upload' %}</label>
             <input type="file" class="form-control" id="file" name="file">
           </div>
-          <button type="submit" class="btn btn-primary w-100">ارسال پیام</button>
+          <button type="submit" class="btn btn-primary w-100 mt-2">{% trans 'Send' %}</button>
         </form>
       </div>
     </div>
