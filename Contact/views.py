@@ -31,8 +31,8 @@ class EmailView(APIView):
             email_message = EmailMessage(
                 email_subject,
                 email_body,
-                'customer@iranianshiningphoenix.com',  # فرستنده
-                ['ceo@iranianshiningphoenix.com']  # گیرنده
+                'customer@phoenixfamily.co]',  # فرستنده
+                ['info@phoenixfamily.co']  # گیرنده
             )
 
             if file:
