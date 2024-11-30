@@ -31,7 +31,7 @@ class EmailView(APIView):
             email_message = EmailMessage(
                 email_subject,
                 email_body,
-                'customer@phoenixfamily.co]',  # فرستنده
+                ['customer@phoenixfamily.co'],  # فرستنده
                 ['info@phoenixfamily.co']  # گیرنده
             )
 
