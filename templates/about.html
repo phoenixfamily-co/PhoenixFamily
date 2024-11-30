@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <title>{% trans "About Us" %}</title>
+    <title>{% trans "About Usپ" %}</title>
 
     <script src="https://kit.fontawesome.com/4a2a05a158.js" crossorigin="anonymous"></script>
 
@@ -272,6 +272,49 @@ footer .copyright {
             outline: none !important;
             box-shadow: none !important;
         }
+        .hero-section {
+            background-size: cover;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #121212) url('{% static 'images/logo.png' %}') center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f5f5f5;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-section .btn-primary {
+            background-color: #e63946;
+            border: none;
+        }
+        .mission-section .card {
+            background-color: #1e1e1e;
+            border: none;
+        }
+        .mission-section .card img {
+            height: 80px;
+            width: auto;
+            margin: auto;
+        }
+        .join-section {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), #121212);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .join-section h2 {
+            color: #e63946;
+        }
+        .btn-primary:hover {
+            background-color: #f77f00;
+        }
     </style>
 </head>
 <body>
@@ -324,25 +367,52 @@ footer .copyright {
     </div>
 </nav>
 
+  <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>ققنوس تنهاست، اما اینجا خانواده پیدا می‌کند</h1>
+        <p>ما در PhoenixFamily با اتحاد و خلاقیت، ایده‌ها را زنده می‌کنیم و آینده‌ای متفاوت می‌سازیم.</p>
+        <a href="#mission" class="btn btn-primary btn-lg">بیشتر بدانید</a>
+    </section>
 
-
-      <div class="center-container">
-        <h1>{% trans "We are under construction!" %}</h1>
-        <p>{% trans "This website is currently being developed. Please check back later." %}</p>
-        <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-
-   <footer class="mt-5">
-    <div class="container py-4">
-        <div class="row align-items-center">
-            <!-- لوگوی شرکت -->
-            <div class="col-md-4 text-center mb-3 mb-md-0">
-                <a href="//phoenixfamily.co">
-                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
-                </a>
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">ماموریت ما</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="teamwork-icon.png" alt="Teamwork">
+                        <h4 class="mt-3">اتحاد</h4>
+                        <p>ما باور داریم که اتحاد کلید موفقیت است. در خانواده ما، هیچ‌کس تنها نیست.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="phoenix-icon.png" alt="Phoenix">
+                        <h4 class="mt-3">بازآفرینی</h4>
+                        <p>همان‌طور که ققنوس از خاکستر برمی‌خیزد، ما به شما کمک می‌کنیم ایده‌هایتان را بازآفرینی کنید.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="family-icon.png" alt="Family">
+                        <h4 class="mt-3">خانواده</h4>
+                        <p>ما خانواده‌ای هستیم که از شما حمایت می‌کنیم تا در مسیرتان پیش بروید.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join-section">
+        <h2>همین حالا به خانواده ما بپیوندید</h2>
+        <p class="mt-3">با هم، از خاکستر به آسمان پرواز می‌کنیم.</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">شروع کنید</a>
+    </section>
+
+
+
 
             <!-- اطلاعات تماس -->
             <div class="col-md-4 text-center mb-3 mb-md-0">
