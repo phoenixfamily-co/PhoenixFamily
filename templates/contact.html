@@ -494,6 +494,8 @@ footer .copyright {
     e.preventDefault();
     let formData = new FormData(this);
 
+    console.log("test")
+
     fetch("{% url 'contact:email' %}", {
         method: "POST",
         body: formData,
