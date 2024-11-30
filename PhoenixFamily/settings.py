@@ -139,3 +139,16 @@ MEDIA_URL = 'media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.phoenixfamily.co'
+EMAIL_PORT = 465  # پورت SMTP
+EMAIL_USE_TLS = False  # TLS غیرفعال است
+EMAIL_USE_SSL = True  # SSL فعال است
+EMAIL_HOST_USER = 'customer@phoenixfamily.co'
+EMAIL_HOST_PASSWORD = 'n.Y?8&eg0$60'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+COMPANY_EMAIL = 'ceo@phoenixfamily.co'
+
+

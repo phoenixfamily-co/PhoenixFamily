@@ -391,7 +391,8 @@ footer .copyright {
 
       <!-- فرم تماس -->
       <div class="col-md-6">
-        <form method="POST" action="#" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
           <div class="mb-3">
             <label for="name" class="form-label">{% trans 'Name' %}</label>
             <input type="text" class="form-control" id="name" name="name" required>
@@ -418,8 +419,6 @@ footer .copyright {
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -489,5 +488,31 @@ footer .copyright {
   });
 });
     </script>
+
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    let formData = new FormData(this);
+
+    fetch("{% url 'contact:email' %}", {
+        method: "POST",
+        body: formData,
+        headers: {
+            "X-CSRFToken": "{{ csrf_token }}"
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert(data.message);
+            } else {
+                alert("Error: " + JSON.stringify(data.error));
+            }
+        })
+        .catch(error => console.error("Error:", error));
+});
+
+</script>
+
 </body>
 </html>
