@@ -342,7 +342,7 @@ footer .copyright {
     </div>
 </nav>
 
-    <div class="container mt-4">
+    <div class="container mt-5">
         <section>
             <h2>About Us</h2>
             <p>
@@ -352,35 +352,31 @@ footer .copyright {
             </p>
         </section>
 
-        <section class="mission-vision">
-            <h3>Our Vision</h3>
-            <p>To create a world where innovation and entertainment inspire unity and personal growth.</p>
-            <h3>Our Mission</h3>
-            <p>To provide cutting-edge platforms that merge creativity, entertainment, and functionality.</p>
-        </section>
-
         <section class="faq">
             <h2>FAQs</h2>
             <div class="faq-item">
-                <h3><span class="icon">🔥</span>Why Phoenix?</h3>
-                <p class="faq-answer">
+                <h3>Why Phoenix?</h3>
+                <span class="icon">▼</span>
+                <div class="faq-answer">
                     The phoenix is a mythical bird known for its cycle of death and rebirth. We chose this symbol
                     to represent our commitment to growth, transformation, and creating a family for those who feel alone.
-                </p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3><span class="icon">💼</span>What does your company do?</h3>
-                <p class="faq-answer">
+                <h3>What does your company do?</h3>
+                <span class="icon">▼</span>
+                <div class="faq-answer">
                     We specialize in creating engaging platforms and applications focused on crime mysteries,
                     entertainment, and tools for creative development.
-                </p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3><span class="icon">🎯</span>What is your mission?</h3>
-                <p class="faq-answer">
+                <h3>What is your mission?</h3>
+                <span class="icon">▼</span>
+                <div class="faq-answer">
                     Our mission is to provide innovative solutions and entertaining content that unites people
                     and inspires creativity across the globe.
-                </p>
+                </div>
             </div>
         </section>
     </div>
@@ -453,17 +449,29 @@ footer .copyright {
     </script>
 
     <script>
+
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {
-                item.classList.toggle('active');
                 const answer = item.querySelector('.faq-answer');
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                } else {
+                const icon = item.querySelector('.icon');
+                const isActive = item.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.display = 'none';
+                    i.querySelector('.icon').style.transform = 'rotate(0deg)';
+                });
+
+                // Toggle the clicked FAQ item
+                if (!isActive) {
+                    item.classList.add('active');
                     answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
                 }
             });
         });
+
     </script>
 </body>
 </html>
