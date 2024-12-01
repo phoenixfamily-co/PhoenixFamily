@@ -272,48 +272,23 @@ footer .copyright {
             outline: none !important;
             box-shadow: none !important;
         }
-        .hero-section {
-            background-size: cover;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #121212) url('{% static 'images/logo.png' %}') center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #f5f5f5;
+                .icon {
+            margin-right: 0.5rem;
         }
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: bold;
+        .mission-vision {
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 5px;
         }
-        .hero-section p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+        .icon {
+            margin-right: 0.5rem;
         }
-        .hero-section .btn-primary {
-            background-color: #e63946;
-            border: none;
-        }
-        .mission-section .card {
-            background-color: #1e1e1e;
-            border: none;
-        }
-        .mission-section .card img {
-            height: 80px;
-            width: auto;
-            margin: auto;
-        }
-        .join-section {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), #121212);
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-        .join-section h2 {
-            color: #e63946;
-        }
-        .btn-primary:hover {
-            background-color: #f77f00;
+        .mission-vision {
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -367,52 +342,63 @@ footer .copyright {
     </div>
 </nav>
 
-  <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>ققنوس تنهاست، اما اینجا خانواده پیدا می‌کند</h1>
-        <p> با اتحاد و خلاقیت، ایده‌ها را زنده می‌کنیم و آینده‌ای متفاوت می‌سازیم</p>
-        <p class="mt-3"> شرکتی که با الهام از داستان افسانه‌ای ققنوس، موجودی که همیشه تنهاست، تأسیس شده است. ما تصمیم گرفته‌ایم خانواده‌ای برای این پرنده افسانه‌ای باشیم و همین فلسفه را در هسته اصلی فعالیت‌های خود جای داده‌ایم</p>
-    </section>
+    <div class="header">
+        <h1>About PhoenixFamily</h1>
+        <p>Our journey to unity, rebirth, and creating a family for the phoenix.</p>
+    </div>
 
-    <!-- Mission Section -->
-    <section id="mission" class="mission-section py-5">
-        <div class="container text-center">
-            <h2 class="mb-5">ماموریت ما</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="teamwork-icon.png" alt="Teamwork">
-                        <h4 class="mt-3">اتحاد</h4>
-                        <p>ما باور داریم که اتحاد کلید موفقیت است. در خانواده ما، هیچ‌کس تنها نیست.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="phoenix-icon.png" alt="Phoenix">
-                        <h4 class="mt-3">بازآفرینی</h4>
-                        <p>همان‌طور که ققنوس از خاکستر برمی‌خیزد، ما به شما کمک می‌کنیم ایده‌هایتان را بازآفرینی کنید.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="family-icon.png" alt="Family">
-                        <h4 class="mt-3">خانواده</h4>
-                        <p>ما خانواده‌ای هستیم که از شما حمایت می‌کنیم تا در مسیرتان پیش بروید.</p>
-                    </div>
-                </div>
+    <div class="container">
+        <section>
+            <h2>About Us</h2>
+            <p>
+                PhoenixFamily was founded with a vision to bring people together, inspire creativity,
+                and provide a platform for entertainment and innovation. We believe in the power of rebirth,
+                growth, and unity, much like the mythical phoenix rising from the ashes.
+            </p>
+        </section>
+
+        <section class="mission-vision">
+            <h3>Our Vision</h3>
+            <p>To create a world where innovation and entertainment inspire unity and personal growth.</p>
+            <h3>Our Mission</h3>
+            <p>To provide cutting-edge platforms that merge creativity, entertainment, and functionality.</p>
+        </section>
+
+        <section class="faq">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <h3><span class="icon">🔥</span>Why Phoenix?</h3>
+                <p class="faq-answer">
+                    The phoenix is a mythical bird known for its cycle of death and rebirth. We chose this symbol
+                    to represent our commitment to growth, transformation, and creating a family for those who feel alone.
+                </p>
             </div>
-        </div>
-    </section>
+            <div class="faq-item">
+                <h3><span class="icon">💼</span>What does your company do?</h3>
+                <p class="faq-answer">
+                    We specialize in creating engaging platforms and applications focused on crime mysteries,
+                    entertainment, and tools for creative development.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3><span class="icon">🎯</span>What is your mission?</h3>
+                <p class="faq-answer">
+                    Our mission is to provide innovative solutions and entertaining content that unites people
+                    and inspires creativity across the globe.
+                </p>
+            </div>
+        </section>
+    </div>
 
-    <!-- Join Section -->
-    <section class="join-section">
-        <h2>همین حالا به خانواده ما بپیوندید</h2>
-        <p class="mt-3">با هم، از خاکستر به آسمان پرواز می‌کنیم.</p>
-        <a href="#" class="btn btn-primary btn-lg mt-3">شروع کنید</a>
-    </section>
-
-
-
+<footer class="mt-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <!-- لوگوی شرکت -->
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <a href="//phoenixfamily.co">
+                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
+                </a>
+            </div>
 
             <!-- اطلاعات تماس -->
             <div class="col-md-4 text-center mb-3 mb-md-0">
