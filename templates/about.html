@@ -351,35 +351,67 @@ footer .copyright {
                 growth, and unity, much like the mythical phoenix rising from the ashes.
             </p>
         </section>
-
-        <section class="faq">
-            <h2>FAQs</h2>
-            <div class="faq-item">
-                <h3>Why Phoenix?</h3>
-                <span class="icon">▼</span>
-                <div class="faq-answer">
-                    The phoenix is a mythical bird known for its cycle of death and rebirth. We chose this symbol
-                    to represent our commitment to growth, transformation, and creating a family for those who feel alone.
-                </div>
-            </div>
-            <div class="faq-item">
-                <h3>What does your company do?</h3>
-                <span class="icon">▼</span>
-                <div class="faq-answer">
-                    We specialize in creating engaging platforms and applications focused on crime mysteries,
-                    entertainment, and tools for creative development.
-                </div>
-            </div>
-            <div class="faq-item">
-                <h3>What is your mission?</h3>
-                <span class="icon">▼</span>
-                <div class="faq-answer">
-                    Our mission is to provide innovative solutions and entertaining content that unites people
-                    and inspires creativity across the globe.
-                </div>
-            </div>
-        </section>
     </div>
+
+<div class="accordion w-100" id="basicAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button data-mdb-button-init  data-mdb-collapse-init class="accordion-button collapsed" type="button"
+        data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+        Question #1
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+      data-mdb-parent="#basicAccordion" style="">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default,
+        until the collapse plugin adds the appropriate classes that we use to style each
+        element. These classes control the overall appearance, as well as the showing and
+        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+        our default variables. It's also worth noting that just about any HTML can go within
+        the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button data-mdb-button-init  data-mdb-collapse-init class="accordion-button collapsed" type="button"
+        data-mdb-target="#basicAccordionCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Question #2
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+      data-mdb-parent="#basicAccordion" style="">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default,
+        until the collapse plugin adds the appropriate classes that we use to style each
+        element. These classes control the overall appearance, as well as the showing and
+        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+        our default variables. It's also worth noting that just about any HTML can go within
+        the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button data-mdb-button-init  data-mdb-collapse-init class="accordion-button collapsed" type="button"
+        data-mdb-target="#basicAccordionCollapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Question #3
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+      data-mdb-parent="#basicAccordion" style="">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default,
+        until the collapse plugin adds the appropriate classes that we use to style each
+        element. These classes control the overall appearance, as well as the showing and
+        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+        our default variables. It's also worth noting that just about any HTML can go within
+        the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="mt-5">
     <div class="container py-4">
@@ -448,30 +480,5 @@ footer .copyright {
 });
     </script>
 
-    <script>
-
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.querySelector('.faq-answer');
-                const icon = item.querySelector('.icon');
-                const isActive = item.classList.contains('active');
-
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.faq-answer').style.display = 'none';
-                    i.querySelector('.icon').style.transform = 'rotate(0deg)';
-                });
-
-                // Toggle the clicked FAQ item
-                if (!isActive) {
-                    item.classList.add('active');
-                    answer.style.display = 'block';
-                    icon.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
-
-    </script>
 </body>
 </html>
