@@ -282,8 +282,17 @@ footer .copyright {
 
         .search-bar input {
             width: 80%;
-            outline: none;
-            border: var(--primary-light);
+            background-color: transparent;
+            color: var(--text-color);
+            outline: none!important;
+            box-shadow: none;
+        }
+
+        .search-bar input:focus {
+            background-color: transparent;
+            border-color: var(--primary-light)!important;
+            color: var(--text-color);
+            outline: none!important;
             box-shadow: none;
         }
 
