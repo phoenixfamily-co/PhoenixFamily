@@ -273,14 +273,10 @@ footer .copyright {
             box-shadow: none !important;
         }
 
-        .accordion{
-            background-color:var(--bg-color)!important;
-            color:var(--text-color)!important;
+        .section a {
+            color: var(--primary-light);
         }
-        .accordion.accordion-item{
-            background-color:var(--bg-color)!important;
-            color:var(--text-color)!important;
-        }
+
     </style>
 </head>
 <body>
@@ -387,8 +383,8 @@ footer .copyright {
     <div class="col-md-6 col-lg-4 mb-4">
       <h6 class="mb-3" style="color: var(--primary-light)"><i class="fas fa-home pe-2" style="color: var(--primary-light)"></i>How can I use your products or get in touch with you?
       </h6>
-      <p>To use our products, you can visit the <a href="{% url 'contact:contact-view' %}">Products</a>
-          section on our website for detailed information. For getting in touch with us, you can go to the <a href="{% url 'products:product-view' %}">Contact Us</a> section on the website.</p>
+      <p>To use our products, you can visit the <a href="{% url 'products:product-view' %}">Products</a>
+          section on our website for detailed information. For getting in touch with us, you can go to the <a href="{% url 'contact:contact-view'  %}">Contact Us</a> section on the website.</p>
 
     </div>
 
