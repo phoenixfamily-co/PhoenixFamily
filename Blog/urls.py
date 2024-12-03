@@ -11,7 +11,7 @@ router.register(r'blog', BlogPostViewSet, basename='blog')
 
 urlpatterns = [
     path('', views.BlogPostListView, name='blog-view'),  # صفحه اصلی
-    path('blog/<slug:slug>/', views.BlogPostDetailView.as_view(), name='detail'),
+    path('blog/<slug:slug>/', views.BlogPostDetailView, name='detail'),
 
     path('', include(router.urls)),
 
