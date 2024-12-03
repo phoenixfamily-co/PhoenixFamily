@@ -2,10 +2,11 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
-from Blog.sitemap import BlogPostSitemap
+from Blog.sitemap import *
 
 sitemaps = {
-    'blog': BlogPostSitemap,
+    'blog_list': BlogPostListSitemap,
+    'blog_details': BlogPostDetailSitemap,
 }
 
 urlpatterns = [
