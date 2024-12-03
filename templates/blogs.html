@@ -417,7 +417,7 @@ footer .copyright {
 
     <div class="col-md-4 mb-4">
          <div class="card">
-        <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="Hollywood Sign on The Hill" />
+        <img src="{{ post.image.url }}" class="card-img-top" alt="Hollywood Sign on The Hill" />
         <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text">
