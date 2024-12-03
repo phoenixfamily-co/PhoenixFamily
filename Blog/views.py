@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.utils.translation import get_language
 from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, DetailView
@@ -23,15 +22,19 @@ class BlogPostListView(ListView):
         queryset = BlogPost.objects.all().order_by("-published_date")
         category = self.request.GET.get("category")
         author = self.request.GET.get("author")
+        search = self.request.GET.get("search")  # اضافه کردن جستجو
         if category:
             queryset = queryset.filter(category__icontains=category)
         if author:
             queryset = queryset.filter(author__username__icontains=author)
+        if search:
+            queryset = queryset.filter(title__icontains=search)
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['current_language'] = get_language()  # زبان جاری را اضافه می‌کنیم
+        context['current_language'] = get_language()  # زبان جاری
+        context['total_posts'] = BlogPost.objects.count()  # تعداد کل مقالات
         return context
 
 
