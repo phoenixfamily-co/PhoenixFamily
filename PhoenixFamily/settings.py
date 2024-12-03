@@ -13,10 +13,16 @@ SECRET_KEY = 'django-insecure-at+z71p&8n4sf$r_5=ux5jb=ha2!h7^pp&2s470qb8&4+3^-ig
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SITE_ID = 1
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
 ALLOWED_HOSTS = [
     'localhost',
     'abbaslotfinasab.com',
-    'phoenixfamily.co'
+    'phoenixfamily.co',
+    'www.phoenixfamily.co'
+
 ]
 
 # Application definition
@@ -28,6 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',  # برای ساخت Sitemap
+    'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'Home',
     'About',
     'Blog',
@@ -46,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
 ]
 
 ROOT_URLCONF = 'PhoenixFamily.urls'
@@ -77,6 +88,49 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+# Custom SEO Tags (برای صفحات دینامیک)
+SEO_DEFAULT_TITLE = _("PhoenixFamily | Bringing Ideas to Life and Unique Entertainment")
+SEO_DEFAULT_DESCRIPTION = _("PhoenixFamily provides tools for realizing creative ideas and delivering unique "
+                            "entertainment products.")
+SEO_DEFAULT_KEYWORDS = [
+    _("PhoenixFamily"),
+    _("Realizing Ideas"),
+    _("bringing Ideas to life"),
+    _("unique entertainment"),
+    _("creative entertainment"),
+    _("website builder"),
+    _("web builder"),
+    _("application builder"),
+    _("app builder"),
+    _("entertainment platform"),
+]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
 }
 
 # Password validation
@@ -128,18 +182,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = '/home/abbaslot/public_html/static'
-MEDIA_ROOT = '/home/abbaslot/public_html/media'
+STATIC_ROOT = BASE_DIR / 'public_html/static'
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
+MEDIA_ROOT = BASE_DIR / 'public_html/media'
 MEDIA_URL = 'media/'
 
+ROBOTS_FILE_PATH = STATIC_ROOT / 'robots.txt'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.phoenixfamily.co'
@@ -150,5 +204,3 @@ EMAIL_HOST_USER = 'customer@phoenixfamily.co'
 EMAIL_HOST_PASSWORD = 'n.Y?8&eg0$60'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 COMPANY_EMAIL = 'info@phoenixfamily.co'
-
-
