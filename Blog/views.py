@@ -11,7 +11,6 @@ from Blog.serializers import BlogPostSerializer
 
 
 # لیست مقالات
-@cache_page(60 * 15)
 class BlogPostListView(ListView):
     model = BlogPost
     template_name = "blogs.html"
@@ -39,7 +38,6 @@ class BlogPostListView(ListView):
 
 
 # جزئیات مقاله
-@cache_page(60 * 15)
 class BlogPostDetailView(DetailView):
     model = BlogPost
     template_name = "blogpost_detail.html"
