@@ -190,8 +190,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # اگر فایل استاتیکی دارید که در مسیر پروژه هستند.
 ]
 
-MEDIA_ROOT = BASE_DIR / 'public_html/media'
-MEDIA_URL = 'media/'
+MEDIA_ROOT = '/home/abbaslot/public_html/media'
+MEDIA_URL = '/media/'
 
 ROBOTS_FILE_PATH = '/home/abbaslot/public_html/static/robots.txt'
 
