@@ -1,4 +1,5 @@
 from django.contrib.sitemaps import Sitemap
+from django.contrib.sites.models import Site
 from django.utils.translation import activate
 
 from .models import BlogPost
@@ -14,7 +15,8 @@ class BlogPostListSitemap(Sitemap):
         return ['blogs:blog-view']
 
     def location(self, item):
-        return reverse(item)
+        current_site = Site.objects.get_current()
+        return f"{current_site.domain}{reverse(item)}"
 
 
 class BlogPostDetailSitemap(Sitemap):
