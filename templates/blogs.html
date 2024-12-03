@@ -272,13 +272,7 @@ footer .copyright {
             outline: none !important;
             box-shadow: none !important;
         }
-        .search-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 90%;
-            margin: 0 auto;
-        }
+
 
         .search-bar input {
             width: 80%;
@@ -300,27 +294,26 @@ footer .copyright {
             box-shadow: none;
         }
 
-        .search-bar button {
-            width: 20%;
+        .input-group button {
             background-color: var(--btn-bg)!important;
             color: white;
             border: none;
             outline: none;
         }
 
-        .search-bar button:hover {
+        .input-group button:hover {
             background-color: var(--btn-bg)!important;
             opacity: 0.7;
             border: none;
             outline: none;
         }
-         .search-bar button:active {
+         .input-group button:active {
             background-color: var(--btn-bg) !important;
              border: none;
             outline: none;
         }
 
-          .search-bar button:focus {
+          .input-group button:focus {
             background-color: var(--btn-bg) !important;
               border: none;
             outline: none;
@@ -407,15 +400,14 @@ footer .copyright {
     </div>
 </nav>
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="search-bar">
-                <input type="text" class="form-control" id="searchInput" placeholder="Search for blog posts...">
-                <button class="btn" onclick="searchFunction()">Search</button>
-            </div>
-        </div>
-    </div>
+<div class="input-group mt-4">
+  <div class="form-outline" data-mdb-input-init>
+    <input type="search" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+    <i class="fas fa-search"></i>
+  </button>
 </div>
 
 <div class="container my-5">
