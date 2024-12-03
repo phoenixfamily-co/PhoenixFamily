@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',  # برای ساخت Sitemap
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
+    'rest_framework',
     'Home',
     'About',
     'Blog',
