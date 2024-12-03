@@ -53,28 +53,6 @@ class BlogPostDetailView(DetailView):
         return context
 
 
-# لیست مقالات
-class BlogPostListAPI(ListAPIView):
-    serializer_class = BlogPostSerializer
-
-    def get_queryset(self):
-        queryset = BlogPost.objects.all().order_by("-published_date")
-        category = self.request.query_params.get("category")
-        author = self.request.query_params.get("author")
-        if category:
-            queryset = queryset.filter(category__icontains=category)
-        if author:
-            queryset = queryset.filter(author__username__icontains=author)
-        return queryset
-
-
-# جزئیات مقاله
-class BlogPostDetailAPI(RetrieveAPIView):
-    serializer_class = BlogPostSerializer
-    lookup_field = "slug"
-    queryset = BlogPost.objects.all()
-
-
 class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all().order_by('-published_date')  # لیست مقالات مرتب‌شده بر اساس تاریخ انتشار
     serializer_class = BlogPostSerializer
