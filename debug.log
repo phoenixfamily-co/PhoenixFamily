@@ -736,3 +736,119 @@ File C:\Users\abbas\PycharmProjects\PhoenixFamily\venv\Lib\site-packages\django\
 File C:\Users\abbas\PycharmProjects\PhoenixFamily\venv\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1732376604.2248952
 File C:\Users\abbas\PycharmProjects\PhoenixFamily\venv\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1732376607.039666
 File C:\Users\abbas\PycharmProjects\PhoenixFamily\venv\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1732376604.2259068
+(0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "Blog_blogpost" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(200) NOT NULL, "slug" varchar(50) NOT NULL UNIQUE, "content" text NOT NULL, "published_date" datetime NOT NULL, "category" varchar(100) NULL, "image" varchar(100) NULL, "meta_title" varchar(255) NULL, "meta_description" varchar(160) NULL, "meta_keywords" varchar(255) NULL, "author_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "Blog_blogpost" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(200) NOT NULL, "slug" varchar(50) NOT NULL UNIQUE, "content" text NOT NULL, "published_date" datetime NOT NULL, "category" varchar(100) NULL, "image" varchar(100) NULL, "meta_title" varchar(255) NULL, "meta_description" varchar(160) NULL, "meta_keywords" varchar(255) NULL, "author_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+CREATE INDEX "Blog_blogpost_author_id_80c3be3d" ON "Blog_blogpost" ("author_id"); (params ())
+(0.000) CREATE INDEX "Blog_blogpost_author_id_80c3be3d" ON "Blog_blogpost" ("author_id"); args=(); alias=default
+(0.016) COMMIT; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('Blog', '0001_initial', '2024-12-03 20:04:02.709691') RETURNING "django_migrations"."id"; args=('Blog', '0001_initial', '2024-12-03 20:04:02.709691'); alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "domain" varchar(100) NOT NULL, "name" varchar(50) NOT NULL); (params None)
+(0.000) CREATE TABLE "django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "domain" varchar(100) NOT NULL, "name" varchar(50) NOT NULL); args=None; alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sites', '0001_initial', '2024-12-03 20:04:02.741043') RETURNING "django_migrations"."id"; args=('sites', '0001_initial', '2024-12-03 20:04:02.741043'); alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+(0.016) COMMIT; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "new__django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "domain" varchar(100) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "new__django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "domain" varchar(100) NOT NULL UNIQUE); args=None; alias=default
+INSERT INTO "new__django_site" ("id", "name", "domain") SELECT "id", "name", "domain" FROM "django_site"; (params ())
+(0.000) INSERT INTO "new__django_site" ("id", "name", "domain") SELECT "id", "name", "domain" FROM "django_site"; args=(); alias=default
+DROP TABLE "django_site"; (params ())
+(0.000) DROP TABLE "django_site"; args=(); alias=default
+ALTER TABLE "new__django_site" RENAME TO "django_site"; (params ())
+(0.000) ALTER TABLE "new__django_site" RENAME TO "django_site"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sites', '0002_alter_domain_unique', '2024-12-03 20:04:02.772226') RETURNING "django_migrations"."id"; args=('sites', '0002_alter_domain_unique', '2024-12-03 20:04:02.772226'); alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+(0.032) COMMIT; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sites'; args=('sites',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sites', 'site') RETURNING "django_content_type"."id"; args=('sites', 'site'); alias=default
+(0.031) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sites' AND "django_content_type"."model" = 'site') LIMIT 21; args=('sites', 'site'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add site', 8, 'add_site'), ('Can change site', 8, 'change_site'), ('Can delete site', 8, 'delete_site'), ('Can view site', 8, 'view_site') RETURNING "auth_permission"."id"; args=('Can add site', 8, 'add_site', 'Can change site', 8, 'change_site', 'Can delete site', 8, 'delete_site', 'Can view site', 8, 'view_site'); alias=default
+(0.031) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sites'; args=('sites',); alias=default
+(0.000) SELECT 1 AS "a" FROM "django_site" LIMIT 1; args=(1,); alias=default
+(0.000) UPDATE "django_site" SET "domain" = 'example.com', "name" = 'example.com' WHERE "django_site"."id" = 1; args=('example.com', 'example.com', 1); alias=default
+(0.000) INSERT INTO "django_site" ("id", "domain", "name") VALUES (1, 'example.com', 'example.com') RETURNING "django_site"."id"; args=(1, 'example.com', 'example.com'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'Blog'; args=('Blog',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('Blog', 'blogpost') RETURNING "django_content_type"."id"; args=('Blog', 'blogpost'); alias=default
+(0.016) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'Blog' AND "django_content_type"."model" = 'blogpost') LIMIT 21; args=('Blog', 'blogpost'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9,); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add blog post', 9, 'add_blogpost'), ('Can change blog post', 9, 'change_blogpost'), ('Can delete blog post', 9, 'delete_blogpost'), ('Can view blog post', 9, 'view_blogpost') RETURNING "auth_permission"."id"; args=('Can add blog post', 9, 'add_blogpost', 'Can change blog post', 9, 'change_blogpost', 'Can delete blog post', 9, 'delete_blogpost', 'Can view blog post', 9, 'view_blogpost'); alias=default
+(0.031) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'Blog'; args=('Blog',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'Contact'; args=('Contact',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'Contact' AND "django_content_type"."model" = 'contact') LIMIT 21; args=('Contact', 'contact'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'Contact'; args=('Contact',); alias=default
