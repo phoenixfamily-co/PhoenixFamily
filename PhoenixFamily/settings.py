@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 
@@ -182,13 +183,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'public_html/static'
+STATIC_ROOT = '/home/abbaslot/public_html/static/'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # اگر فایل استاتیکی دارید که در مسیر پروژه هستند.
+]
 
 MEDIA_ROOT = BASE_DIR / 'public_html/media'
 MEDIA_URL = 'media/'
 
-ROBOTS_FILE_PATH = STATIC_ROOT / 'robots.txt'
+ROBOTS_FILE_PATH = '/home/abbaslot/public_html/static/robots.txt'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
