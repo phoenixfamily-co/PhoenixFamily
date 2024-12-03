@@ -18,6 +18,9 @@ SITE_ID = 1
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
+DOMAIN = 'phoenixfamily.co'
+SITE_NAME = 'PhoenixFamily'
+
 ALLOWED_HOSTS = [
     'localhost',
     'abbaslotfinasab.com',
