@@ -323,8 +323,6 @@ footer .copyright {
             color: var(--primary-light);
             background-color:var(--navbar-bg)!important; ;
             border-color:var(--primary-light)!important ;
-
-
           }
 
           .card-footer a {
@@ -400,16 +398,16 @@ footer .copyright {
     </div>
 </nav>
 
-<div class="input-group mt-4">
-  <div class="form-outline" data-mdb-input-init>
-    <input type="search" id="form1" class="form-control" />
-    <label class="form-label" for="form1">Search</label>
-  </div>
-  <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-    <i class="fas fa-search"></i>
-  </button>
+<div class="container w-80 mt-4">
+    <div class="input-group">
+        <label for="search-input"></label><input type="text" id="search-input" class="form-control" placeholder="{% trans 'Search' %}">
+        <div class="input-group-append">
+            <button id="search-button" class="btn" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
 </div>
-
 <div class="container my-5">
   <div class="row">
     <div class="col-md-12 text-start" style="color:var(--primary-light);">
