@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <title>{% trans "Blogs" %}</title>
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <meta name="keywords" content="{{ page_keywords }}">
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
     <script src="https://kit.fontawesome.com/4a2a05a158.js" crossorigin="anonymous"></script>
 

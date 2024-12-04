@@ -1,11 +1,9 @@
 from django.utils.translation import get_language
-from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, DetailView
 from rest_framework import viewsets
-from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
+from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-
-
+from django.utils.translation import gettext_lazy as _
 from Blog.models import BlogPost
 from Blog.serializers import BlogPostSerializer
 
@@ -34,7 +32,29 @@ class BlogPostListView(ListView):
         context = super().get_context_data(**kwargs)
         context['current_language'] = get_language()  # زبان جاری
         context['total_posts'] = BlogPost.objects.count()  # تعداد کل مقالات
+
+        page_title = self.get_page_title()
+        page_description = self.get_page_description()
+        page_keywords = self.get_page_keywords()
+        canonical_url = self.request.build_absolute_uri(self.request.path)
+
+        context['page_description'] = page_description
+        context['page_keywords'] = page_keywords
+        context['canonical_url'] = canonical_url
+        context['page_title'] = page_title
+
         return context
+
+    def get_page_description(self):
+        # اینجا می‌توانید توصیف صفحه را بر اساس مدل یا داده‌های دیگر بسازید
+        return _("Discover Insights, Stories, and Innovations.")
+
+    def get_page_keywords(self):
+        # اینجا می‌توانید کلمات کلیدی را بر اساس مدل یا داده‌های دیگر بسازید
+        return _("phoenixfamily, blog, post, article, Insights, Stories, Innovations ")
+
+    def get_page_title(self):
+        return _("blogs")  # عنوان صفحه بر اساس زبان انتخابی
 
 
 # جزئیات مقاله
@@ -50,7 +70,33 @@ class BlogPostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['current_language'] = get_language()  # زبان جاری را اضافه می‌کنیم
+
+        page_title = self.get_page_title()  # عنوان صفحه
+        page_description = self.get_page_description()  # توصیف صفحه
+        page_keywords = self.get_page_keywords()  # کلمات کلیدی
+        canonical_url = self.request.build_absolute_uri(self.request.path)
+
+        context['page_title'] = page_title
+        context['page_description'] = page_description
+        context['page_keywords'] = page_keywords
+        context['canonical_url'] = canonical_url
+
         return context
+
+    def get_page_title(self):
+        # شما می‌توانید عنوان صفحه را بر اساس عنوان مقاله بسازید
+        blog_post = self.get_object()
+        return blog_post.meta_title
+
+    def get_page_description(self):
+        # توصیف صفحه می‌تواند از محتوای مقاله گرفته شود
+        blog_post = self.get_object()
+        return blog_post.meta_description  # یا هر فیلدی که توصیف کوتاهی از مقاله باشد
+
+    def get_page_keywords(self):
+        # کلمات کلیدی می‌تواند بر اساس دسته‌بندی یا برچسب‌های مقاله باشد
+        blog_post = self.get_object()
+        return blog_post.meta_keywords  # اگر مقاله دسته‌بندی‌ها داشته باشد
 
 
 class BlogPostViewSet(viewsets.ModelViewSet):
@@ -61,7 +107,3 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         # تنظیم نویسنده به کاربر جاری هنگام ایجاد مقاله
         serializer.save(author=self.request.user)
-
-
-
-
