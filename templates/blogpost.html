@@ -57,7 +57,7 @@
         <header class="blog-header text-center">
             <h1 class="blog-title">{{ blog_post.title }}</h1>
             <p class="blog-meta">
-                By <a href="#" class="text-decoration-none">John Doe</a> | December 5, 2024
+                By <a href="" class="text-decoration-none">{{ blog_post.author }}</a> | {{ blog_post.published_date }}
             </p>
         </header>
 
@@ -74,6 +74,21 @@
         </article>
 
     </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ blog_post.meta_title }}",
+  "description": "{{ blog_post.meta_description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ blog_post.author }}"
+  },
+  "datePublished": "{{ blog_post.published_date }}",
+  "image": "{{ blog_post.image.url }}"
+}
+</script>
 
 </body>
 </html>
