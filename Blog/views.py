@@ -1,3 +1,4 @@
+from django.utils.timezone import now
 from django.utils.translation import get_language
 from django.views.generic import ListView, DetailView
 from rest_framework import viewsets
@@ -37,11 +38,13 @@ class BlogPostListView(ListView):
         page_description = self.get_page_description()
         page_keywords = self.get_page_keywords()
         canonical_url = self.request.build_absolute_uri(self.request.path)
+        page_date_published = self.get_page_date_published()
 
         context['page_description'] = page_description
         context['page_keywords'] = page_keywords
         context['canonical_url'] = canonical_url
         context['page_title'] = page_title
+        context['page_date_published'] = page_date_published
 
         return context
 
@@ -56,11 +59,15 @@ class BlogPostListView(ListView):
     def get_page_title(self):
         return _("blogs")  # عنوان صفحه بر اساس زبان انتخابی
 
+    def get_page_date_published(self):
+        # برای صفحات جستجو یا دسته‌بندی می‌توانید از تاریخ فعلی استفاده کنید
+        return now().strftime('%Y-%m-%dT%H:%M:%S+00:00')
+
 
 # جزئیات مقاله
 class BlogPostDetailView(DetailView):
     model = BlogPost
-    template_name = "blogpost_detail.html"
+    template_name = "blogpost.html"
     context_object_name = "blog_post"
 
     def get_object(self, queryset=None):
