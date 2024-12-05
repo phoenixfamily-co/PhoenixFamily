@@ -55,7 +55,7 @@
     <div class="container">
         <!-- Header Section -->
         <header class="blog-header text-center">
-            <h1 class="blog-title">Understanding Bootstrap for Better Web Design</h1>
+            <h1 class="blog-title">{{ blog_post.title }}</h1>
             <p class="blog-meta">
                 By <a href="#" class="text-decoration-none">John Doe</a> | December 5, 2024
             </p>
@@ -63,41 +63,16 @@
 
         <!-- Cover Image -->
         <div class="text-center">
-            <img src="https://via.placeholder.com/1200x600" alt="Blog Cover" class="img-fluid rounded">
+            <img src="{{ blog_post.image.url }}" alt="Blog Cover" class="img-fluid rounded">
         </div>
 
         <!-- Blog Content -->
         <article class="blog-content mt-4">
             <p>
-                Bootstrap is one of the most popular front-end frameworks that makes designing web pages easier and more consistent.
-                It provides pre-designed components and utilities for building responsive websites quickly and effectively.
-            </p>
-            <p>
-                The framework uses a grid system to create layouts, ensuring a seamless experience across devices of all sizes.
-                For example, using <code>.col-md-6</code> ensures that a column takes up half the width on medium-sized screens and above.
-            </p>
-            <img src="https://via.placeholder.com/800x400" alt="Grid Example">
-            <p>
-                If you're looking for a faster way to develop web applications, Bootstrap can save you countless hours of coding
-                while maintaining high-quality results.
+                {{ blog_post.content }}
             </p>
         </article>
 
-        <!-- Footer Section -->
-        <footer class="blog-footer">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Tags</h5>
-                    <span class="badge bg-secondary">Bootstrap</span>
-                    <span class="badge bg-secondary">Web Design</span>
-                    <span class="badge bg-secondary">Development</span>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="btn btn-outline-primary">Share on Twitter</a>
-                    <a href="#" class="btn btn-outline-primary">Share on Facebook</a>
-                </div>
-            </div>
-        </footer>
     </div>
 
 </body>
