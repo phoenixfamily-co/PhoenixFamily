@@ -63,8 +63,8 @@
 
         <!-- Cover Image -->
         <div class="text-center">
-             {% if post.image %}
-            <img src="{{ blog_post.image.url }}" alt="blog_post.title " class="img-fluid rounded">
+             {% if blog_post.image %}
+                 <img src="{{ blog_post.image.url }}" alt="blog_post.title " class="img-fluid rounded">
              {% else %}
                  <img src="{% static 'images/logo.png' %}" class="img-fluid rounded" alt="{{ blog_post.title }}" />
              {% endif %}
