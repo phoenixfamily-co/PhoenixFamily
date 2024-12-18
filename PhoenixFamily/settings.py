@@ -25,7 +25,6 @@ SITE_ID = 1
 
 ALLOWED_HOSTS = [
     'localhost',
-    'abbaslotfinasab.com',
     'phoenixfamily.co',
     'www.phoenixfamily.co'
 
@@ -189,14 +188,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = '/home/abbaslot/public_html/static/'
+STATIC_ROOT = '/home/phoenixf/public_html/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # اگر فایل استاتیکی دارید که در مسیر پروژه هستند.
 ]
 
-MEDIA_ROOT = '/home/abbaslot/public_html/media/'
+MEDIA_ROOT = '/home/phoenixf/public_html/media/'
 MEDIA_URL = '/media/'
 
 ROBOTS_FILE_PATH = '/home/abbaslot/public_html/robots.txt/'
