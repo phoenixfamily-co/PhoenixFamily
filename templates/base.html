@@ -1,0 +1,145 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PhoenixFamily{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/4a2a05a158.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeSwitch = document.getElementById("theme-switch");
+            const currentTheme = localStorage.getItem("theme") || "light";
+
+            if (currentTheme === "dark") {
+                document.body.classList.add("dark-mode");
+                themeSwitch.checked = true;
+            }
+
+          themeSwitch.addEventListener("change", function () {
+            if (this.checked) {
+              document.body.classList.add("dark-mode");
+              localStorage.setItem("theme", "dark");
+            } else {
+              document.body.classList.remove("dark-mode");
+              localStorage.setItem("theme", "light");
+            }
+          });
+        });
+    </script>
+
+</head>
+<body>
+
+    <header>
+
+    <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="//phoenixfamily.co">
+            <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+            <span class="navbar-toggler-icon">
+            </span>
+            <i class="fa-solid fa-bars custom-toggler"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+         {% block header %}
+
+        {% endblock %}
+            <!-- دکمه تغییر تم -->
+            <div class="ms-3 d-flex align-items-center">
+                <i class="fas fa-sun"></i>
+                <div class="ms-2 form-check form-switch">
+                    <label for="theme-switch"></label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="theme-switch" />
+                </div>
+                <i class="fas fa-moon"></i>
+            </div>
+            <!-- فرم تغییر زبان -->
+            <div class="ms-3">
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <label>
+                        <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
+                        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                        <option value="fa" class="option-rtl" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
+                        <option value="ar" class="option-rtl" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
+                        <option value="tr" {% if LANGUAGE_CODE == 'tr' %}selected{% endif %}>Türkçe</option>
+                        <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>Русский</option>
+                        <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
+                        <option value="zh" {% if LANGUAGE_CODE == 'zh' %}selected{% endif %}>中文</option>
+                    </select>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    </header>
+    <!-- محتوای متغیر -->
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+            {% block footer %}
+                <div class="container py-4">
+                    <div class="row align-items-center">
+                        <!-- لوگوی شرکت -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <a href="//phoenixfamily.co">
+                                <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
+                            </a>
+                        </div>
+
+                        <!-- اطلاعات تماس -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
+                            <p class="mb-1">
+                                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: +989022981378
+                            </p>
+                            <p class="mb-0">
+                                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: info@phoenixfamily.co
+                            </p>
+                        </div>
+
+                        <!-- شبکه‌های اجتماعی -->
+                        <div class="col-md-4 text-center right">
+                            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
+                            <div class="social-icons">
+                            <a href="//instagram.com/phoenixfamily.co?igsh=ZzRpb2owOHdnMWd5" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="//t.me/Abbas_lotfinasab" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                            <a href="//wa.link/9x7e5p" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                            <a href="//linkedin.com/company/phoenixfamily/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کپی‌رایت -->
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <p class="mb-0 copyright">
+                                &copy; 2024 PhoenixFamily. {% trans "All rights reserved." %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+    </footer>
+</body>
+
+</html>
