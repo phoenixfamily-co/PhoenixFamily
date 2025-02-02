@@ -340,7 +340,7 @@
           }
 
 
-                  .hero {
+        .hero {
             position: relative;
             height: 100vh;
             display: flex;
@@ -395,7 +395,7 @@
             background: linear-gradient(45deg, #ff8c00, #ff3d00);
             border: none;
             border-radius: 50px;
-            color: white;
+            color: white!important;
             transition: 0.3s ease-in-out;
             text-decoration: none;
             display: inline-block;
