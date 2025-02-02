@@ -18,25 +18,19 @@
     </style>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const themeSwitch = document.getElementById("theme-switch");
-            const currentTheme = localStorage.getItem("theme") || "light";
+      document.addEventListener("DOMContentLoaded", function () {
+          const themeSwitch = document.getElementById("theme-switch");
+          const isDark = localStorage.getItem("theme") === "dark";
 
-            if (currentTheme === "dark") {
-                document.body.classList.add("dark-mode");
-                themeSwitch.checked = true;
-            }
+          document.documentElement.classList.toggle("dark-mode", isDark);
+          themeSwitch.checked = isDark;
 
           themeSwitch.addEventListener("change", function () {
-            if (this.checked) {
-              document.body.classList.add("dark-mode");
-              localStorage.setItem("theme", "dark");
-            } else {
-              document.body.classList.remove("dark-mode");
-              localStorage.setItem("theme", "light");
-            }
+              document.documentElement.classList.toggle("dark-mode", this.checked);
+              localStorage.setItem("theme", this.checked ? "dark" : "light");
           });
-        });
+      });
+
     </script>
 
 </head>
@@ -50,8 +44,6 @@
             <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
-            <span class="navbar-toggler-icon">
-            </span>
             <i class="fa-solid fa-bars custom-toggler"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -63,7 +55,7 @@
                 <i class="fas fa-sun"></i>
                 <div class="ms-2 form-check form-switch">
                     <label for="theme-switch"></label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="theme-switch" />
+                    <input class="form-check-input" type="checkbox" role="switch" id="theme-switch" aria-label="Toggle theme" />
                 </div>
                 <i class="fas fa-moon"></i>
             </div>
