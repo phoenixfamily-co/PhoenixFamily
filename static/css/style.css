@@ -395,13 +395,14 @@
             background: linear-gradient(45deg, #ff8c00, #ff3d00);
             border: none;
             border-radius: 50px;
-            color: white!important;
+            color: var(--text-color) !important;
             transition: 0.3s ease-in-out;
             text-decoration: none;
             display: inline-block;
         }
         .cta-btn:hover {
             background: linear-gradient(45deg, #ff3d00, #ff8c00);
+            color: var(--btn-bg) !important;
             transform: scale(1.1);
         }
         .sound-btn {
