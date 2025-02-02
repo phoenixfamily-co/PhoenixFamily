@@ -30,13 +30,37 @@
 
 
  {% block content %}
-      <div class="center-container">
-        <h1>{% trans "We are under construction!" %}</h1>
-        <p>{% trans "This website is currently being developed. Please check back later." %}</p>
-        <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+
+         <section class="hero">
+        <video id="heroVideo" autoplay muted loop>
+            <source src="brand-intro.mp4" type="video/mp4">
+            مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <p class="typing-text">مرز بین واقعیت و رویا را بشکن!</p>
+            <br>
+            <a href="#next-section" class="cta-btn">کاوش را آغاز کن →</a>
         </div>
-      </div>
+        <button class="sound-btn" id="soundToggle"><i class="fas fa-volume-mute"></i></button>
+    </section>
+
+    <script>
+        document.getElementById("soundToggle").addEventListener("click", function() {
+            let video = document.getElementById("heroVideo");
+            let icon = this.querySelector("i");
+            if (video.muted) {
+                video.muted = false;
+                icon.classList.remove("fa-volume-mute");
+                icon.classList.add("fa-volume-up");
+            } else {
+                video.muted = true;
+                icon.classList.remove("fa-volume-up");
+                icon.classList.add("fa-volume-mute");
+            }
+        });
+    </script>
+
  {% endblock %}
 
 {% block footer %}
