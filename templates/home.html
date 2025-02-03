@@ -32,9 +32,9 @@
  {% block content %}
 
 <section class="section container">
-    <div class="row align-items-center d-flex flex-column flex-lg-row {% if LANGUAGE_BIDI %}flex-lg-row-reverse{% endif %}">
+    <div class="row align-items-center d-flex flex-column">
         <!-- ویدیو -->
-        <div class="col-lg-6 video-wrapper order-lg-2">
+        <div class="col-lg-6 video-wrapper {% if LANGUAGE_BIDI %}float-start{% else %}float-end{% endif %}">
             <video controls>
                 <source src="video-path.mp4" type="video/mp4">
                 مرورگر شما از این فرمت پشتیبانی نمی‌کند.
@@ -42,7 +42,7 @@
         </div>
 
         <!-- متن معرفی برند -->
-        <div class="col-lg-6 text-wrapper order-lg-1">
+        <div class="col-lg-6 text-wrapper {% if LANGUAGE_BIDI %}float-start{% else %}float-end{% endif %}">
             <h2 class="display-4">PhoenixFamily</h2>
             <p>LANGUAGE_BIDI: {{ LANGUAGE_BIDI }}</p>
             <p class="lead">
