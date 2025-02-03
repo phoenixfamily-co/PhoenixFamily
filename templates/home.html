@@ -33,9 +33,9 @@
      <section class="section container">
         <div class="row align-items-center">
             <!-- ویدیو -->
-            <div class="col-lg-6 video-wrapper {% if LANGUAGE_BIDI %}float-start{% else %}float-end{% endif %}">
-                <video controls class="w-100">
-                    <source src="video-path.mp4" type="video/mp4">
+            <div class="col-lg-6{% if LANGUAGE_BIDI %}float-start{% else %}float-end{% endif %}">
+                <video controls class="w-100 rounded">
+                    <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
                     مرورگر شما از این فرمت پشتیبانی نمی‌کند.
                 </video>
             </div>
