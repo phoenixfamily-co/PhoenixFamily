@@ -8,8 +8,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>{% block title %}{% trans page_title %}{% endblock %}</title> <!-- عنوان صفحه -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
 
 </head>
 <body>
@@ -33,30 +31,28 @@
  {% block content %}
 
      <section class="section container">
-         <div class="row align-items-center d-flex {% if LANGUAGE_BIDI %}flex-lg-row-reverse{% else %}flex-lg-row{% endif %} flex-column">
-        <!-- ویدیو -->
-        <div class="col-lg-6 video-wrapper text-center">
-            <video controls class="w-100">
-                <source src="video-path.mp4" type="video/mp4">
-                مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-            </video>
-        </div>
+        <div class="row align-items-center">
+            <!-- ویدیو -->
+            <div class="col-lg-6 video-wrapper order-lg-1 {% if LANGUAGE_BIDI %}order-lg-2 float-start{% else %}order-lg-1 float-end{% endif %}">
+                <video controls class="w-100">
+                    <source src="video-path.mp4" type="video/mp4">
+                    مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+                </video>
+            </div>
 
-        <!-- متن -->
-        <div class="col-lg-6 text-wrapper text-center text-lg-start">
-            <h2 class="display-4">PhoenixFamily</h2>
-            <p class="lead">
-                دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
-            </p>
-            <p>
-                ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
-            </p>
-            <a href="#" class="cta-button">شروع بازی</a>
+            <!-- متن -->
+            <div class="col-lg-6 text-wrapper {% if LANGUAGE_BIDI %}order-lg-1 float-end{% else %}float-start order-lg-2{% endif %}">
+                <h2 class="display-4">PhoenixFamily</h2>
+                <p class="lead">
+                    دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
+                </p>
+                <p>
+                    ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
+                </p>
+                <a href="#" class="cta-button">شروع بازی</a>
+            </div>
         </div>
-    </div>
-</section>
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
 
  {% endblock %}
 
