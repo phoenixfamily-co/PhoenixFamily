@@ -34,7 +34,7 @@
         <section class="section container">
         <div class="row align-items-center">
             <!-- ویدیو (بالا در موبایل، چپ در فارسی، راست در انگلیسی در دسکتاپ) -->
-            <div class="col-lg-6 video-wrapper order-1 order-lg-{% if LANGUAGE_BIDI %}1{% else %}2{% endif %}">
+            <div class="col-lg-6 video-wrapper order-1 {% if LANGUAGE_BIDI %}order-lg-1{% else %}order-lg-2{% endif %}">
                 <video controls>
                     <source src="video-path.mp4" type="video/mp4">
                     مرورگر شما از این فرمت پشتیبانی نمی‌کند.
@@ -42,7 +42,7 @@
             </div>
 
             <!-- متن معرفی برند (پایین در موبایل، راست در فارسی، چپ در انگلیسی در دسکتاپ) -->
-            <div class="col-lg-6 text-wrapper order-2 order-lg-{% if LANGUAGE_BIDI %}2{% else %}1{% endif %}">
+            <div class="col-lg-6 text-wrapper order-2 {% if LANGUAGE_BIDI %}order-lg-2{% else %}order-lg-1{% endif %}">
                 <h2 class="display-4">PhoenixFamily</h2>
                 <p class="lead">
                     دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
