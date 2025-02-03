@@ -438,3 +438,27 @@
         .feature-card:hover {
             transform: scale(1.05);
         }
+
+            .custom-button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+    }
+
+    .custom-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(255, 75, 43, 0.8);
+    }
+
+    .custom-image {
+        max-width: 90%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
