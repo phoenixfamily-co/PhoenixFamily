@@ -426,3 +426,15 @@
         .sound-btn:hover {
             background: rgba(255, 255, 255, 0.3);
         }
+
+         .video-container {
+            position: relative;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .feature-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
