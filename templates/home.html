@@ -32,7 +32,7 @@
  {% block content %}
 
 <section class="section container">
-    <div class="row align-items-center {% if LANGUAGE_BIDI %}flex-lg-row-reverse{% endif %} d-flex">
+    <div class="row align-items-center d-flex {% if LANGUAGE_BIDI %}flex-lg-row-reverse{% else %}flex-lg-row{% endif %}">
         <!-- ویدیو (بالا در موبایل، چپ در فارسی، راست در انگلیسی در دسکتاپ) -->
         <div class="col-lg-6 video-wrapper">
             <video controls>
@@ -54,6 +54,7 @@
         </div>
     </div>
 </section>
+
 
  {% endblock %}
 
