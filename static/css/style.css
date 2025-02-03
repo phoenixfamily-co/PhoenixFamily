@@ -365,3 +365,10 @@
             background-color: #e14d29;
         }
 
+         @media (min-width: 992px) {
+            .rtl .video-wrapper { order: 1; }
+            .rtl .text-wrapper { order: 2; }
+            .ltr .video-wrapper { order: 2; }
+            .ltr .text-wrapper { order: 1; }
+        }
+
