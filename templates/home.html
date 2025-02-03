@@ -33,7 +33,7 @@
      <section class="section container">
         <div class="row align-items-center">
             <!-- ویدیو -->
-            <div class="col-lg-6 video-wrapper order-lg-1 {% if LANGUAGE_BIDI %}order-lg-2 float-start{% else %}order-lg-1 float-end{% endif %}">
+            <div class="col-lg-6 video-wrapper {% if LANGUAGE_BIDI %}float-end{% else %}float-start{% endif %}">
                 <video controls class="w-100">
                     <source src="video-path.mp4" type="video/mp4">
                     مرورگر شما از این فرمت پشتیبانی نمی‌کند.
@@ -41,7 +41,7 @@
             </div>
 
             <!-- متن -->
-            <div class="col-lg-6 text-wrapper {% if LANGUAGE_BIDI %}order-lg-1 float-end{% else %}float-start order-lg-2{% endif %}">
+            <div class="col-lg-6 text-wrapper {% if LANGUAGE_BIDI %}float-start{% else %}float-end{% endif %}">
                 <h2 class="display-4">PhoenixFamily</h2>
                 <p class="lead">
                     دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
