@@ -31,94 +31,31 @@
 
  {% block content %}
 
-         <section class="hero">
-        <video id="heroVideo" autoplay muted loop>
-            <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
-            مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <p class="typing-text">مرز بین واقعیت و رویا را بشکن!</p>
-            <br>
-            <a href="" class="cta-btn">کاوش را آغاز کن →</a>
-        </div>
-        <button class="sound-btn" id="soundToggle"><i class="fas fa-volume-mute"></i></button>
-    </section>
-
-         <section class="container my-5 text-center">
-        <h2 class="mb-4">معرفی محصول</h2>
-        <div class="video-container">
-            <video width="80%" controls>
-                <source src="app-preview.mp4" type="video/mp4">
-                مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-            </video>
-        </div>
-        <p class="lead">اپلیکیشن پرونده جنایی، دنیای واقعی و مجازی را ترکیب کرده تا شما را در نقش یک کارآگاه قرار دهد!</p>
-        <a href="#features" class="btn btn-primary mt-3">ویژگی‌های برنامه</a>
-    </section>
-
-    <!-- کارکرد اپلیکیشن -->
-    <section id="features" class="container my-5">
-        <h2 class="text-center mb-4">کارکرد اپلیکیشن</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="card feature-card p-3 bg-dark text-white">
-                    <h4>بررسی مدارک</h4>
-                    <p>مدارک را بررسی کنید و رمزها را پیدا کنید.</p>
+         <section class="section text-center container">
+        <div class="row align-items-center">
+            <!-- ویدیو بخش معرفی برند -->
+            <div class="col-lg-6 col-md-12">
+                <div class="video-wrapper">
+                    <video width="100%" height="auto" controls>
+                        <source src="video-path.mp4" type="video/mp4">
+                        مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+                    </video>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card feature-card p-3 bg-dark text-white">
-                    <h4>بازجویی از مظنونین</h4>
-                    <p>سوالات مناسب را بپرسید تا سرنخ پیدا کنید.</p>
-                </div>
+
+            <!-- متن معرفی برند -->
+            <div class="col-lg-6 col-md-12 text-wrapper">
+                <h2 class="display-4">PhoenixFamily</h2>
+                <p class="lead">
+                    دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
+                </p>
+                <p>
+                    ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
+                </p>
+                <a href="#" class="cta-button">شروع بازی</a>
             </div>
-            <div class="col-md-4">
-                <div class="card feature-card p-3 bg-dark text-white">
-                    <h4>حل پرونده</h4>
-                    <p>نتیجه‌گیری کنید و مجرم را شناسایی کنید!</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="#" class="btn btn-success">دانلود اپلیکیشن</a>
-            <a href="#" class="btn btn-outline-light">مشاهده نسخه آزمایشی</a>
         </div>
     </section>
-
-    <script>
-        document.getElementById("soundToggle").addEventListener("click", function() {
-            let video = document.getElementById("heroVideo");
-            let icon = this.querySelector("i");
-            if (video.muted) {
-                video.muted = false;
-                icon.classList.remove("fa-volume-mute");
-                icon.classList.add("fa-volume-up");
-            } else {
-                video.muted = true;
-                icon.classList.remove("fa-volume-up");
-                icon.classList.add("fa-volume-mute");
-            }
-        });
-    </script>
-
-     <section class="container my-5 py-5">
-    <div class="row align-items-center">
-        <!-- متن بخش ارزش پیشنهادی -->
-        <div class="col-lg-6 text-white text-center text-lg-start">
-            <h2 class="fw-bold">سرگرمی‌ای که فقط برای تو ساخته شده!</h2>
-            <p class="lead">در PhoenixFamily، ما تجربه‌هایی می‌سازیم که کاملاً منحصربه‌فرد هستند، سرگرمی‌هایی که مطابق سلیقه و شخصیت تو طراحی شده‌اند.</p>
-            <a href="#custom-fun" class="btn custom-button mt-3">
-                <i class="fas fa-magic"></i> سرگرمی اختصاصی خودت رو بساز!
-            </a>
-        </div>
-
-        <!-- تصویر بخش ارزش پیشنهادی -->
-        <div class="col-lg-6 text-center">
-            <img src="your-image.jpg" alt="سرگرمی شخصی‌سازی‌شده" class="img-fluid custom-image">
-        </div>
-    </div>
-</section>
 
  {% endblock %}
 
