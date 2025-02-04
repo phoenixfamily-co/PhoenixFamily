@@ -354,6 +354,7 @@
 
         .glass-card {
             position: relative;
+            height: 500px;
             background-color: transparent;
             backdrop-filter: blur(15x);
             -webkit-backdrop-filter: blur(20px); /* پشتیبانی از سافاری */
