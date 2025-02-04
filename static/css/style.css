@@ -354,7 +354,6 @@
 
         .glass-card {
             position: relative;
-            height: 500px;
             background-color: transparent;
             backdrop-filter: blur(15x);
             -webkit-backdrop-filter: blur(20px); /* پشتیبانی از سافاری */
@@ -366,7 +365,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-width: 400px; /* عرض حداکثر ویدیو */
+            max-width: 600px; /* عرض حداکثر ویدیو */
             margin: auto;
             overflow: hidden; /* جلوگیری از بیرون زدن تصویر */
             border-radius: 10px;
@@ -374,7 +373,7 @@
 
         .video-thumbnail {
             width: 100%;
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 10px;
             cursor: pointer;
         }
