@@ -72,12 +72,17 @@
 
 
      <script>
-         document.getElementById("play-btn").addEventListener("click", function () {
-             let video = document.getElementById("brand-video");
-             video.controls = true; // فعال کردن کنترل‌های ویدیو
-             video.play();
-             this.style.display = "none"; // مخفی کردن دکمه بعد از کلیک
-         });
+        document.getElementById("play-btn").addEventListener("click", function () {
+    let video = document.getElementById("brand-video");
+    let thumbnail = document.getElementById("video-thumbnail");
+
+    video.style.display = "block";  // نمایش ویدیو
+    video.controls = true;          // فعال کردن کنترل‌های ویدیو
+    video.play();                   // اجرای ویدیو
+
+    thumbnail.style.display = "none"; // پنهان کردن تصویر پیش‌نمایش
+    this.style.display = "none";      // مخفی کردن دکمه پلی
+});
 
      </script>
 
