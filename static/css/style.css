@@ -365,7 +365,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-width: 600px; /* عرض حداکثر ویدیو */
+            max-width: 400px; /* عرض حداکثر ویدیو */
             margin: auto;
             overflow: hidden; /* جلوگیری از بیرون زدن تصویر */
             border-radius: 10px;
