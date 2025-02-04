@@ -17,3 +17,4 @@ class ContentView(viewsets.ModelViewSet):
     queryset = Content.objects.all()
     serializer_class = ContentSerializer
 
+
