@@ -352,7 +352,7 @@
             color: var(--text-color);
         }
 
-                .glass-card {
+        .glass-card {
             position: relative;
             background-color: transparent;
             backdrop-filter: blur(15x);
@@ -362,18 +362,31 @@
             overflow: hidden; /* جلوگیری از بیرون زدن افکت */
         }
 
-       .video-container {
-           position: relative;
-           width: 100%;
-           max-width: 600px;
-           margin: auto;
-       }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* عرض حداکثر ویدیو */
+            margin: auto;
+            overflow: hidden; /* جلوگیری از بیرون زدن تصویر */
+            border-radius: 10px;
+        }
 
         .video-thumbnail {
             width: 100%;
+            height: auto;
+            object-fit: cover; /* جلوگیری از کشیدگی */
             border-radius: 10px;
             cursor: pointer;
         }
+
+        .brand-video {
+            width: 100%;
+            height: auto;
+            display: none; /* پنهان کردن ویدیو قبل از پخش */
+            border-radius: 10px;
+        }
+
+
 
         .play-button {
             position: absolute;
@@ -392,12 +405,6 @@
 
         .play-button:hover {
             background: rgba(255, 255, 255, 0.9);
-        }
-
-        .brand-video {
-            width: 100%;
-            display: none; /* پنهان کردن ویدیو قبل از پلی */
-            border-radius: 10px;
         }
 
 
