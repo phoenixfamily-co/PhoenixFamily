@@ -34,7 +34,7 @@
     <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}">
         <!-- ویدیو -->
         <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
-            <div class="video-wrapper rounded overflow-hidden">
+            <div class="video-wrapper rounded shadow-lg overflow-hidden">
                 <video controls class="w-100 rounded">
                     <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
                     مرورگر شما از این فرمت پشتیبانی نمی‌کند.
@@ -42,17 +42,17 @@
             </div>
         </div>
 
-        <!-- متن -->
+        <!-- متن با افکت Glassmorphism -->
         <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-lg-end{% else %}text-lg-start{% endif %}">
-            <div class="content-box p-4 rounded shadow" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+            <div class="content-box p-4 rounded shadow glass-card">
                 <h2 class="display-4 fw-bold text-danger">PhoenixFamily</h2>
-                <p class="lead">
+                <p class="lead text-light">
                     دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
                 </p>
-                <p>
+                <p class="text-light">
                     ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
                 </p>
-                <a href="#" class="btn btn-lg px-4 py-2 shadow">شروع بازی</a>
+                <a href="#" class="btn btn-lg px-4 py-2 shadow">شروع کنید</a>
             </div>
         </div>
     </div>
