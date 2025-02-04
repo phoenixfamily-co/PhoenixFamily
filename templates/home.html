@@ -35,7 +35,7 @@
         <!-- ویدیو -->
         <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
             <div class="video-container">
-                <video controls id="brand-video" class="w-100 rounded">
+                <video id="brand-video" class="w-100 rounded">
                     <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
         مرورگر شما از این فرمت پشتیبانی نمی‌کند.
                 </video>
@@ -66,9 +66,11 @@
      <script>
          document.getElementById("play-btn").addEventListener("click", function () {
              let video = document.getElementById("brand-video");
+             video.controls = true; // فعال کردن کنترل‌های ویدیو
              video.play();
-             this.style.display = "none"; // مخفی کردن دکمه بعد از پلی شدن ویدیو
-});
+             this.style.display = "none"; // مخفی کردن دکمه بعد از کلیک
+         });
+
      </script>
 
 
