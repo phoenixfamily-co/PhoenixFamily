@@ -353,35 +353,11 @@
         }
 
         .glass-card {
-            position: relative;
-            background: rgba(0, 0, 0, 0.3); /* رنگ تیره نیمه‌شفاف */
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px); /* پشتیبانی از سافاری */
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05); /* پس‌زمینه‌ی بسیار شفاف */
+            backdrop-filter: blur(25px); /* میزان بلور افزایش یافت */
+            border: 1px solid rgba(211, 47, 47, 0.5); /* حاشیه‌ی قرمز تیره و شفاف */
+            box-shadow: 0 4px 20px rgba(211, 47, 47, 0.2); /* سایه‌ی محو به رنگ قرمز */
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden; /* جلوگیری از بیرون زدن افکت */
-        }
-
-        /* ایجاد نورپردازی متحرک */
-        .glass-card::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 0, 150, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
-            animation: glowing 6s infinite linear;
-        }
-
-        /* انیمیشن حرکت نور */
-        @keyframes glowing {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            color: white;
         }
