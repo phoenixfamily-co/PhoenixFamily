@@ -30,24 +30,24 @@
 
  {% block content %}
 
-<div class="floating-card">
-    <!-- ویدیو -->
-    <div class="video-container">
-        <video controls>
-            <source src="video-path.mp4" type="video/mp4">
+    <section class="parallax">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
             مرورگر شما از این فرمت پشتیبانی نمی‌کند.
         </video>
-    </div>
-
-    <!-- متن -->
-    <div class="text-container">
-        <h2 class="display-5">PhoenixFamily</h2>
-        <p class="lead">
-            دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
-        </p>
-        <a href="#" class="cta-button">شروع بازی</a>
-    </div>
-</div>
+        <div class="content">
+            <div class="glass-card">
+                <h2>PhoenixFamily</h2>
+                <p>دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.</p>
+                <a href="#" class="cta-button">شروع بازی</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener("scroll", function () {
+            document.querySelector("video").style.transform = `translate(-50%, calc(-50% + ${window.scrollY * 0.5}px))`;
+        });
+    </script>
 
  {% endblock %}
 
