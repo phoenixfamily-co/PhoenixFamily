@@ -24,6 +24,7 @@ SITE_ID = 1
 
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'localhost',
     'phoenixfamily.co',
     'www.phoenixfamily.co'
@@ -128,6 +129,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'debug.log',
+            'encoding': 'utf-8',
         },
     },
     'loggers': {
