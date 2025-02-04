@@ -373,7 +373,7 @@
 
         .video-thumbnail {
             width: 100%;
-            object-fit: cover; /* جلوگیری از کشیدگی */
+            object-fit: fill;
             border-radius: 10px;
             cursor: pointer;
         }
