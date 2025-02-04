@@ -355,12 +355,10 @@
         .glass-card {
             position: relative;
             background-color: transparent;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(15x);
             -webkit-backdrop-filter: blur(20px); /* پشتیبانی از سافاری */
-            border: 1px solid rgba(211, 47, 47, 0.4); /* حاشیه قرمز ملایم */
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 4px 20px rgba(211, 47, 47, 0.3); /* سایه قرمز */
             overflow: hidden; /* جلوگیری از بیرون زدن افکت */
         }
 
@@ -372,7 +370,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(211, 47, 47, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+            background: radial-gradient(circle, rgb(211, 47, 47) 0%, rgb(255, 255, 255) 60%);
             animation: glowing 6s infinite linear;
             opacity: 0.6; /* کنترل شدت نور */
         }
