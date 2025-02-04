@@ -63,6 +63,15 @@
 </section>
 
 
+     <script>
+         document.getElementById("play-btn").addEventListener("click", function () {
+             let video = document.getElementById("brand-video");
+             video.play();
+             this.style.display = "none"; // مخفی کردن دکمه بعد از پلی شدن ویدیو
+});
+     </script>
+
+
  {% endblock %}
 
 {% block footer %}
