@@ -354,7 +354,7 @@
 
         .glass-card {
             position: relative;
-            background: rgba(0, 0, 0, 0.3); /* رنگ تیره نیمه‌شفاف */
+            background: rgba(255, 255, 255, 0.8); /* رنگ تیره نیمه‌شفاف */
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px); /* پشتیبانی از سافاری */
             border: 1px solid rgba(211, 47, 47, 0.4); /* حاشیه قرمز ملایم */
