@@ -31,17 +31,25 @@
  {% block content %}
 
 <section class="section container py-5">
+
     <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}">
         <!-- ویدیو -->
         <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
             <div class="video-container">
-                <video id="brand-video" class="w-100 rounded">
-                    <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
-        مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-                </video>
-                <button class="play-button" id="play-btn">
-                    <i class="fa-solid fa-play" style="color: #ffffff;"></i>
-                </button>
+        <!-- تصویر پیش‌نمایش -->
+        <img id="video-thumbnail" src="{% static 'images/phoenix.jpeg' %}" alt="پیش‌نمایش ویدیو" class="video-thumbnail">
+
+        <!-- دکمه پلی -->
+        <button id="play-btn" class="play-button">
+            <i class="fa-solid fa-play" style="color: #ffffff;"></i>
+        </button>
+
+        <!-- ویدیو -->
+        <video id="brand-video" class="brand-video" width="100%">
+            <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
+            مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+        </video>
+
             </div>
 
         </div>
