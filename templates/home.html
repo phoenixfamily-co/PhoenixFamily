@@ -30,26 +30,30 @@
 
  {% block content %}
 
-   <section class="section container">
-    <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}" >
+<section class="section container py-5">
+    <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}">
         <!-- ویدیو -->
-        <div class="col-12 col-lg-6 d-flex justify-content-center ">
-            <video controls class="w-100 rounded">
-                <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
-                مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-            </video>
+        <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
+            <div class="video-wrapper rounded shadow-lg overflow-hidden">
+                <video controls class="w-100 rounded">
+                    <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
+                    مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+                </video>
+            </div>
         </div>
 
         <!-- متن -->
         <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-lg-end{% else %}text-lg-start{% endif %}">
-            <h2 class="display-4">PhoenixFamily</h2>
-            <p class="lead">
-                دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
-            </p>
-            <p>
-                ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
-            </p>
-            <a href="#" class="cta-button">شروع بازی</a>
+            <div class="content-box p-4 rounded shadow" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                <h2 class="display-4 fw-bold text-danger">PhoenixFamily</h2>
+                <p class="lead text-light">
+                    دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
+                </p>
+                <p class="text-light">
+                    ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
+                </p>
+                <a href="#" class="btn btn-danger btn-lg px-4 py-2 shadow">شروع بازی</a>
+            </div>
         </div>
     </div>
 </section>
