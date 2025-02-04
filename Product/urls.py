@@ -1,8 +1,13 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from .views import products, ProductView
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'product', ProductView)
 
 app_name = 'products'
 
 urlpatterns = [
-    path('', views.products, name='product-view'),  # صفحه اصلی
+    path('', products, name='product-view'),  # صفحه اصلی
+    path('api/', include(router.urls)),
 ]
