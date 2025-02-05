@@ -47,7 +47,7 @@
         <!-- ویدیو -->
         <video id="brand-video" class="brand-video" width="100%">
             <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
-            مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+            {% trans 'Your browser does not support this format.'%}
         </video>
 
             </div>
@@ -57,14 +57,14 @@
         <!-- متن با افکت Glassmorphism -->
         <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-lg-end{% else %}text-lg-start{% endif %}">
             <div class="content p-4 rounded shadow glass-card">
-                <h2 class="display-4 fw-bold text-danger">PhoenixFamily</h2>
+                <h2 class="display-4 fw-bold text-danger">{% trans 'Entertainment Reborn, Like a Phoenix!' %}</h2>
                 <p class="lead">
-                    دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
+                    {% trans 'A new world of entertainment. We challenge you here. This is where entertainment rises from its ashes.' %}
                 </p>
                 <p>
-                    ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
+                    {% trans 'We offer unique entertainment platforms that immerse you in a world of endless excitement.' %}
                 </p>
-                <a href="#" class="btn btn-lg px-4 py-2 shadow">شروع کنید</a>
+                <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment!' %}</a>
             </div>
         </div>
     </div>
