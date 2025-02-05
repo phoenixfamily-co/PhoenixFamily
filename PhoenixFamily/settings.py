@@ -218,3 +218,5 @@ EMAIL_HOST_USER = 'customer@phoenixfamily.co'
 EMAIL_HOST_PASSWORD = 'n.Y?8&eg0$60'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 COMPANY_EMAIL = 'info@phoenixfamily.co'
+
+AUTH_USER_MODEL = 'User.User'

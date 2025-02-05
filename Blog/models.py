@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
-from django.contrib.auth.models import User  # برای مدیریت نویسنده‌ها
+from django.conf import settings
+# from django.contrib.auth.models import User  # برای مدیریت نویسنده‌ها
 
 
 class BlogPost(models.Model):
@@ -8,7 +9,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     content = models.TextField()
     published_date = models.DateTimeField(auto_now_add=True)  # تاریخ انتشار
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")  # نویسنده مقاله
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts")  # نویسنده مقاله
     category = models.CharField(max_length=100, blank=True, null=True)  # دسته‌بندی
     image = models.ImageField(upload_to='blog_images/', blank=True, null=True)  # تصویر شاخص
     meta_title = models.CharField(max_length=255, blank=True, null=True)  # عنوان برای SEO
