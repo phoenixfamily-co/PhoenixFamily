@@ -32,7 +32,7 @@
 
 <section class="section container py-5">
 
-    <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}">
+    <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
         <!-- ویدیو -->
         <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
             <div class="video-container">
@@ -58,7 +58,7 @@
         <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
             <div class="content p-4 rounded shadow glass-card">
                 <h2 class="display-6 fw-bold text-danger">{% trans 'Entertainment Reborn, Like a Phoenix' %}</h2>
-                <p class="lead ltr">
+                <p class="lead">
                     {% trans 'A new world of entertainment. We challenge you here. This is where entertainment rises from its ashes.We offer unique entertainment platforms that immerse you in a world of endless excitement.' %}
                 </p>
                 <a href="{% url 'contact:contact-view' %}" class="btn px-2 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
