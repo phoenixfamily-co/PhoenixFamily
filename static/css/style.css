@@ -365,27 +365,25 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-width: 600px; /* عرض حداکثر ویدیو */
-            margin: auto;
-            overflow: hidden; /* جلوگیری از بیرون زدن تصویر */
+            max-width: 600px; /* عرض ثابت برای ویدیو */
+            aspect-ratio: 16 / 9; /* حفظ نسبت تصویر */
+            overflow: hidden;
             border-radius: 10px;
         }
 
-        .video-thumbnail {
+        .video-thumbnail, .brand-video {
             width: 100%;
-            object-fit: cover;
+            height: 100%;
+            object-fit: cover; /* حفظ تناسب و جلوگیری از تغییر اندازه */
             border-radius: 10px;
-            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
-        .brand-video {
-            width: 100%;
-            height: auto;
-            display: none; /* پنهان کردن ویدیو قبل از پخش */
-            border-radius: 10px;
-        }
-
-
+       .brand-video {
+           display: none; /* پنهان کردن ویدیو تا قبل از پلی شدن */
+       }
 
         .play-button {
             position: absolute;
@@ -404,6 +402,14 @@
 
         .play-button:hover {
             background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* ارتفاع متن را برابر با ویدیو قرار می‌دهد */
+        .content {
+            min-height: 100%; /* حداقل ارتفاع برابر با ویدیو */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* تراز کردن محتوا در وسط */
         }
 
 
