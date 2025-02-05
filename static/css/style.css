@@ -367,6 +367,7 @@
             width: 100%;
             max-width: 600px; /* عرض ثابت برای ویدیو */
             aspect-ratio: 16 / 9; /* حفظ نسبت تصویر */
+            padding-top: 56.25%; /* نسبت 16:9 */
             overflow: hidden;
             border-radius: 10px;
         }
