@@ -460,21 +460,21 @@
 
           form .form-control {
             background-color: transparent;
-            color: white!important;
+            color: var(--text-color);
             outline: none;
             box-shadow: none;
         }
         form .form-control:focus {
             background-color: transparent;
-            border-color:#d32f2f;
-            color: white!important;
+            border-color:var(--btn-bg);
+            color: var(--text-color);
             outline: none;
             box-shadow: none;
         }
 
         .form-select {
             background-color: #1e1e1e!important;
-            color: white!important;
+            color: var(--text-color);
         }
 
         .form-select:focus {
@@ -485,7 +485,7 @@
         /* تغییر رنگ هاور برای گزینه‌ها */
         .form-select option:hover {
             background-color: #FF6659 !important; /* قرمز روشن */
-            color: #fff !important; /* متن سفید */
+            color: var(--text-color);
         }
 
         textarea::placeholder{
