@@ -25,6 +25,7 @@ urlpatterns += i18n_patterns(
     path('contact/', include('Contact.urls', namespace='contact')),  # مسیر URLهای اپلیکیشن Contact
     path('home/', include('Home.urls', namespace='home')),  # مسیر URLهای اپلیکیشن Home
     path('products/', include('Product.urls', namespace='products')),  # مسیر URLهای اپلیکیشن Product
+    path('user/', include('User.urls', namespace='user')),  # مسیر URLهای اپلیکیشن User
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
