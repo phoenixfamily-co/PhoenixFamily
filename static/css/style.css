@@ -373,7 +373,7 @@
 
         .video-thumbnail, .brand-video {
             width: 100%;
-            height: 300px; /* مقدار ارتفاع دلخواه */
+            height: 350px; /* مقدار ارتفاع دلخواه */
             object-fit: cover; /* حفظ تناسب و جلوگیری از تغییر اندازه */
             border-radius: 10px;
             position: absolute;
