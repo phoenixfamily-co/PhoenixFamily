@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',  # برای ساخت Sitemap
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'rest_framework',
+    'django_user_agents',       # helper package that allow to work with User/views
     'Home',
     'About',
     'Blog',
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',    # for get device info (User/Views)
 
 ]
 

@@ -22,14 +22,5 @@
     <orderEntry type="library" name="4a2a05a158" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="4a2a05a158" level="application" />
-    <orderEntry type="module" module-name="crime_phoenix" />
-  </component>
-  <component name="TemplatesService">
-    <option name="TEMPLATE_CONFIGURATION" value="Django" />
-    <option name="TEMPLATE_FOLDERS">
-      <list>
-        <option value="$MODULE_DIR$/../PhoenixFamily\templates" />
-      </list>
-    </option>
   </component>
 </module>
