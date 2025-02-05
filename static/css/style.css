@@ -366,14 +366,14 @@
             position: relative;
             width: 100%;
             max-width: 600px; /* عرض ثابت برای ویدیو */
-            aspect-ratio: 16 / 12; /* حفظ نسبت تصویر */
+            aspect-ratio: 16 / 9; /* حفظ نسبت تصویر */
             overflow: hidden;
             border-radius: 10px;
         }
 
         .video-thumbnail, .brand-video {
             width: 100%;
-            height: 400px; /* مقدار ارتفاع دلخواه */
+            height: 300px; /* مقدار ارتفاع دلخواه */
             object-fit: cover; /* حفظ تناسب و جلوگیری از تغییر اندازه */
             border-radius: 10px;
             position: absolute;
