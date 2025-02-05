@@ -7,7 +7,7 @@
             --nav-link-hover: #d32f2f;
             --btn-bg: #d32f2f;
             --btn-hover: #ff6659;
-            --btn-text: #ffffff;
+            --btn-text: #000;
             --primary-light: #d32f2f; /* قرمز لوگو */
             --primary-dark: #333;
             --toggle-bg-light: var(--primary-light);
