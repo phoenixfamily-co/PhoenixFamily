@@ -128,24 +128,25 @@
     </div>
 </section>
 
-
      <section class="container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
     <div class="row align-items-center">
 
          <!-- تصویر -->
-        <div class="col-lg-6 d-flex justify-content-center">
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
             <div class="image-container position-relative">
                 <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class="img-fluid rounded shadow-lg">
             </div>
         </div>
 
-        <div class="content p-4 rounded shadow glass-card">
+        <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+            <div class="content p-4 rounded shadow glass-card">
                 <h2 class="display-6 fw-bold section-title">{% trans 'We make your entertainment come true!' %}</h2>
                 <p class="lead">
                     {% trans 'Have an idea for a fun experience? We make it a real platform. Its time to make your hobby come true' %}
                 </p>
                 <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
-            </div>
+        </div>
+        </div>
 
     </div>
 </section>
