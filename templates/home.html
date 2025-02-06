@@ -115,8 +115,16 @@
     </div>
 </section>
 
-     <section class="container py-5 text-center text-lg-start">
+     <section class="container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
     <div class="row align-items-center">
+
+         <!-- تصویر -->
+        <div class="col-lg-6 d-flex justify-content-center">
+            <div class="image-container position-relative">
+                <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
         <!-- متن و دکمه -->
         <div class="col-lg-6">
             <h2 class="display-4 fw-bold text-danger">ما سرگرمی‌های شما را به واقعیت تبدیل می‌کنیم!</h2>
@@ -124,12 +132,6 @@
             <a href="/contact" class="btn btn-danger btn-lg px-4 py-2 mt-3 shadow-lg">ایده خود را به اشتراک بگذارید</a>
         </div>
 
-        <!-- تصویر -->
-        <div class="col-lg-6 d-flex justify-content-center">
-            <div class="image-container position-relative">
-                <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class="img-fluid rounded shadow-lg">
-            </div>
-        </div>
     </div>
 </section>
 
