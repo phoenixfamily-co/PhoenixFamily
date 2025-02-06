@@ -500,6 +500,10 @@
             transform: scale(1.05);
         }
 
+        .section-title {
+            color: var(--btn-bg);
+        }
+
 
 
 
