@@ -136,38 +136,38 @@
 </section>
 
 <section class="container py-5 text-center text-white">
-    <h2 class="display-4 fw-bold section-title">پلتفرم پرونده‌های جنایی</h2>
-    <p class="lead text-muted">با ورود به دنیای ما، پرونده‌های جنایی پیچیده را بررسی کنید، سرنخ‌ها را پیدا کنید و پرده از رازهای پنهان بردارید!</p>
+    <h2 class="display-4 fw-bold section-title">{% trans 'Crime Cases Platform' %}</h2>
+    <p class="lead text-muted">{% trans 'Enter our world, investigate complex criminal cases, find the clues, and catch the killer.' %}</p>
 
     <div class="row mt-4">
         <!-- کارت‌های پرونده -->
         <div class="col-md-4">
             <div class="card case-card">
-                <img src="{% static 'images/phoenix.jpeg' %}" class="card-img-top" alt="پرونده 1">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
                 <div class="card-body">
-                    <h5 class="card-title">قتل در نیمه‌شب</h5>
-                    <p class="card-text">پرونده‌ای مرموز که هیچ سرنخی از قاتل در صحنه یافت نمی‌شود...</p>
-                    <a href="#" class="btn btn-danger">بررسی پرونده</a>
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn">{% trans 'Investigate' %}</a>
+                </div>
+            </div>
+        </div>
+       <div class="col-md-4">
+            <div class="card case-card">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn">{% trans 'Investigate' %}</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card case-card">
-                <img src="{% static 'images/phoenix.jpeg' %}" class="card-img-top" alt="پرونده 2">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
                 <div class="card-body">
-                    <h5 class="card-title">ناپدید شدن دانشمند</h5>
-                    <p class="card-text">یک دانشمند برجسته ناپدید شده است، اما آخرین پیام او راز بزرگی را فاش می‌کند...</p>
-                    <a href="#" class="btn btn-danger">بررسی پرونده</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card case-card">
-                <img src="{% static 'images/phoenix.jpeg' %}" class="card-img-top" alt="پرونده 3">
-                <div class="card-body">
-                    <h5 class="card-title">سرقت از موزه</h5>
-                    <p class="card-text">یک اثر هنری گرانبها به سرقت رفته است. آیا می‌توانید سارق را پیدا کنید؟</p>
-                    <a href="#" class="btn btn-danger">بررسی پرونده</a>
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn">{% trans 'Investigate' %}</a>
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@
 
     <!-- دکمه مشاهده همه پرونده‌ها -->
     <div class="mt-4">
-        <a href="#" class="btn btn-lg btn-outline-light">مشاهده همه پرونده‌ها</a>
+        <a href="//crime.phoenixfamily.co/" class="btn btn-lg btn-outline-light">{% trans 'Go to Crime' %}</a>
     </div>
 </section>
 
