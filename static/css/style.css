@@ -504,6 +504,21 @@
             color: var(--btn-bg);
         }
 
+        .case-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #1c1c1c;
+            color: white;
+            border: none;
+        }
+        .case-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.5);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
 
 
 
