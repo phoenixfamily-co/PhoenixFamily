@@ -524,6 +524,30 @@
             object-fit: cover;
         }
 
+         .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header::before,
+        .header::after {
+            content: '';
+            flex: 1;
+            border-top: 2px solid var(--btn-bg)!important; /* خط سفید */
+            margin: 0 10px;
+        }
+
+        .header h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase; /* حروف بزرگ */
+            letter-spacing: 2px; /* فاصله بین حروف */
+            margin: 0;
+        }
+
 
 
 
