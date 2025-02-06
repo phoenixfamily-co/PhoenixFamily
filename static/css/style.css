@@ -335,7 +335,7 @@
           }
 
           .card-body {
-              background-color:transparent;!important;
+              background-color:white;!important;
               color: var(--text-color)!important;
           }
 
