@@ -7,10 +7,24 @@ from .views import (
     UserCRUDView,
 )
 
+
+# Customize the router to use 'number' as the lookup field
+class CustomRouter(DefaultRouter):
+    def get_urls(self):
+        urls = super().get_urls()
+        for url in urls:
+            # Access the URL pattern string using the `pattern` property
+            pattern = str(url.pattern)
+            if '{pk}' in pattern:
+                # Replace '{pk}' with '{number}' in the URL pattern
+                url.pattern._regex = url.pattern._regex.replace('{pk}', '{number}')
+        return urls
+
+
 app_name = "user"
 
 # Create a router for the UserCRUDView (ModelViewSet)
-router = DefaultRouter()
+router = CustomRouter()
 router.register(r'user-CRUD', UserCRUDView, basename='user')
 
 urlpatterns = [

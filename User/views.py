@@ -6,7 +6,6 @@ from django_user_agents.utils import get_user_agent
 from .models import User, UserDeviceInfo, UserActivityLog
 from django.contrib.auth import login
 from django.utils.crypto import get_random_string
-from rest_framework.generics import GenericAPIView, UpdateAPIView
 from .serializers import UserSerializer
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -111,24 +110,22 @@ def log_exit_time(request):
     return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
 
 
-
 class UserCRUDView(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    lookup_field = "number"  # Use 'number' as the lookup field instead of 'pk'
 
+    def get_object(self):
+        """
+        Override the default `get_object` method to look up users by `number`.
+        """
+        # Get the `number` from the URL kwargs
+        number = self.kwargs.get('number')
 
+        # Retrieve the user object or raise a 404 error if not found
+        obj = get_object_or_404(User, number=number)
 
-
-
-
-
-
-
-
-
-
-
-
+        return obj
 
 # class UserObserve(GenericAPIView):
 #     permission_classes = [AllowAny]
