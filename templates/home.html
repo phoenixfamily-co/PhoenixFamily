@@ -30,26 +30,157 @@
 
  {% block content %}
 
-   <section class="section container">
-    <div class="row align-items-center" dir="{% if LANGUAGE_BIDI %}ltr{% else %}rtl{% endif %}" >
+<section class="section container py-5">
+
+    <div class="row align-items-center">
         <!-- ویدیو -->
-        <div class="col-12 col-lg-6 text-center">
-            <video controls class="w-100 rounded">
-                <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
-                مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-            </video>
+        <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
+            <div class="video-container">
+        <!-- تصویر پیش‌نمایش -->
+        <img id="video-thumbnail" src="{% static 'images/phoenix.jpeg' %}" alt="پیش‌نمایش ویدیو" class="video-thumbnail">
+
+        <!-- دکمه پلی -->
+        <button id="play-btn" class="play-button">
+            <i class="fa-solid fa-play" style="color: #ffffff;"></i>
+        </button>
+
+        <!-- ویدیو -->
+        <video id="brand-video" class="brand-video" width="100%">
+            <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
+            {% trans 'Your browser does not support this format.'%}
+        </video>
+
+            </div>
+
         </div>
 
-        <!-- متن -->
-        <div class="col-12 col-lg-6 text-center {% if LANGUAGE_BIDI %}text-lg-end{% else %}text-lg-start{% endif %}">
-            <h2 class="display-4">PhoenixFamily</h2>
-            <p class="lead">
-                دنیای جدیدی از بازی‌های جنایی و معماهای پیچیده. با ما به کشف حقیقت بپردازید و در دنیای پر از راز و هیجان غوطه‌ور شوید.
-            </p>
-            <p>
-                ما پلتفرم‌های سرگرمی منحصربه‌فردی را ارائه می‌دهیم که شما را در دنیای اسرارآمیز پرونده‌های جنایی غرق می‌کند. به دنبال جواب‌های پیچیده بگردید و قهرمان معماها شوید!
-            </p>
-            <a href="#" class="cta-button">شروع بازی</a>
+        <!-- متن با افکت Glassmorphism -->
+        <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+            <div class="content p-4 rounded shadow glass-card">
+                <h2 class="display-6 fw-bold section-title">{% trans 'Entertainment Reborn, Like a Phoenix' %}</h2>
+                <p class="lead">
+                    {% trans 'A new world of entertainment. We challenge you here. This is where entertainment rises from its ashes.We offer unique entertainment platforms that immerse you in a world of endless excitement.' %}
+                </p>
+                <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+     <script>
+        document.getElementById("play-btn").addEventListener("click", function () {
+            let video = document.getElementById("brand-video");
+            let thumbnail = document.getElementById("video-thumbnail");
+
+            video.style.display = "block";  // نمایش ویدیو
+            video.controls = true;          // فعال کردن کنترل‌های ویدیو
+            video.play();                   // اجرای ویدیو
+
+            thumbnail.style.display = "none"; // پنهان کردن تصویر پیش‌نمایش
+            this.style.display = "none";      // مخفی کردن دکمه پلی
+        });
+
+     </script>
+
+    <section class="container py-5 text-center text-white">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="display-6 fw-bold section-title text-start text-md-end">{% trans 'Crime Cases Platform' %}</h2>
+        <div class="mt-4 text-start text-md-end">
+            <a href="//crime.phoenixfamily.co/" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Go to Crime' %}</a>
+        </div>
+    </div>
+
+    <p class="lead text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans 'Enter our world, investigate complex criminal cases, find the clues, and catch the killer.' %}</p>
+
+    <div class="row mt-4">
+        <!-- کارت‌های پرونده -->
+        <div class="col-md-4">
+            <div class="card case-card">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
+                <div class="card-body rounded shadow glass-card">
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card case-card">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card case-card">
+                <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top" alt="{% trans 'Red Trap' %}">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                    <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                    <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <section class="container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+    <div class="row align-items-center">
+
+         <!-- تصویر -->
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <div class="image-container position-relative">
+                <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class=" img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+            <div class="content p-4 rounded shadow glass-card">
+                <h2 class="display-6 fw-bold section-title">{% trans 'We make your Entertainment Come True!' %}</h2>
+                <p class="lead">
+                    {% trans 'Do you have an idea for a fun and unique experience? We turn it into a real and functional platform. With our team, you can bring your creative ideas to life and build a world of entertainment and new experiences. Its time to make your hobby a reality and allow others to enjoy it' %}
+                </p>
+                <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
+        </div>
+        </div>
+
+    </div>
+</section>
+
+
+     <section class="value-section container py-5">
+      <div class="header">
+    <h3 class="text-center text-danger fw-bold">{% trans 'Features of PhoenixFamily' %}</h3>
+     </div>
+    <p class="text-center text-muted">{% trans 'Features that discern us from others' %}</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="content p-4 rounded shadow value-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>{% trans 'Innovation in entertainment' %}</h3>
+                <p>{% trans 'Providing new and creative experiences in the world of entertainment' %}</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="content p-4 rounded shadow  value-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>{% trans 'Social interaction' %}</h3>
+                <p>{% trans 'An opportunity to work in a group and competitively.' %}</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="content p-4 rounded shadow  value-card">
+                <i class="fa-solid fa-vr-cardboard"></i>
+                <h3>{% trans 'Modern technologies' %}</h3>
+                <p>{% trans 'Using augmented reality (AR) and artificial intelligence (AI)' %}</p>
+            </div>
         </div>
     </div>
 </section>
