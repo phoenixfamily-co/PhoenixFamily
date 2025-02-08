@@ -550,6 +550,56 @@
             margin: 0;
         }
 
+        .vision-section {
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            padding: 60px 0;
+        }
+        .vision-section .section-title {
+            color: #f8f9fa;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .timeline-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .timeline-icon {
+            font-size: 30px;
+            margin-right: 15px;
+        }
+        .timeline-content h5 {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+        .timeline-content p {
+            margin: 5px 0 0;
+            color: #ddd;
+            font-size: 14px;
+        }
+        .btn-outline-light {
+            border-color: #f8f9fa;
+            color: #f8f9fa;
+        }
+        .btn-outline-light:hover {
+            background: #f8f9fa;
+            color: #16213e;
+        }
+
 
 
 
