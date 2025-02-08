@@ -572,15 +572,16 @@
         .vision-year {
             font-size: 24px;
             font-weight: bold;
-            color: #ffcc00;
+            color: var(--btn-bg);
         }
         .vision-title {
             font-size: 18px;
             margin-top: 10px;
+            color: var(--text-color);
         }
         .vision-description {
             font-size: 14px;
-            color: #bbb;
+            color: var(--text-color);
             margin-top: 10px;
         }
 
