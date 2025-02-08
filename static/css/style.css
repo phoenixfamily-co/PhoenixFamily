@@ -583,20 +583,12 @@
         .timeline-content h5 {
             margin: 0;
             font-size: 18px;
-            color: #fff;
+            color: var(--text-color);
         }
         .timeline-content p {
             margin: 5px 0 0;
-            color: #ddd;
+            color: var(--text-color);
             font-size: 14px;
-        }
-        .btn-outline-light {
-            border-color: #f8f9fa;
-            color: #f8f9fa;
-        }
-        .btn-outline-light:hover {
-            background: #f8f9fa;
-            color: #16213e;
         }
 
 
