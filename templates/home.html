@@ -128,77 +128,7 @@
     </div>
 </section>
 
-  <section class="vision-section py-5 text-center text-white">
-    <div class="container">
-        <!-- عنوان بخش -->
-        <div class="header">
-            <h3 class="text-danger fw-bold">{% trans 'PhoenixFamily Vision' %}</h3>
-        </div>
-        <p class="text-muted">{% trans 'Empowering creativity and innovation for a brighter tomorrow.' %}</p>
-
-        <!-- نوار زمان (Timeline) با اسکرول افقی -->
-        <div class="vision-container d-flex flex-nowrap overflow-auto py-3">
-
-            <div class="content bg-dark text-white p-4 rounded shadow mx-3 flex-shrink-0" style="min-width: 80%; scroll-snap-align: center;">
-                <div class="vision-year fs-4 fw-bold text-danger">2025</div>
-                <div class="vision-title h5 mt-2">{% trans 'Launching Our First Platform' %}</div>
-                <div class="vision-description mt-2">{% trans 'We are stepping into the world of digital entertainment with our first product—a mystery crime platform. This interactive experience allows users to dive into complex cases, uncover hidden clues, and catch the culprit.' %}</div>
-            </div>
-
-            <div class="content bg-dark text-white p-4 rounded shadow mx-3 flex-shrink-0" style="min-width: 80%; scroll-snap-align: center;">
-                <div class="vision-year fs-4 fw-bold text-danger">2027</div>
-                <div class="vision-title h5 mt-2">{% trans 'Integrating AI, AR, and VR into Entertainment' %}</div>
-                <div class="vision-description mt-2">{% trans 'We aim to push the boundaries of imagination. By leveraging AI, AR, and VR, we will bring stories to life, make mysteries feel more real, and transform passive audiences into active participants.' %}</div>
-            </div>
-
-            <div class="content bg-dark text-white p-4 rounded shadow mx-3 flex-shrink-0" style="min-width: 80%; scroll-snap-align: center;">
-                <div class="vision-year fs-4 fw-bold text-danger">2030</div>
-                <div class="vision-title h5 mt-2">{% trans 'Expanding into Podcasts, Comics, and Film & TV Productions' %}</div>
-                <div class="vision-description mt-2">{% trans 'Great stories are not confined to a single format. Our goal is to create captivating universes that unfold across podcasts, comics, animation, films, and TV series.' %}</div>
-            </div>
-
-            <div class="content bg-dark text-white p-4 rounded shadow mx-3 flex-shrink-0" style="min-width: 80%; scroll-snap-align: center;">
-                <div class="vision-year fs-4 fw-bold text-danger">2033</div>
-                <div class="vision-title h5 mt-2">{% trans 'Building a Seamlessly Connected Entertainment Ecosystem' %}</div>
-                <div class="vision-description mt-2">{% trans 'Our users are not just spectators—they are part of the story. We aim to develop an interconnected world where all our products and platforms are linked.' %}</div>
-            </div>
-
-            <div class="content bg-dark text-white p-4 rounded shadow mx-3 flex-shrink-0" style="min-width: 80%; scroll-snap-align: center;">
-                <div class="vision-year fs-4 fw-bold text-danger">2035</div>
-                <div class="vision-title h5 mt-2">{% trans 'Establishing PhoenixFamily as a Global Entertainment Brand' %}</div>
-                <div class="vision-description mt-2">{% trans 'We are not just a startup—we are a new movement in the entertainment industry. Our mission is to expand into international markets, collaborate with the most creative minds worldwide, and produce content that is not only engaging but also unforgettable.' %}</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-     <section class="container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-    <div class="row align-items-center">
-
-         <!-- تصویر -->
-        <div class="col-12 col-lg-6 d-flex justify-content-center">
-            <div class="image-container position-relative">
-                <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class=" img-fluid rounded shadow-lg">
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-            <div class="content p-4 rounded shadow glass-card">
-                <h2 class="display-6 fw-bold section-title">{% trans 'We make your Entertainment Come True!' %}</h2>
-                <p class="lead">
-                    {% trans 'Do you have an idea for a fun and unique experience? We turn it into a real and functional platform. With our team, you can bring your creative ideas to life and build a world of entertainment and new experiences. Its time to make your hobby a reality and allow others to enjoy it' %}
-                </p>
-                <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
-        </div>
-        </div>
-
-    </div>
-</section>
-
-
-     <section class="value-section container py-5">
+         <section class="value-section container py-5">
       <div class="header">
     <h3 class="text-center text-danger fw-bold">{% trans 'Features of PhoenixFamily' %}</h3>
      </div>
@@ -231,6 +161,73 @@
     </div>
 </section>
 
+     <section class="container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+    <div class="row align-items-center">
+
+         <!-- تصویر -->
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <div class="image-container position-relative">
+                <img src="/static/images/entertainment-world..webp" alt="Entertainment World" class=" img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+            <div class="content p-4 rounded shadow glass-card">
+                <h2 class="display-6 fw-bold section-title">{% trans 'We make your Entertainment Come True!' %}</h2>
+                <p class="lead">
+                    {% trans 'Do you have an idea for a fun and unique experience? We turn it into a real and functional platform. With our team, you can bring your creative ideas to life and build a world of entertainment and new experiences. Its time to make your hobby a reality and allow others to enjoy it' %}
+                </p>
+                <a href="{% url 'contact:contact-view' %}" class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
+        </div>
+        </div>
+
+    </div>
+</section>
+
+      <section class="vision-section py-5 text-center text-white">
+    <div class="container">
+        <!-- عنوان بخش -->
+        <div class="header">
+            <h3 class="text-danger fw-bold">{% trans 'PhoenixFamily Vision' %}</h3>
+        </div>
+        <p class="text-muted">{% trans 'Empowering creativity and innovation for a brighter tomorrow.' %}</p>
+
+        <!-- نوار زمان (Timeline) با اسکرول افقی -->
+        <div class="vision-container d-flex flex-nowrap overflow-auto py-3">
+
+            <div class="content p-4 rounded shadow  value-card" style="min-width: 80%; scroll-snap-align: center;">
+                <div class="vision-year fs-4 fw-bold text-danger">2025</div>
+                <div class="vision-title h5 mt-2">{% trans 'Launching Our First Platform' %}</div>
+                <div class="vision-description mt-2">{% trans 'We are stepping into the world of digital entertainment with our first product—a mystery crime platform. This interactive experience allows users to dive into complex cases, uncover hidden clues, and catch the culprit.' %}</div>
+            </div>
+
+            <div class="content p-4 rounded shadow  value-card" style="min-width: 80%; scroll-snap-align: center;">
+                <div class="vision-year fs-4 fw-bold text-danger">2027</div>
+                <div class="vision-title h5 mt-2">{% trans 'Integrating AI, AR, and VR into Entertainment' %}</div>
+                <div class="vision-description mt-2">{% trans 'We aim to push the boundaries of imagination. By leveraging AI, AR, and VR, we will bring stories to life, make mysteries feel more real, and transform passive audiences into active participants.' %}</div>
+            </div>
+
+            <div class="content p-4 rounded shadow  value-card" style="min-width: 80%; scroll-snap-align: center;">
+                <div class="vision-year fs-4 fw-bold text-danger">2030</div>
+                <div class="vision-title h5 mt-2">{% trans 'Expanding into Podcasts, Comics, and Film & TV Productions' %}</div>
+                <div class="vision-description mt-2">{% trans 'Great stories are not confined to a single format. Our goal is to create captivating universes that unfold across podcasts, comics, animation, films, and TV series.' %}</div>
+            </div>
+
+            <div class="content p-4 rounded shadow  value-card" style="min-width: 80%; scroll-snap-align: center;">
+                <div class="vision-year fs-4 fw-bold text-danger">2033</div>
+                <div class="vision-title h5 mt-2">{% trans 'Building a Seamlessly Connected Entertainment Ecosystem' %}</div>
+                <div class="vision-description mt-2">{% trans 'Our users are not just spectators—they are part of the story. We aim to develop an interconnected world where all our products and platforms are linked.' %}</div>
+            </div>
+
+            <div class="content p-4 rounded shadow  value-card" style="min-width: 80%; scroll-snap-align: center;">
+                <div class="vision-year fs-4 fw-bold text-danger">2035</div>
+                <div class="vision-title h5 mt-2">{% trans 'Establishing PhoenixFamily as a Global Entertainment Brand' %}</div>
+                <div class="vision-description mt-2">{% trans 'We are not just a startup—we are a new movement in the entertainment industry. Our mission is to expand into international markets, collaborate with the most creative minds worldwide, and produce content that is not only engaging but also unforgettable.' %}</div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
  {% endblock %}
 
