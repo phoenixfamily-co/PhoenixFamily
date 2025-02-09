@@ -630,10 +630,4 @@ textarea::placeholder {
     }
 }
 
-@media (min-width: 1024px) {
-    .vision-card {
-        flex: 0 0 33%; /* در دسکتاپ، سه کارت در یک صفحه */
-    }
-}
-
 
