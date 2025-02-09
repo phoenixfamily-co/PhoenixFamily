@@ -18,7 +18,7 @@ def about(request):
 
     return render(request, 'about.html', {'LANGUAGE_CODE': current_language,
                                           'LANGUAGE_BIDI': is_bidi,
-                                          'AboutUs': aboutUs,
+                                          'About': aboutUs,
                                           'FAQ': faq,
                                           'Products': products,
 
