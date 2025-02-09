@@ -527,15 +527,27 @@
             display: none; /* برای کروم، سافاری و اپرا */
         }
 
+
         .case-card {
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: white;
+            width: 60%; /* تغییر عرض کارت‌ها */
+            max-width: 300px; /* حداکثر عرض برای کنترل در صفحه‌های بزرگ */
             color: var(--text-color);
             border: none;
             flex: 0 0 auto;
             scroll-snap-align: center;
             margin-right: 1rem;
+
         }
+
+        @media (max-width: 768px) {
+            .case-card {
+                width: 80%; /* بزرگ‌تر در موبایل */
+                max-width: 250px;
+            }
+        }
+
         .case-card:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
