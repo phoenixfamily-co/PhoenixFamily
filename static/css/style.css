@@ -507,7 +507,7 @@ textarea::placeholder {
     color: var(--btn-bg);
 }
 
-.case-container {
+.case-section {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -519,7 +519,7 @@ textarea::placeholder {
     padding-bottom: 10px; /* کمی فاصله پایین برای جلوگیری از برش */
 }
 
-.case-container::-webkit-scrollbar {
+.case-section::-webkit-scrollbar {
     display: none; /* برای کروم، سافاری و اپرا */
 }
 
@@ -606,7 +606,7 @@ textarea::placeholder {
     transition: 0.3s;
 }
 
-.vision-container::-webkit-scrollbar {
+.vision-section::-webkit-scrollbar {
     display: none;
 }
 
