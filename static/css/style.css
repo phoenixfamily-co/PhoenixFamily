@@ -507,20 +507,21 @@ textarea::placeholder {
     color: var(--btn-bg);
 }
 
-.case-section {
+.case-container {
     display: flex;
-    flex-wrap: nowrap;
+    position: relative;
+    flex-wrap: nowrap; /* جلوگیری از شکستن سطر */
     overflow-x: auto;
-    scrollbar-width: none; /* برای فایرفاکس */
-    -ms-overflow-style: none; /* برای اینترنت اکسپلورر و اج */
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; /* حرکت نرم هنگام اسکرول */
+    scrollbar-width: none; /* مخفی کردن اسکرول‌بار در فایرفاکس */
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding-bottom: 10px; /* کمی فاصله پایین برای جلوگیری از برش */
+
+
 }
 
-.case-section::-webkit-scrollbar {
-    display: none; /* برای کروم، سافاری و اپرا */
+.case-container::-webkit-scrollbar {
+    display: none; /* مخفی کردن اسکرول‌بار در کروم و سافاری */
 }
 
 
