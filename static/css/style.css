@@ -557,12 +557,6 @@ textarea::placeholder {
     object-fit: cover;
 }
 
-.card .btn {
-    display: block; /* دکمه را به صورت بلاک نمایش می‌دهیم */
-    margin: 0 auto; /* خودکار تنظیم شدن حاشیه‌ها */
-}
-
-
 .header {
     display: flex;
     align-items: center;
