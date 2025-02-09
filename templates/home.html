@@ -251,6 +251,36 @@
 {% endblock %}
 
 {% block footer %}
+    <div class="row align-items-center">
+                        <!-- لوگوی شرکت -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <a href="//phoenixfamily.co">
+                                <img src="{{ About.logo.url }}" alt="{% trans About.name %}" class="img-fluid" style="max-width: 150px;">
+                            </a>
+                        </div>
+
+                        <!-- اطلاعات تماس -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
+                            <p class="mb-1">
+                                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: {{ About.number }}
+                            </p>
+                            <p class="mb-0">
+                                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: {{ About.email }}
+                            </p>
+                        </div>
+
+                        <!-- شبکه‌های اجتماعی -->
+                        <div class="col-md-4 text-center right">
+                            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
+                            <div class="social-icons">
+                            <a href="{{ About.instagram }}" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="{{ About.telegram }}" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                            <a href="{{ About.whatsApp }}" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                            <a href="{{ About.linkedin }}"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
 {% endblock %}
 
