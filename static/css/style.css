@@ -596,7 +596,6 @@ textarea::placeholder {
     flex: 0 0 100%; /* هر کارت تمام عرض صفحه را بگیرد */
     scroll-snap-align: center; /* مرکز چین شدن کارت‌ها */
     transition: transform 0.3s ease-in-out; /* انیمیشن برای حس بهتر */
-    min-height: 300px; /* حداقل ارتفاع برای زیبایی */
 }
 
 .vision-card:hover {
@@ -609,16 +608,12 @@ textarea::placeholder {
 @media (min-width: 768px) {
     .vision-card {
         flex: 0 0 50%; /* در تبلت و بالاتر، دو کارت در یک صفحه */
-        min-height: 350px;
-
     }
 }
 
 @media (min-width: 1024px) {
     .vision-card {
         flex: 0 0 33%; /* در دسکتاپ، سه کارت در یک صفحه */
-        min-height: 400px;
-
     }
 }
 
