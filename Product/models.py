@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, null=True, blank=True)
     title = models.TextField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     logo = models.FileField(upload_to='images/', null=True)

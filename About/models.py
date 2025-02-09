@@ -4,16 +4,16 @@ from django.db import models
 # Create your models here.
 
 class FAQ(models.Model):
-    icon = models.CharField(max_length=100)
-    title = models.CharField(max_length=255)
+    icon = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
 
 class AboutUs(models.Model):
-    title = models.CharField(max_length=255)
-    name = models.CharField(max_length=50)
+    title = models.CharField(max_length=255, null=True, blank=True)
+    name = models.CharField(max_length=50, null=True, blank=True)
     description = models.TextField(blank=True, null=True)
-    phone = models.CharField(max_length=11)
+    phone = models.CharField(max_length=11, null=True, blank=True)
     email = models.EmailField(blank=True, null=True)
     linkedin = models.URLField(verbose_name="linkedin", blank=True, null=True)
     instagram = models.URLField(verbose_name="instagram", blank=True, null=True)
@@ -22,7 +22,7 @@ class AboutUs(models.Model):
     logo = models.FileField(upload_to='images/', null=True)
     image = models.FileField(upload_to='images/', null=True)
     video = models.FileField(upload_to='videos/', null=True)
-    alt = models.CharField(max_length=255)
+    alt = models.CharField(max_length=255, null=True, blank=True)
     context = models.TextField(blank=True, null=True)
 
 
