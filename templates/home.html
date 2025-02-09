@@ -87,9 +87,21 @@
 
     </script>
 
-    <section class="case-section container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+    <section class="section container py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
 
-        <div class="card rounded shadow case-card">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="display-6 fw-bold section-title text-start text-md-end">{% trans 'Crime Cases Platform' %}</h2>
+            <div class="mt-4 text-start text-md-end">
+                <a href="//crime.phoenixfamily.co/" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Go to Crime' %}</a>
+            </div>
+        </div>
+
+    <p class="lead text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans 'Enter our world, investigate complex criminal cases, find the clues, and catch the killer.' %}</p>
+
+
+        <div class="vision-container d-flex gap-4 overflow-x-auto py-3 px-2 ">
+
+        <div class="case-card card rounded shadow">
             <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
                  alt="{% trans 'Red Trap' %}">
             <div class="card-body rounded shadow glass-card">
@@ -99,7 +111,7 @@
             </div>
         </div>
 
-        <div class="card rounded shadow case-card">
+        <div class="case-card card rounded shadow">
             <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
                  alt="{% trans 'Red Trap' %}">
             <div class="card-body">
@@ -109,7 +121,17 @@
             </div>
         </div>
 
-        <div class="card rounded shadow case-card">
+        <div class="case-card card rounded shadow">
+            <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
+                 alt="{% trans 'Red Trap' %}">
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'Red Trap' %}</h5>
+                <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
+                <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
+            </div>
+        </div>
+
+    <div class="case-card card rounded shadow">
             <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
                  alt="{% trans 'Red Trap' %}">
             <div class="card-body">
@@ -128,15 +150,6 @@
                 <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
             </div>
         </div>
-
-    <div class="card rounded shadow case-card">
-            <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
-                 alt="{% trans 'Red Trap' %}">
-            <div class="card-body">
-                <h5 class="card-title">{% trans 'Red Trap' %}</h5>
-                <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
-                <a href="#" class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Investigate' %}</a>
-            </div>
         </div>
     </section>
 
@@ -235,18 +248,6 @@
             </div>
         </div>
     </section>
-
-
-    <script>
-        document.getElementById("prev").addEventListener("click", function () {
-            document.querySelector(".vision-container").scrollBy({left: -300, behavior: "smooth"});
-        });
-
-        document.getElementById("next").addEventListener("click", function () {
-            document.querySelector(".vision-container").scrollBy({left: 300, behavior: "smooth"});
-        });
-
-    </script>
 
 
 {% endblock %}
