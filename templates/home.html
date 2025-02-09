@@ -49,7 +49,7 @@
 
                     <!-- ویدیو -->
                     <video id="brand-video" class="brand-video" width="100%">
-                        <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
+                        <source src="{{ about.video }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
 
@@ -60,9 +60,9 @@
             <!-- متن با افکت Glassmorphism -->
             <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                 <div class="card p-4 rounded shadow glass-card">
-                    <h2 class="display-6 fw-bold section-title">{% trans 'Entertainment Reborn, Like a Phoenix' %}</h2>
+                    <h2 class="display-6 fw-bold section-title">{% trans About.alt %}</h2>
                     <p class="lead">
-                        {% trans 'A new world of entertainment. We challenge you here. This is where entertainment rises from its ashes.We offer unique entertainment platforms that immerse you in a world of endless excitement.' %}
+                        {% trans About.context %}
                     </p>
                     <a href="{% url 'contact:contact-view' %}"
                        class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
