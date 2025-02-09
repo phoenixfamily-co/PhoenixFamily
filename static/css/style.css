@@ -570,7 +570,7 @@
             content: '';
             flex: 1;
             border-top: 2px solid var(--btn-bg)!important; /* خط سفید */
-            margin: 0 8px;
+            margin: 0 5px;
         }
 
         .header h3 {
