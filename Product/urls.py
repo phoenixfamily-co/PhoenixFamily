@@ -8,6 +8,6 @@ router.register(r'product', ProductView, basename='product')
 app_name = 'products'
 
 urlpatterns = [
-    path('', products, name='product-view'),  # صفحه اصلی
+    path('<int:pk>/', products, name='product-view'),  # صفحه اصلی
     path('api/', include(router.urls)),
 ]
