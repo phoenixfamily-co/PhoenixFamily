@@ -39,7 +39,7 @@
             <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
                 <div class="video-container">
                     <!-- تصویر پیش‌نمایش -->
-                    <img id="video-thumbnail" src="{% static 'images/phoenix.jpeg' %}" alt="پیش‌نمایش ویدیو"
+                    <img id="video-thumbnail" src="{{ about.image.url }}" alt="{{ about.alt }}"
                          class="video-thumbnail">
 
                     <!-- دکمه پلی -->
@@ -49,7 +49,7 @@
 
                     <!-- ویدیو -->
                     <video id="brand-video" class="brand-video" width="100%">
-                        <source src="{{ about.video }}" type="video/mp4">
+                        <source src="{{ about.video.url }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
 
