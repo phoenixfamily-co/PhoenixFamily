@@ -13,7 +13,7 @@ class AboutUs(models.Model):
     title = models.CharField(max_length=255, null=True, blank=True)
     name = models.CharField(max_length=50, null=True, blank=True)
     description = models.TextField(blank=True, null=True)
-    phone = models.CharField(max_length=11, null=True, blank=True)
+    phone = models.CharField(max_length=13, null=True, blank=True)
     email = models.EmailField(blank=True, null=True)
     linkedin = models.URLField(verbose_name="linkedin", blank=True, null=True)
     instagram = models.URLField(verbose_name="instagram", blank=True, null=True)
