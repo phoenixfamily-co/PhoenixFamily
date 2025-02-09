@@ -19,7 +19,7 @@ def contact(request):
 
     return render(request, 'contact.html', {'LANGUAGE_CODE': current_language,
                                             'LANGUAGE_BIDI': is_bidi,
-                                            'AboutUs': aboutUs,
+                                            'About': aboutUs,
                                             'Products': products,
                                             })
 

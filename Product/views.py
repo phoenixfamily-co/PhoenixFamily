@@ -17,7 +17,7 @@ def products(request, pk):
 
     return render(request, 'products.html', {'LANGUAGE_CODE': current_language,
                                              'LANGUAGE_BIDI': is_bidi,
-                                             'AboutUs': aboutUs,
+                                             'About': aboutUs,
                                              'Products': product,
                                              })
 
