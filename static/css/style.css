@@ -511,11 +511,30 @@
             color: var(--btn-bg);
         }
 
+        .case-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none; /* برای فایرفاکس */
+            -ms-overflow-style: none; /* برای اینترنت اکسپلورر و اج */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 1rem;
+            padding-left: 0; /* جلوگیری از جابجایی آیتم اول */
+        }
+
+        .case-container::-webkit-scrollbar {
+            display: none; /* برای کروم، سافاری و اپرا */
+        }
+
         .case-card {
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: white;
             color: var(--text-color);
             border: none;
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            margin-right: 1rem;
         }
         .case-card:hover {
             transform: scale(1.05);
