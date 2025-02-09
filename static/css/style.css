@@ -580,9 +580,10 @@ textarea::placeholder {
     margin: 0;
 }
 
-.vision-section {
+.vision-container {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
     overflow-x: auto;
     display: flex;
     gap: 1rem;
@@ -606,7 +607,7 @@ textarea::placeholder {
     transition: 0.3s;
 }
 
-.vision-section::-webkit-scrollbar {
+.vision-container::-webkit-scrollbar {
     display: none;
 }
 
