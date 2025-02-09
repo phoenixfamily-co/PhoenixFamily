@@ -63,10 +63,10 @@
             <!-- FAQ Items -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-fire fa-2x text-danger mb-3"></i>
-                        <h6 class="fw-bold">{% trans "Why was the name PhoenixFamily chosen?" %}</h6>
-                        <p class="text-muted">
+                    <div class="card-body">
+                        <i class="fa-solid fa-fire fa-2x text-danger mb-3 "></i>
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "Why was the name PhoenixFamily chosen?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             The phoenix is a mythical bird known for its solitude, having no family. Our vision is to be
                             the family this bird never had.
                         </p>
@@ -78,8 +78,8 @@
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold">{% trans "What does your company do?" %}</h6>
-                        <p class="text-muted">
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What does your company do?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             PhoenixFamily specializes in creating entertainment platforms and transforming ideas into
                             reality through websites and mobile applications.
                         </p>
@@ -91,8 +91,8 @@
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-bullseye fa-2x text-success mb-3"></i>
-                        <h6 class="fw-bold">{% trans "What is your main mission?" %}</h6>
-                        <p class="text-muted">
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What is your main mission?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             Our mission is to foster creativity, bring people together, and offer engaging entertainment
                             experiences powered by cutting-edge technology.
                         </p>
@@ -104,8 +104,8 @@
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-wand-sparkles fa-2x text-warning mb-3"></i>
-                        <h6 class="fw-bold">{% trans "What makes PhoenixFamily unique?" %}</h6>
-                        <p class="text-muted">
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What makes PhoenixFamily unique?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             We stand out by blending entertainment with emerging technologies such as AI, AR, and VR,
                             all while maintaining a focus on creativity and innovation.
                         </p>
@@ -117,8 +117,8 @@
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-store fa-2x text-info mb-3"></i>
-                        <h6 class="fw-bold">{% trans "How can I use your products or contact you?" %}</h6>
-                        <p class="text-muted">
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "How can I use your products or contact you?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             You can explore our products in the <a href="{% url 'products:product-view' %}"
                                                                    class="text-primary">Products</a> section.
                             To reach us, visit the <a href="{% url 'contact:contact-view' %}" class="text-primary">Contact
@@ -132,8 +132,8 @@
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
                         <i class="fa-solid fa-hands-helping fa-2x text-dark mb-3"></i>
-                        <h6 class="fw-bold">{% trans "Do you accept client projects?" %}</h6>
-                        <p class="text-muted">
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "Do you accept client projects?" %}</h6>
+                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                             <strong>Absolutely!</strong> We are happy to offer solutions to anyone interested in our
                             services.
                         </p>
