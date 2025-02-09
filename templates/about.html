@@ -22,7 +22,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                aria-expanded="false">{% trans "Products" %}</a>
@@ -34,7 +34,7 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
     </ul>
         </div>
