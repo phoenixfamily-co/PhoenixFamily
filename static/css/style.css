@@ -609,3 +609,7 @@ textarea::placeholder {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--btn-bg) !important
 }
+
+.text-danger{
+    color: var(--btn-bg)!important;
+}
