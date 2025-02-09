@@ -520,7 +520,7 @@
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             gap: 1rem;
-            padding-left: 0; /* جلوگیری از جابجایی آیتم اول */
+            padding-bottom: 10px; /* کمی فاصله پایین برای جلوگیری از برش */
         }
 
         .case-container::-webkit-scrollbar {
