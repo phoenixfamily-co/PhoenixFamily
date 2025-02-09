@@ -14,11 +14,11 @@ def about(request):
 # _____________________________ Class Based Views for developing API ________________________________
 
 
-class UsCRUDView(ModelViewSet):
+class AboutUsView(ModelViewSet):
     queryset = AboutUs.objects.all()
     serializer_class = AboutUsSerializer
 
 
-class FAQCRUDView(ModelViewSet):
+class FAQView(ModelViewSet):
     queryset = FAQ.objects.all()
     serializer_class = FAQSerializer

@@ -3,7 +3,7 @@ from .views import products, ProductView
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'product', ProductView)
+router.register(r'product', ProductView, basename='product')
 
 app_name = 'products'
 

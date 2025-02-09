@@ -3,9 +3,9 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'content', views.ContentView)
-router.register(r'vision', views.VisionView)
-router.register(r'features', views.FeaturesView)
+router.register(r'content', views.ContentView, basename='content')
+router.register(r'vision', views.VisionView, basename='vision')
+router.register(r'features', views.FeaturesView, basename='features')
 
 
 app_name = 'home'
