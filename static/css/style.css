@@ -581,34 +581,21 @@ textarea::placeholder {
 }
 
 .vision-container {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
-    overflow-x: auto;
     display: flex;
-    gap: 1rem;
-    padding-left: 0; /* جلوگیری از جابجایی آیتم اول */
-    scrollbar-width: none; /* مخفی کردن اسکرول در فایرفاکس */
-}
-
-.vision-card {
-    min-width: 80%;
-    scroll-snap-align: start;
-    color: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: white;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    margin-top: 20px;
-    text-align: center;
-    transition: 0.3s;
+    flex-wrap: nowrap; /* جلوگیری از شکستن سطر */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* حرکت نرم هنگام اسکرول */
+    scrollbar-width: none; /* مخفی کردن اسکرول‌بار در فایرفاکس */
 }
 
 .vision-container::-webkit-scrollbar {
-    display: none;
+    display: none; /* مخفی کردن اسکرول‌بار در کروم و سافاری */
+}
+
+.vision-card {
+    flex: 0 0 100%; /* هر کارت تمام عرض صفحه را بگیرد */
+    scroll-snap-align: center; /* مرکز چین شدن کارت‌ها */
+    transition: transform 0.3s ease-in-out; /* انیمیشن برای حس بهتر */
 }
 
 .vision-card:hover {
@@ -617,24 +604,17 @@ textarea::placeholder {
     border: 2px solid var(--btn-bg) !important
 }
 
-.vision-year {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--btn-bg);
+
+@media (min-width: 768px) {
+    .vision-card {
+        flex: 0 0 50%; /* در تبلت و بالاتر، دو کارت در یک صفحه */
+    }
 }
 
-.vision-title {
-    font-size: 18px;
-    margin-top: 10px;
-    color: var(--text-color) !important;
+@media (min-width: 1024px) {
+    .vision-card {
+        flex: 0 0 33%; /* در دسکتاپ، سه کارت در یک صفحه */
+    }
 }
-
-.vision-description {
-    font-size: 14px;
-    color: var(--text-color);
-    margin-top: 10px;
-}
-
-
 
 
