@@ -414,15 +414,6 @@
             scale: 1.1;
         }
 
-        /* ارتفاع متن را برابر با ویدیو قرار می‌دهد */
-        .content {
-            min-height: 100%; /* حداقل ارتفاع برابر با ویدیو */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* تراز کردن محتوا در وسط */
-        }
-
-
         .value-section {
             text-align: center;
         }
