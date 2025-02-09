@@ -493,7 +493,7 @@ textarea::placeholder {
     position: relative;
     width: 100%;
     max-width: 600px; /* عرض ثابت برای ویدیو */
-    aspect-ratio: 16 / 13; /* حفظ نسبت تصویر */
+    aspect-ratio: 16 / 12.5; /* حفظ نسبت تصویر */
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
