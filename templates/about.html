@@ -13,95 +13,136 @@
 <body>
 
 
- {% block header %}
-      <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{% trans "Products" %}</a>
-                     <ul class="dropdown-menu">
-                         <li><a class="dropdown-item" href="https://crime.phoenixfamily.co/">Crime</a></li>
-                     </ul>
-                 </li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
+{% block header %}
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+               aria-expanded="false">{% trans "Products" %}</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://crime.phoenixfamily.co/">Crime</a></li>
             </ul>
- {% endblock %}
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
+    </ul>
+{% endblock %}
 
-  {% block content %}
+{% block content %}
 
-    <div class="container mt-5">
-        <section>
-            <h2 style="color: var(--primary-light)">Where Ideas and Connections Are Reborn</h2>
-            <p>
-                PhoenixFamily is a company inspired by the mythical story of the phoenix, a creature that is always alone.
-                We have decided to be a family for this legendary bird,
-                embedding this philosophy at the core of our mission: supporting creativity and fostering meaningful connections.
-                Our goal is to create a space where individuals can bring their ideas to life without feeling alone or unsupported.
-                Additionally, we provide products that bring excitement and entertainment into the lives of our audience.
-                At PhoenixFamily, we believe that every idea can be reborn, just like the phoenix rising from its ashes.
-                Our family is here to accompany you on your journey to creating ideas and experiencing unique entertainment.
-            </p>
-        </section>
-    </div>
+    <section class="section container py-5">
+        <h2 style="color: var(--primary-light)">Where Ideas and Connections Are Reborn</h2>
+        <p>
+            PhoenixFamily is a company inspired by the mythical story of the phoenix, a creature that is always
+            alone.
+            We have decided to be a family for this legendary bird,
+            embedding this philosophy at the core of our mission: supporting creativity and fostering meaningful
+            connections.
+            Our goal is to create a space where individuals can bring their ideas to life without feeling alone or
+            unsupported.
+            Additionally, we provide products that bring excitement and entertainment into the lives of our
+            audience.
+            At PhoenixFamily, we believe that every idea can be reborn, just like the phoenix rising from its ashes.
+            Our family is here to accompany you on your journey to creating ideas and experiencing unique
+            entertainment.
+        </p>
+    </section>
 
-    <!--Section: FAQ-->
-<section class="ms-5 me-5 mt-5">
-  <h3 class="text-center mb-4 pb-2 fw-bold" style="color: var(--primary-light)">FAQ</h3>
-  <p class="text-center mb-5">
-    Find the answers for the most frequently asked questions below
-  </p>
+    <!-- FAQ Section -->
+    <section class="section container py-5">
+        <div class="header text-center mb-4">
+            <h3 class="text-danger fw-bold">{% trans 'FAQ' %}</h3>
+            <p class="text-muted">{% trans 'Find answers to the most frequently asked questions below.' %}</p>
+        </div>
 
-  <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)"><i class="far fa-brands fa-phoenix-framework pe-2" style="color: var(--primary-light)"></i> Why was the name PhoenixFamily chosen? </h6>
-      <p>
-          We chose this name because the phoenix is a mythical bird that is always alone and has no family.
-          Our goal is to be a family for this solitary bird.
-      </p>
-    </div>
+        <div class="row">
+            <!-- FAQ Items -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-fire fa-2x text-danger mb-3"></i>
+                        <h6 class="fw-bold">{% trans "Why was the name PhoenixFamily chosen?" %}</h6>
+                        <p class="text-muted">
+                            The phoenix is a mythical bird known for its solitude, having no family. Our vision is to be
+                            the family this bird never had.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)"><i class="fa-solid fa-building pe-2" style="color: var(--primary-light)"></i> What does your company do?</h6>
-      <p>
-      PhoenixFamily focuses on developing entertainment platforms and Bringing ideas to life through a website or an app
-      </p>
-    </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold">{% trans "What does your company do?" %}</h6>
+                        <p class="text-muted">
+                            PhoenixFamily specializes in creating entertainment platforms and transforming ideas into
+                            reality through websites and mobile applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)"><i class="fa-solid fa-bullseye pe-2" style="color: var(--primary-light)"></i> What is your main mission?
-      </h6>
-      <p>
-          Our mission is to support families, unity, and provide tools for bringing creative ideas to life
-          and offering unique entertainment experiences.
-      </p>
-    </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-bullseye fa-2x text-success mb-3"></i>
+                        <h6 class="fw-bold">{% trans "What is your main mission?" %}</h6>
+                        <p class="text-muted">
+                            Our mission is to foster creativity, bring people together, and offer engaging entertainment
+                            experiences powered by cutting-edge technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)"><i class="fa-solid fa-wand-sparkles pe-2" style="color: var(--primary-light)"></i> What makes PhoenixFamily unique?
-      </h6>
-      <p>
-        Our focus on family, unity, and Entertainment through the advanced technologies such as AI, AR and VR sets us apart.
-      </p>
-    </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-wand-sparkles fa-2x text-warning mb-3"></i>
+                        <h6 class="fw-bold">{% trans "What makes PhoenixFamily unique?" %}</h6>
+                        <p class="text-muted">
+                            We stand out by blending entertainment with emerging technologies such as AI, AR, and VR,
+                            all while maintaining a focus on creativity and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)"><i class="fa-solid fa-store pe-2" style="color: var(--primary-light)"></i> How can I use your products or get in touch with you?
-      </h6>
-      <p>To use our products, you can visit the <a href="{% url 'products:product-view' %}">Products</a>
-          section on our website for detailed information. For getting in touch with us, you can go to the <a href="{% url 'contact:contact-view'  %}">Contact Us</a> section on the website.</p>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-store fa-2x text-info mb-3"></i>
+                        <h6 class="fw-bold">{% trans "How can I use your products or contact you?" %}</h6>
+                        <p class="text-muted">
+                            You can explore our products in the <a href="{% url 'products:product-view' %}"
+                                                                   class="text-primary">Products</a> section.
+                            To reach us, visit the <a href="{% url 'contact:contact-view' %}" class="text-primary">Contact
+                            Us</a> page.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card vision-card shadow-lg border-0 p-3">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-hands-helping fa-2x text-dark mb-3"></i>
+                        <h6 class="fw-bold">{% trans "Do you accept client projects?" %}</h6>
+                        <p class="text-muted">
+                            <strong>Absolutely!</strong> We are happy to offer solutions to anyone interested in our
+                            services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of FAQ Section -->
 
-    <div class="col-md-6 col-lg-4 mb-4">
-      <h6 class="mb-3" style="color: var(--primary-light)" ><i class="fa-solid fa-hands-helping pe-2" style="color: var(--primary-light)"></i> Does your company accept client projects?</h6>
-      <p>
-        <strong>Ofcourse</strong> We’re happy to offer a plan to anyone who wants to try our service.
-      </p>
-    </div>
-  </div>
-</section>
-<!--Section: FAQ-->
 
 {% endblock %}
 
