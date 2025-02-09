@@ -331,7 +331,6 @@
           .card {
               background-color:transparent;!important;
               color: var(--text-color)!important;
-              border-color:var(--primary-light)!important ;
           }
 
           .card-body {
@@ -538,7 +537,6 @@
             flex: 0 0 auto;
             scroll-snap-align: center;
             margin-right: 1rem;
-
         }
 
 
