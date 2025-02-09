@@ -598,7 +598,7 @@ textarea::placeholder {
 .vision-card {
     scroll-snap-align: center; /* مرکز چین شدن کارت‌ها */
     transition: transform 0.3s ease-in-out; /* انیمیشن برای حس بهتر */
-    flex: 0 0 100vw;!important; /* هر کارت دقیقاً اندازه کل عرض صفحه */
+    flex: 0 0 100%; /* هر کارت دقیقاً اندازه کل عرض صفحه */
     padding: 2rem;
     box-sizing: border-box;
 }
@@ -622,12 +622,6 @@ textarea::placeholder {
 
 #next {
     right: 0;
-}
-
-@media (min-width: 768px) {
-    .vision-card {
-        flex: 0 0 50%; /* در تبلت و بالاتر، دو کارت در یک صفحه */
-    }
 }
 
 
