@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 
 from About.models import AboutUs
 from Contact.forms import ContactForm
+from Product.models import Product
 
 
 @cache_page(60 * 15)
@@ -14,10 +15,13 @@ def contact(request):
     current_language = get_language()
     is_bidi = get_language_bidi()
     aboutUs = AboutUs.objects.first()
+    products = Product.objects.all()
 
     return render(request, 'contact.html', {'LANGUAGE_CODE': current_language,
                                             'LANGUAGE_BIDI': is_bidi,
-                                            'AboutUs': aboutUs})
+                                            'AboutUs': aboutUs,
+                                            'Products': products,
+                                            })
 
 
 class EmailView(APIView):

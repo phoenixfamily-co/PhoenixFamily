@@ -12,5 +12,66 @@
 
 <body>
 
+{% block header %}
+    <a class="navbar-brand" href="//phoenixfamily.co">
+            <img src="{{ About.logo.url }}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+            <i class="fa-solid fa-bars custom-toggler"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+               aria-expanded="false">{% trans "Products" %}</a>
+            <ul class="dropdown-menu">
+                {% for x in Products %}
+                <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
+    </ul>
+        </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="row align-items-center">
+                        <!-- لوگوی شرکت -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <a href="//phoenixfamily.co">
+                                <img src="{{ About.logo.url }}" alt="{% trans About.name %}" class="img-fluid" style="max-width: 150px;">
+                            </a>
+                        </div>
+
+                        <!-- اطلاعات تماس -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
+                            <p class="mb-1">
+                                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: {{ About.number }}
+                            </p>
+                            <p class="mb-0">
+                                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: {{ About.email }}
+                            </p>
+                        </div>
+
+                        <!-- شبکه‌های اجتماعی -->
+                        <div class="col-md-4 text-center right">
+                            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
+                            <div class="social-icons">
+                            <a href="{{ About.instagram }}" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="{{ About.telegram }}" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                            <a href="{{ About.whatsApp }}" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                            <a href="{{ About.linkedin }}"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}
+
 </body>
 </html>
