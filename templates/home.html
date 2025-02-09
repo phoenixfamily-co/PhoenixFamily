@@ -87,7 +87,7 @@
 
     </script>
 
-    <section class="case-section container text-center py-5">
+    <section class="case-section container text-center py-5 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
 
         <div class="card rounded shadow case-card">
             <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
@@ -203,7 +203,7 @@
         <p class="text-muted">{% trans 'Empowering creativity and innovation for a brighter tomorrow.' %}</p>
 
         <!-- نوار زمان (Timeline) با اسکرول افقی -->
-        <div class="vision-container d-flex gap-4 overflow-x-auto py-3 px-2">
+        <div class="vision-container d-flex gap-4 overflow-x-auto py-3 px-2 ">
             <div class="vision-card card p-4 shadow">
                 <div class="fs-4 fw-bold text-danger">2025</div>
                 <h5 class="mt-2">{% trans 'Launching Our First Platform' %}</h5>
