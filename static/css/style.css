@@ -582,6 +582,7 @@ textarea::placeholder {
 
 .vision-container {
     display: flex;
+    position: relative;
     flex-wrap: nowrap; /* جلوگیری از شکستن سطر */
     overflow-x: auto;
     scroll-snap-type: x mandatory; /* حرکت نرم هنگام اسکرول */
@@ -604,6 +605,20 @@ textarea::placeholder {
     border: 2px solid var(--btn-bg) !important
 }
 
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
 
 @media (min-width: 768px) {
     .vision-card {
