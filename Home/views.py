@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils.translation import get_language, get_language_bidi
 from .serializers import ContentSerializer, FeaturesSerializer, VisionSerializer
-from .models import Content, Vision
+from .models import Content, Vision, Features
 from rest_framework import viewsets
 
 
@@ -20,10 +20,10 @@ class ContentView(viewsets.ModelViewSet):
 
 
 class VisionView(viewsets.ModelViewSet):
-    queryset = Content.objects.all()
+    queryset = Vision.objects.all()
     serializer_class = VisionSerializer
 
 
 class FeaturesView(viewsets.ModelViewSet):
-    queryset = Vision.objects.all()
+    queryset = Features.objects.all()
     serializer_class = FeaturesSerializer
