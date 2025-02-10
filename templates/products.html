@@ -76,7 +76,10 @@
                     </p>
                     <hr style="height: 2px">
                     <h3 style="margin-bottom: 10px">Key Features:</h3>
-
+                    {% for x in Features %}
+                        <h6 class="mt-2">{{ x.title }}</h6>
+                        <p class="lead">{{ x.description }}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
