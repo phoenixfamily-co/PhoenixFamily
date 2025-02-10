@@ -41,63 +41,77 @@
 
 
 {% block content %}
-        <!-- Video Section -->
-    <section class="container my-5 text-center">
-        <h2>🎥 معرفی پلتفرم پرونده جنایی</h2>
-        <div class="video-container">
-            <img src="preview.jpg" id="video-thumbnail" alt="پریویو ویدیو">
-            <div class="play-button" id="play-btn">▶</div>
-            <video id="intro-video" controls class="w-100" style="display: none; border-radius: 10px;">
-                <source src="crime-platform-intro.mp4" type="video/mp4">
-                مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-            </video>
-        </div>
-    </section>
 
-    <!-- Description Section -->
-    <section class="container my-5">
-        <h2>📝 درباره پلتفرم</h2>
-        <p class="lead">پلتفرم پرونده جنایی یک تجربه منحصربه‌فرد است که شما را در نقش یک کارآگاه حرفه‌ای قرار می‌دهد. با حل معماها، بررسی مدارک و بازجویی از مظنونین، مهارت‌های خود را در حل پرونده‌های جنایی به چالش بکشید.</p>
-    </section>
+    <section class="section container py-5">
 
-    <!-- Features Section -->
-    <section class="container my-5 text-center">
-        <h2>🔎 ویژگی‌های کلیدی</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="feature-box shadow-sm">
-                    <h4>ژانر</h4>
-                    <p>ماجراجویی، معمایی، جنایی</p>
+        <div class="row align-items-center">
+            <!-- ویدیو -->
+            <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
+                <div class="video-container">
+                    <!-- تصویر پیش‌نمایش -->
+                    <img id="video-thumbnail" src="{{ About.image.url }}" alt="{{ about.alt }}"
+                         class="video-thumbnail">
+
+                    <!-- دکمه پلی -->
+                    <button id="play-btn" class="play-button">
+                        <i class="fa-solid fa-play" style="color: #ffffff;"></i>
+                    </button>
+
+                    <!-- ویدیو -->
+                    <video id="brand-video" class="brand-video" width="100%">
+                        <source src="{{ About.video.url }}" type="video/mp4">
+                        {% trans 'Your browser does not support this format.' %}
+                    </video>
+
                 </div>
+
             </div>
-            <div class="col-md-4">
-                <div class="feature-box shadow-sm">
-                    <h4>سال ساخت</h4>
-                    <p>۲۰۲۵</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box shadow-sm">
-                    <h4>مکانیزم بازی</h4>
-                    <p>حل معماها، بازجویی و تحلیل مدارک</p>
+
+            <!-- متن با افکت Glassmorphism -->
+            <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+                <div class="card p-4 rounded shadow glass-card">
+                    <h2 class="display-6 fw-bold section-title">{% trans About.alt %}</h2>
+                    <p class="lead">
+                        {% trans About.context %}
+                    </p>
+                    <a href="{% url 'contact:contact-view' %}"
+                       class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <section class="section container py-5">
+        <div class="card p-4 rounded shadow glass-card">
+            <h2 class="display-6 fw-bold section-title">{% trans About.title %}</h2>
+            <p class="lead">
+                {% trans About.description %}
+            </p>
+        </div>
+    </section>
+
 
     <!-- CTA Section -->
     <section class="container my-5 text-center">
         <h2>🚀 آماده حل پرونده‌ها هستید؟</h2>
-        <a href="https://crimeplatform.com" class="btn btn-danger btn-lg btn-custom">شروع ماجراجویی</a>
+        <a href="https://crimeplatform.com" class="btn btn-lg">شروع ماجراجویی</a>
     </section>
 
+
     <script>
-        document.getElementById('play-btn').addEventListener('click', function() {
-            document.getElementById('video-thumbnail').style.display = 'none';
-            document.getElementById('play-btn').style.display = 'none';
-            document.getElementById('intro-video').style.display = 'block';
-            document.getElementById('intro-video').play();
+        document.getElementById("play-btn").addEventListener("click", function () {
+            let video = document.getElementById("brand-video");
+            let thumbnail = document.getElementById("video-thumbnail");
+
+            video.style.display = "block";  // نمایش ویدیو
+            video.controls = true;          // فعال کردن کنترل‌های ویدیو
+            video.play();                   // اجرای ویدیو
+
+            thumbnail.style.display = "none"; // پنهان کردن تصویر پیش‌نمایش
+            this.style.display = "none";      // مخفی کردن دکمه پلی
         });
+
     </script>
 {% endblock %}
 
