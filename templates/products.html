@@ -72,7 +72,7 @@
                 <div class="card p-4 rounded shadow glass-card">
                     <h2 class="display-6 fw-bold section-title">{% trans Item.title %}</h2>
                     <p class="lead">
-                        {% trans Item.description %}
+                        {% trans Item.content %}
                     </p>
                     <hr style="height: 2px">
                     <h3 style="margin-bottom: 10px">Key Features:</h3>
@@ -90,7 +90,7 @@
         <div class="card p-4 rounded shadow glass-card">
             <h2 class="display-6 fw-bold section-title">{% trans Item.title %}</h2>
             <p class="lead">
-                {% trans Item.description %}
+                {% trans Item.description | linebreaks %}
             </p>
         </div>
     </section>
@@ -99,7 +99,7 @@
     <!-- CTA Section -->
     <section class="container my-5 text-center">
         <h2>{% trans 'Are you ready to start?' %}</h2>
-        <a href="https://crimeplatform.com" class="btn btn-lg">{% trans 'Go to Crime' %}</a>
+        <a href="{{ Item.address }}" class="btn btn-lg">{% trans 'Go to Crime' %}</a>
     </section>
 
 
