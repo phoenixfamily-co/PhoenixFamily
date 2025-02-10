@@ -615,22 +615,12 @@ textarea::placeholder {
 }
 
 
-.hero-container {
-    position: absolute;
-    width: 100%;
-    max-width: 700px; /* ثابت نگه داشتن عرض */
-    height: 100%; /* هم‌اندازه شدن با کارت کناری */
-    display: flex;
-    align-items: center; /* وسط‌چین کردن محتوا */
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.hero-video-thumbnail,
-.hero-video {
+.hero-video-thumbnail, .hero-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* تنظیم تصویر و ویدیو برای پر کردن فضا */
-    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
 }
