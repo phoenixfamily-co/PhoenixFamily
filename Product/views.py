@@ -15,7 +15,7 @@ def products(request, pk):
     aboutUs = AboutUs.objects.first()
     product = Product.objects.all()
     item = Product.objects.get(id=pk)
-    features = Features.objects.filter(product=pk)
+    features = Features.objects.filter(product_id=pk)
 
     return render(request, 'products.html', {'LANGUAGE_CODE': current_language,
                                              'LANGUAGE_BIDI': is_bidi,
