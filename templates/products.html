@@ -41,42 +41,64 @@
 
 
 {% block content %}
-    <!-- Product Section -->
+        <!-- Video Section -->
+    <section class="container my-5 text-center">
+        <h2>🎥 معرفی پلتفرم پرونده جنایی</h2>
+        <div class="video-container">
+            <img src="preview.jpg" id="video-thumbnail" alt="پریویو ویدیو">
+            <div class="play-button" id="play-btn">▶</div>
+            <video id="intro-video" controls class="w-100" style="display: none; border-radius: 10px;">
+                <source src="crime-platform-intro.mp4" type="video/mp4">
+                مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+            </video>
+        </div>
+    </section>
+
+    <!-- Description Section -->
     <section class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="text-danger">پلتفرم پرونده جنایی</h1>
-                <p class="lead">اولین پلتفرم تعاملی برای حل پرونده‌های جنایی! خودت را در نقش یک کارآگاه تصور کن و سرنخ‌ها را برای کشف حقیقت دنبال کن.</p>
-                <ul class="list-unstyled">
-                    <li>🔍 بررسی مدارک و شواهد واقعی</li>
-                    <li>🎭 کاراکترهای زنده و داستان‌های جذاب</li>
-                    <li>🕵️‍♂️ تجربه‌ای منحصر به فرد از حل معما</li>
-                </ul>
-                <a href="https://crimeplatform.com" class="btn btn-danger btn-lg mt-3">شروع ماجراجویی</a>
+        <h2>📝 درباره پلتفرم</h2>
+        <p class="lead">پلتفرم پرونده جنایی یک تجربه منحصربه‌فرد است که شما را در نقش یک کارآگاه حرفه‌ای قرار می‌دهد. با حل معماها، بررسی مدارک و بازجویی از مظنونین، مهارت‌های خود را در حل پرونده‌های جنایی به چالش بکشید.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container my-5 text-center">
+        <h2>🔎 ویژگی‌های کلیدی</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box shadow-sm">
+                    <h4>ژانر</h4>
+                    <p>ماجراجویی، معمایی، جنایی</p>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="crime-platform.jpg" alt="پلتفرم پرونده جنایی" class="img-fluid rounded shadow">
+            <div class="col-md-4">
+                <div class="feature-box shadow-sm">
+                    <h4>سال ساخت</h4>
+                    <p>۲۰۲۵</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box shadow-sm">
+                    <h4>مکانیزم بازی</h4>
+                    <p>حل معماها، بازجویی و تحلیل مدارک</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- CTA Section -->
     <section class="container my-5 text-center">
-        <h2>🔴 تماشا کنید</h2>
-        <p>ویدیوی معرفی پلتفرم ما را ببینید و وارد دنیای معماها شوید.</p>
-        <video controls class="w-75 rounded shadow">
-            <source src="crime-platform-intro.mp4" type="video/mp4">
-            مرورگر شما از این فرمت پشتیبانی نمی‌کند.
-        </video>
+        <h2>🚀 آماده حل پرونده‌ها هستید؟</h2>
+        <a href="https://crimeplatform.com" class="btn btn-danger btn-lg btn-custom">شروع ماجراجویی</a>
     </section>
 
     <script>
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('light-mode');
+        document.getElementById('play-btn').addEventListener('click', function() {
+            document.getElementById('video-thumbnail').style.display = 'none';
+            document.getElementById('play-btn').style.display = 'none';
+            document.getElementById('intro-video').style.display = 'block';
+            document.getElementById('intro-video').play();
         });
     </script>
-
 {% endblock %}
 
 {% block footer %}
