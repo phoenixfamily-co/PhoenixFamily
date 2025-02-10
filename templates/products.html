@@ -41,32 +41,41 @@
 
 
 {% block content %}
-    <!-- Hero Section -->
-    <header class="hero text-center text-white">
-        <div class="container">
-            <h1>🔍 وارد دنیای معما شو!</h1>
-            <p>اولین پلتفرم پرونده‌های جنایی تعاملی، تجربه‌ای متفاوت از حل معما!</p>
-            <a href="https://crime.phoenixfamily.co" class="btn btn-lg">شروع ماجراجویی</a>
-        </div>
-    </header>
-
-    <!-- Features Section -->
-    <section id="features" class="container text-center my-5">
-        <h2>ویژگی‌های کلیدی</h2>
-        <div class="row mt-4">
-            <div class="col-md-4"><h4>🎭 شخصیت‌های واقعی</h4></div>
-            <div class="col-md-4"><h4>🕵️ تجربه کارآگاهی</h4></div>
-            <div class="col-md-4"><h4>📜 پرونده‌های متنوع</h4></div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-light py-5">
-        <div class="container text-center">
-            <h2>درباره پلتفرم</h2>
-            <p>این محصول توسط PhoenixFamily طراحی شده و اولین تجربه ما در دنیای سرگرمی تعاملی است.</p>
+    <!-- Product Section -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="text-danger">پلتفرم پرونده جنایی</h1>
+                <p class="lead">اولین پلتفرم تعاملی برای حل پرونده‌های جنایی! خودت را در نقش یک کارآگاه تصور کن و سرنخ‌ها را برای کشف حقیقت دنبال کن.</p>
+                <ul class="list-unstyled">
+                    <li>🔍 بررسی مدارک و شواهد واقعی</li>
+                    <li>🎭 کاراکترهای زنده و داستان‌های جذاب</li>
+                    <li>🕵️‍♂️ تجربه‌ای منحصر به فرد از حل معما</li>
+                </ul>
+                <a href="https://crimeplatform.com" class="btn btn-danger btn-lg mt-3">شروع ماجراجویی</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="crime-platform.jpg" alt="پلتفرم پرونده جنایی" class="img-fluid rounded shadow">
+            </div>
         </div>
     </section>
+
+    <!-- Video Section -->
+    <section class="container my-5 text-center">
+        <h2>🔴 تماشا کنید</h2>
+        <p>ویدیوی معرفی پلتفرم ما را ببینید و وارد دنیای معماها شوید.</p>
+        <video controls class="w-75 rounded shadow">
+            <source src="crime-platform-intro.mp4" type="video/mp4">
+            مرورگر شما از این فرمت پشتیبانی نمی‌کند.
+        </video>
+    </section>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
 
 {% endblock %}
 
