@@ -616,7 +616,7 @@ textarea::placeholder {
 
 
 .hero-container {
-    position: relative;
+    position: absolute;
     width: 100%;
     max-width: 700px; /* ثابت نگه داشتن عرض */
     height: 100%; /* هم‌اندازه شدن با کارت کناری */
