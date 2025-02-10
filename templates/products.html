@@ -50,7 +50,7 @@
                 <div class="hero-container">
                     <!-- تصویر پیش‌نمایش -->
                     <img id="video-thumbnail" src="{{ Item.image.url }}" alt="{{ Item.title }}"
-                         class="video-thumbnail">
+                         class="hero-video-thumbnail">
 
                     <!-- دکمه پلی -->
                     <button id="play-btn" class="play-button">
@@ -58,7 +58,7 @@
                     </button>
 
                     <!-- ویدیو -->
-                    <video id="brand-video" class="brand-video" width="100%">
+                    <video id="brand-video" class="hero-video">
                         <source src="{{ Item.video.url }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
