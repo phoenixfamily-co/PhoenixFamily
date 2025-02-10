@@ -613,3 +613,12 @@ textarea::placeholder {
 .text-danger{
     color: var(--btn-bg)!important;
 }
+
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* عرض ثابت برای ویدیو */
+    overflow: hidden;
+    border-radius: 10px;
+}
