@@ -49,7 +49,7 @@
             <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
                 <div class="video-container">
                     <!-- تصویر پیش‌نمایش -->
-                    <img id="video-thumbnail" src="{{ About.image.url }}" alt="{{ about.alt }}"
+                    <img id="video-thumbnail" src="{{ Item.image.url }}" alt="{{ Item.title }}"
                          class="video-thumbnail">
 
                     <!-- دکمه پلی -->
@@ -59,7 +59,7 @@
 
                     <!-- ویدیو -->
                     <video id="brand-video" class="brand-video" width="100%">
-                        <source src="{{ About.video.url }}" type="video/mp4">
+                        <source src="{{ Item.video.url }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
 
@@ -98,8 +98,8 @@
 
     <!-- CTA Section -->
     <section class="container my-5 text-center">
-        <h2>🚀 آماده حل پرونده‌ها هستید؟</h2>
-        <a href="https://crimeplatform.com" class="btn btn-lg">شروع ماجراجویی</a>
+        <h2>{% trans 'Are you ready to start?' %}</h2>
+        <a href="https://crimeplatform.com" class="btn btn-lg">{% trans 'Go to Crime' %}</a>
     </section>
 
 
