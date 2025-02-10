@@ -70,12 +70,13 @@
             <!-- متن با افکت Glassmorphism -->
             <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                 <div class="card p-4 rounded shadow glass-card">
-                    <h2 class="display-6 fw-bold section-title">{% trans About.alt %}</h2>
+                    <h2 class="display-6 fw-bold section-title">{% trans Item.title %}</h2>
                     <p class="lead">
-                        {% trans About.context %}
+                        {% trans Item.description %}
                     </p>
-                    <a href="{% url 'contact:contact-view' %}"
-                       class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
+                    <hr style="height: 2px">
+                    <h3 style="margin-bottom: 10px">Key Features:</h3>
+
                 </div>
             </div>
         </div>
