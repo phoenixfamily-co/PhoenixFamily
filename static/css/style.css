@@ -618,6 +618,8 @@ textarea::placeholder {
 .hero-container {
     position: relative;
     width: 100%;
+    height: auto; /* هم‌ارتفاع شدن با محتوا */
+    min-height: 400px; /* حداقل ارتفاع */
     border-radius: 10px;
     overflow: hidden;
 }
