@@ -46,7 +46,7 @@ msgstr ""
 
 #: .\PhoenixFamily\settings.py:117
 msgid "creative entertainment"
-msgstr ""
+msgstr "سرگرمی خودت رو بساز"
 
 #: .\PhoenixFamily\settings.py:118
 msgid "website builder"
