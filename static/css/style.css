@@ -79,42 +79,42 @@ body.dark-mode {
 
 /* تغییر رنگ حاشیه و سایه انتخاب شده */
 select.form-select:focus {
-    border-color: #D32F2F !important; /* قرمز رنگ لوگو */
+    border-color: var(--navbar-border) !important; /* قرمز رنگ لوگو */
     box-shadow: 0 0 0 0.25rem rgba(211, 47, 47, 0.5) !important; /* قرمز با شفافیت */
 }
 
 /* تغییر رنگ هاور برای گزینه‌ها */
 select.form-select option:hover {
-    background-color: #FF6659 !important; /* قرمز روشن */
-    color: #fff !important; /* متن سفید */
+    background-color: var(--navbar-border) !important; /* قرمز روشن */
+    color: var(--text-color) !important; /* متن سفید */
 }
 
 /* تغییر رنگ سوییچ به رنگ قرمز */
 .form-check-input {
     background-color: #EBEBE4; /* رنگ دایره در حالت فعال */
-    border-color: #d32f2f !important; /* رنگ مرز (قرمز لوگو) */
-    box-shadow: 0 0 1px #d32f2f; /* سایه دور سوییچ */
+    border-color: var(--navbar-border)  !important; /* رنگ مرز (قرمز لوگو) */
+    box-shadow: 0 0 1px var(--navbar-border) ; /* سایه دور سوییچ */
     transition: all 0.3s ease-in-out; /* انیمیشن تغییر */
 }
 
 /* تغییر رنگ هنگام فعال بودن (روشن) */
 .form-check-input:checked {
-    background-color: #d32f2f; /* رنگ دایره در حالت فعال */
-    border-color: #d32f2f;
-    box-shadow: 0 0 1px #d32f2f; /* سایه بیشتر برای حالت روشن */
+    background-color: var(--navbar-border) ; /* رنگ دایره در حالت فعال */
+    border-color: var(--navbar-border) ;
+    box-shadow: 0 0 1px var(--navbar-border) ; /* سایه بیشتر برای حالت روشن */
 }
 
 
 /* تغییر سایه و استایل هنگام فوکوس */
 .form-check-input:focus {
-    box-shadow: 0 0 1px #ff0000; /* سایه هنگام فوکوس */
-    border-color: #d32f2f;
+    box-shadow: 0 0 1px var(--navbar-border) ; /* سایه هنگام فوکوس */
+    border-color: var(--navbar-border) ;
 
 }
 
 .form-check-input:checked:focus {
-    box-shadow: 0 0 1px #ff0000; /* سایه هنگام فوکوس */
-    border-color: #d32f2f;
+    box-shadow: 0 0 1px var(--navbar-border) ; /* سایه هنگام فوکوس */
+    border-color: var(--navbar-border) ;
 }
 
 .nav-item.align-items-center {
@@ -343,7 +343,7 @@ section a:hover {
 }
 
 .card-body {
-    background-color: white;!important;
+    background-color: var(--navbar-bg) ;!important;
     color: var(--text-color) !important;
 }
 
