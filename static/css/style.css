@@ -406,6 +406,7 @@ section a:hover {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    z-index: 10!important;
 }
 
 .play-button:hover {
