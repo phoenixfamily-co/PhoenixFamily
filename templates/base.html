@@ -17,22 +17,6 @@
 
     </style>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const themeSwitch = document.getElementById("theme-switch");
-          const isDark = localStorage.getItem("theme") === "dark";
-
-          document.documentElement.classList.toggle("dark-mode", isDark);
-          themeSwitch.checked = isDark;
-
-          themeSwitch.addEventListener("change", function () {
-              document.documentElement.classList.toggle("dark-mode", this.checked);
-              localStorage.setItem("theme", this.checked ? "dark" : "light");
-          });
-      });
-
-    </script>
-
 </head>
 <body>
 
@@ -96,6 +80,24 @@
                     </div>
                 </div>
     </footer>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const themeSwitch = document.getElementById("theme-switch");
+          const isDark = localStorage.getItem("theme") === "dark";
+
+          document.documentElement.classList.toggle("dark-mode", isDark);
+          themeSwitch.checked = isDark;
+
+          themeSwitch.addEventListener("change", function () {
+              document.documentElement.classList.toggle("dark-mode", this.checked);
+              localStorage.setItem("theme", this.checked ? "dark" : "light");
+          });
+      });
+
+    </script>
+
 </body>
 
 </html>
