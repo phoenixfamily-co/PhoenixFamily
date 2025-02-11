@@ -49,7 +49,7 @@ body.dark-mode {
 }
 
 
-.text-muted{
+.text-mute{
     color: var(--text-color-muted) !important;
 }
 .navbar {
