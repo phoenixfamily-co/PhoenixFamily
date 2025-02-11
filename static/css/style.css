@@ -367,7 +367,7 @@ section a:hover {
 
 .glass-card {
     position: relative;
-    background-color: var(--navbar-bg);
+    background-color: var(--navbar-bg)!important;
     backdrop-filter: blur(15x);
     -webkit-backdrop-filter: blur(20px); /* پشتیبانی از سافاری */
     border-radius: 15px;
