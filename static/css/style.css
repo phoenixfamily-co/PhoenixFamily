@@ -616,9 +616,11 @@ textarea::placeholder {
 
 
 .hero-container {
-    position: relative;
+    display: flex;
+    align-items: stretch; /* المان‌ها را هم‌ارتفاع می‌کند */
+    justify-content: center;
     width: 100%;
-    height: 100%; /* هم‌ارتفاع شدن با محتوا */
+    max-height: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -627,9 +629,6 @@ textarea::placeholder {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 
