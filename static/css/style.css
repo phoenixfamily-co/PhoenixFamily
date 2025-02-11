@@ -608,7 +608,7 @@ textarea::placeholder {
 }
 
 .vision-card {
-    background: var(--navbar-bg) ;
+    background: var(--navbar-bg) !important ;
     scroll-snap-align: center; /* مرکز چین شدن کارت‌ها */
     transition: transform 0.3s ease-in-out; /* انیمیشن برای حس بهتر */
     flex: 0 0 80%; /* هر کارت دقیقاً اندازه کل عرض صفحه */
