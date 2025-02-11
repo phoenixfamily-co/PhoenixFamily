@@ -65,7 +65,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',    # for get device info (User/Views)
-
 ]
 
 ROOT_URLCONF = 'PhoenixFamily.urls'
@@ -185,7 +184,7 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale/',
+    os.path.join(BASE_DIR, 'locale'),
 ]
 
 TIME_ZONE = 'UTC'
