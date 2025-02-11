@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'rest_framework',
     'django_user_agents',       # helper package that allow to work with User/views
-    'modeltranslation',
     'Home',
     'About',
     'Blog',
