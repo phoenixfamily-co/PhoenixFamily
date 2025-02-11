@@ -50,7 +50,7 @@ body.dark-mode {
 
 
 .text-muted{
-    color: var(--text-color-muted);
+    color: var(--text-color-muted) !important;
 }
 .navbar {
     background-color: var(--navbar-bg);
