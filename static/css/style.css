@@ -388,10 +388,6 @@ section a:hover {
     border-radius: 10px;
 }
 
-.brand-video {
-    display: none;
-}
-
 .play-button {
     position: absolute;
     top: 50%;
