@@ -48,11 +48,10 @@
     <!-- ویدیو -->
     <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
         <div class="hero-container">
-            <img id="video-thumbnail" src="{{ Item.image.url }}" alt="{{ Item.title }}" class="hero-video-thumbnail">
             <button id="play-btn" class="play-button">
                 <i class="fa-solid fa-play" style="color: #ffffff;"></i>
             </button>
-            <video id="brand-video" class="hero-video" width="100%">
+            <video id="brand-video" class="hero-video" poster="{{ Item.image.url }}" width="100%">
                 <source src="{{ Item.video.url }}" type="video/mp4">
                 {% trans 'Your browser does not support this format.' %}
             </video>
