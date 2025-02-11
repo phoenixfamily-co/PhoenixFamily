@@ -435,7 +435,7 @@ section a:hover {
 
 .value-card {
     position: relative;
-    background: white;
+    background: var(--navbar-bg) ;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -481,7 +481,7 @@ form .form-control:focus {
 }
 
 .form-select {
-    background-color: #1e1e1e !important;
+    background: var(--navbar-bg) !important ;
     color: var(--text-color);
 }
 
@@ -608,6 +608,7 @@ textarea::placeholder {
 }
 
 .vision-card {
+    background: var(--navbar-bg) ;
     scroll-snap-align: center; /* مرکز چین شدن کارت‌ها */
     transition: transform 0.3s ease-in-out; /* انیمیشن برای حس بهتر */
     flex: 0 0 80%; /* هر کارت دقیقاً اندازه کل عرض صفحه */
