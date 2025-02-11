@@ -44,21 +44,17 @@
 
     <section class="section container py-5">
 
-        <div class="row align-items-center">
+        <div class="row align-items-center align-items-stretch">
             <!-- ویدیو -->
             <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
                 <div class="video-container">
-                    <!-- تصویر پیش‌نمایش -->
-                    <img id="video-thumbnail" src="{{ About.image.url }}" alt="{{ about.alt }}"
-                         class="video-thumbnail">
-
                     <!-- دکمه پلی -->
                     <button id="play-btn" class="play-button">
                         <i class="fa-solid fa-play" style="color: #ffffff;"></i>
                     </button>
 
                     <!-- ویدیو -->
-                    <video id="brand-video" class="brand-video" width="100%">
+                    <video id="brand-video" poster="{{ About.image.url }}" class="brand-video" width="100%">
                         <source src="{{ About.video.url }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
@@ -85,14 +81,11 @@
     <script>
         document.getElementById("play-btn").addEventListener("click", function () {
             let video = document.getElementById("brand-video");
-            let thumbnail = document.getElementById("video-thumbnail");
 
             video.style.display = "block";  // نمایش ویدیو
             video.controls = true;          // فعال کردن کنترل‌های ویدیو
             video.play();                   // اجرای ویدیو
 
-            thumbnail.style.display = "none"; // پنهان کردن تصویر پیش‌نمایش
-            this.style.display = "none";      // مخفی کردن دکمه پلی
         });
 
     </script>
