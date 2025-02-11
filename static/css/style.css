@@ -60,7 +60,7 @@ body.dark-mode {
 }
 
 .nav-link:hover {
-    color: var(--nav-link-hover);
+    color: var(--nav-link-hover) !important;
 }
 
 .nav-link.active {
