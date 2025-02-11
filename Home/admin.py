@@ -1,3 +1,10 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
+from .models import Content, Vision, Features
 
-# Register your models here.
+
+class ContentAdmin(TranslationAdmin):
+    list_display = ('title','description')
+
+
+admin.site.register(Content, ContentAdmin)
