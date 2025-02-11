@@ -46,7 +46,7 @@ msgstr ""
 
 #: .\PhoenixFamily\settings.py:117
 msgid "creative entertainment"
-msgstr "سرگرمی خودت رو بساز"
+msgstr "سرگرمی خلاق"
 
 #: .\PhoenixFamily\settings.py:118
 msgid "website builder"
@@ -72,13 +72,13 @@ msgstr ""
 #: .\templates\blogs.html:53 .\templates\contact.html:38
 #: .\templates\home.html:39 .\templates\products.html:38
 msgid "About Us"
-msgstr ""
+msgstr "درباره ما"
 
 #: .\templates\about.html:18 .\templates\blogs.html:34
 #: .\templates\contact.html:16 .\templates\home.html:17
 #: .\templates\products.html:17
 msgid "Logo"
-msgstr ""
+msgstr "لوگو"
 
 #: .\templates\about.html:20 .\templates\blogs.html:36
 #: .\templates\contact.html:19 .\templates\home.html:20
@@ -90,13 +90,13 @@ msgstr ""
 #: .\templates\contact.html:24 .\templates\home.html:25
 #: .\templates\products.html:25
 msgid "Home"
-msgstr ""
+msgstr "خانه"
 
 #: .\templates\about.html:28 .\templates\blogs.html:44
 #: .\templates\contact.html:28 .\templates\home.html:29
 #: .\templates\products.html:28
 msgid "Products"
-msgstr ""
+msgstr "محصولات"
 
 #: .\templates\about.html:35 .\templates\about.html:97
 #: .\templates\blogs.html:51 .\templates\blogs.html:157
@@ -104,17 +104,17 @@ msgstr ""
 #: .\templates\home.html:37 .\templates\home.html:263
 #: .\templates\products.html:36 .\templates\products.html:120
 msgid "Contact Us"
-msgstr ""
+msgstr "ارتباط با ما"
 
 #: .\templates\about.html:38 .\templates\blogs.html:54
 #: .\templates\contact.html:39 .\templates\home.html:40
 #: .\templates\products.html:39
 msgid "Blogs"
-msgstr ""
+msgstr "مقالات"
 
 #: .\templates\about.html:58
 msgid "FAQ"
-msgstr ""
+msgstr "سوالات"
 
 #: .\templates\about.html:60
 msgid "Find answers to the most frequently asked questions below."
@@ -136,11 +136,11 @@ msgstr ""
 #: .\templates\contact.html:161 .\templates\home.html:274
 #: .\templates\products.html:131
 msgid "Follow Us"
-msgstr ""
+msgstr "دنبال کردن ما"
 
 #: .\templates\base.html:82
 msgid "All rights reserved."
-msgstr ""
+msgstr "همه ی حقوق رزرو شده"
 
 #: .\templates\blogs.html:65
 msgid "Search"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: .\templates\contact.html:53
 msgid "Get in Touch! 🎉"
-msgstr ""
+msgstr "ارتباط بگیرید"
 
 #: .\templates\contact.html:55
 msgid ""
@@ -158,19 +158,19 @@ msgstr ""
 
 #: .\templates\contact.html:62
 msgid "Telegram"
-msgstr ""
+msgstr "تلگرام"
 
 #: .\templates\contact.html:64
 msgid "Whatsapp"
-msgstr ""
+msgstr "واتس اپ"
 
 #: .\templates\contact.html:67
 msgid "Instagram"
-msgstr ""
+msgstr "اینستاگرام"
 
 #: .\templates\contact.html:68
 msgid "Linkdin"
-msgstr ""
+msgstr "لینکدین"
 
 #: .\templates\contact.html:71
 msgid ""
@@ -208,15 +208,15 @@ msgstr ""
 
 #: .\templates\home.html:77
 msgid "Create Your Entertainment"
-msgstr ""
+msgstr "سرگرمی خودت رو بساز"
 
 #: .\templates\home.html:100
 msgid "Crime Cases Platform"
-msgstr ""
+msgstr "سکوی پرونده های جنایی"
 
 #: .\templates\home.html:103 .\templates\products.html:94
 msgid "Go to Crime"
-msgstr ""
+msgstr "برو به جنایت"
 
 #: .\templates\home.html:107
 msgid ""
