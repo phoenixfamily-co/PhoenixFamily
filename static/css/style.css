@@ -541,7 +541,7 @@ textarea::placeholder {
 
 .case-card {
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: white;
+    background-color: var(--navbar-bg)!important;
     width: 60%; /* تغییر عرض کارت‌ها */
     max-width: 300px; /* حداکثر عرض برای کنترل در صفحه‌های بزرگ */
     color: var(--text-color);
