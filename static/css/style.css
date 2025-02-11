@@ -74,8 +74,8 @@ body.dark-mode {
 }
 
 .form-select {
-    background-color: var(--navbar-bg);
-    color: var(--text-color);
+    background-color: var(--navbar-bg) !important;
+    color: var(--text-color) !important;
     border: 1px solid var(--navbar-border);
     direction: ltr !important;
 }
