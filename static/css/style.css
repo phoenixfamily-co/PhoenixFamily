@@ -55,7 +55,7 @@ body.dark-mode {
 }
 
 .nav-link {
-    color: var(--nav-link-color);
+    color: var(--nav-link-color)!important;
     transition: color 0.3s ease;
 }
 
