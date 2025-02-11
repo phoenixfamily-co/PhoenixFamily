@@ -100,6 +100,8 @@
             document.documentElement.classList.toggle("dark-mode", this.checked);
             localStorage.setItem("theme", this.checked ? "dark" : "light");
         });
+
+        console.log(localStorage.getItem("theme"));
     });
 </script>
 
