@@ -182,6 +182,8 @@ LANGUAGES = [
     ('ru', 'Русский'),
     ('hi', 'हिन्दी'),
     ('zh', '中文'),
+    ('ja', 'Japanese'),
+    ('ko', 'Korean'),
 ]
 
 LOCALE_PATHS = [
