@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'Contact',
     'Product',
     'User',
+    'Authentication',
 
 ]
 
