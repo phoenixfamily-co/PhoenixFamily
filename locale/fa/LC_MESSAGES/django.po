@@ -31,7 +31,7 @@ msgstr ""
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
-msgstr "فینیکس فامیلی"
+msgstr "خانواده ققنوس"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "Realizing Ideas"
@@ -59,11 +59,11 @@ msgstr "سازنده وب"
 
 #: .\PhoenixFamily\settings.py:120
 msgid "application builder"
-msgstr "سازنده اپلیکیشن"
+msgstr "طراحی اپلیکیشن"
 
 #: .\PhoenixFamily\settings.py:121
 msgid "app builder"
-msgstr "سازنده اپلیکیشن"
+msgstr "طراحی اپ"
 
 #: .\PhoenixFamily\settings.py:122
 msgid "entertainment platform"
@@ -85,7 +85,7 @@ msgstr "لوگو"
 #: .\templates\contact.html:19 .\templates\home.html:20
 #: .\templates\products.html:20
 msgid "Toggle navigation"
-msgstr "ناوبری را تغییر بده"
+msgstr "تغییر ناوبری"
 
 #: .\templates\about.html:25 .\templates\blogs.html:41
 #: .\templates\contact.html:24 .\templates\home.html:25
@@ -183,11 +183,11 @@ msgstr ""
 
 #: .\templates\contact.html:74
 msgid "We’re Looking Forward to Hearing from You! 💬"
-msgstr "بی‌صبرانه منتظر شنیدن از شما هستیم! 💬"
+msgstr "بی‌صبرانه منتظر شنیدن از طرف شما هستیم! 💬"
 
 #: .\templates\contact.html:76
 msgid "Write to us and let the magic of entertainment amaze you! 🌟"
-msgstr "برای ما بنویسید و بگذارید جادوی سرگرمی شما را شگفت‌زده کند! 🌟"
+msgstr "برای ما بنویسید و بزارید جادوی سرگرمی شما رو شگفت‌زده کند! 🌟"
 
 #: .\templates\contact.html:85
 msgid "Name"
@@ -211,7 +211,7 @@ msgstr "مرورگر شما از این فرمت پشتیبانی نمی‌کن�
 
 #: .\templates\home.html:77
 msgid "Create Your Entertainment"
-msgstr "سرگرمی خود را بسازید"
+msgstr "سرگرمی خودت رو بساز"
 
 #: .\templates\home.html:100
 msgid "Crime Cases Platform"
@@ -219,7 +219,7 @@ msgstr "پلتفرم پرونده‌های جنایی"
 
 #: .\templates\home.html:103 .\templates\products.html:94
 msgid "Go to Crime"
-msgstr "برو به پرونده‌های جنایی"
+msgstr "برو به جنایت"
 
 #: .\templates\home.html:107
 msgid ""
@@ -258,7 +258,7 @@ msgstr "ویژگی‌هایی که ما را از دیگران متمایز می
 
 #: .\templates\home.html:218
 msgid "Verify Idea"
-msgstr "ایده را تأیید کنید"
+msgstr "خلق ایده"
 
 #: .\templates\home.html:229
 msgid "PhoenixFamily Vision"
