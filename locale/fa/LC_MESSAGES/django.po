@@ -31,11 +31,11 @@ msgstr ""
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
-msgstr "فینیکس فامیلی"
+msgstr "خانواده ققنوس"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "Realizing Ideas"
-msgstr "تحقق ایده‌ها"
+msgstr "پیاده سازی ایده"
 
 #: .\PhoenixFamily\settings.py:115
 msgid "bringing Ideas to life"
@@ -51,19 +51,19 @@ msgstr "سرگرمی خلاق"
 
 #: .\PhoenixFamily\settings.py:118
 msgid "website builder"
-msgstr "سازنده وب‌سایت"
+msgstr "طراحی وب‌سایت"
 
 #: .\PhoenixFamily\settings.py:119
 msgid "web builder"
-msgstr "سازنده وب"
+msgstr "طراحی سایت"
 
 #: .\PhoenixFamily\settings.py:120
 msgid "application builder"
-msgstr "سازنده اپلیکیشن"
+msgstr "طراحی اپلیکیشن"
 
 #: .\PhoenixFamily\settings.py:121
 msgid "app builder"
-msgstr "سازنده اپلیکیشن"
+msgstr "طراحی اپ"
 
 #: .\PhoenixFamily\settings.py:122
 msgid "entertainment platform"
