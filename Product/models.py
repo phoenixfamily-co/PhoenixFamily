@@ -11,6 +11,7 @@ class Product(models.Model):
     image = models.FileField(upload_to='images/', null=True)
     video = models.FileField(upload_to='videos/', null=True)
     address = models.URLField(verbose_name="ادرس", blank=True, null=True)
+    header = models.TextField(null=True, blank=True)
     content = models.TextField(null=True, blank=True)
 
 
