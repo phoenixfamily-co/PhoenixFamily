@@ -177,13 +177,13 @@ LANGUAGE_CODE = 'en'
 LANGUAGES = [
     ('en', _('English')),
     ('fa', _('Persian')),
-    ('fr', _('French')),
     ('ar', _('Arabic')),
-    ('ru', _('Russian')),
-    ('zh-hans', _('Chinese (Simplified)')),
-    ('ko', _('Korean')),
-    ('hi', _('Hindi')),
     ('tr', _('Turkish')),
+    ('ru', _('Russian')),
+    ('hi', _('Hindi')),
+    ('zh-hans', _('Chinese (Simplified)')),
+    ('ja', _('Japanese')),
+    ('ko', _('Korean')),
 ]
 
 LOCALE_PATHS = [
