@@ -175,15 +175,15 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
-    ('en', 'English'),
-    ('fa', 'فارسی'),
-    ('ar', 'العربية'),
-    ('tr', 'Türkçe'),
-    ('ru', 'Русский'),
-    ('hi', 'हिन्दी'),
-    ('zh-Hans', '中文'),
-    ('ja', 'Japanese'),
-    ('ko', 'Korean'),
+    ('en', _('English')),
+    ('fa', _('Persian')),
+    ('fr', _('French')),
+    ('ar', _('Arabic')),
+    ('ru', _('Russian')),
+    ('zh-hans', _('Chinese (Simplified)')),
+    ('ko', _('Korean')),
+    ('hi', _('Hindi')),
+    ('tr', _('Turkish')),
 ]
 
 LOCALE_PATHS = [
