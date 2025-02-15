@@ -181,7 +181,7 @@ LANGUAGES = [
     ('tr', 'Türkçe'),
     ('ru', 'Русский'),
     ('hi', 'हिन्दी'),
-    ('zh', '中文'),
+    ('zh-Hans', '中文'),
     ('ja', 'Japanese'),
     ('ko', 'Korean'),
 ]
