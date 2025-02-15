@@ -43,19 +43,15 @@
                     <label>
                         <select name="language" class="form-select form-select-sm d-inline w-auto"
                                 onchange="this.form.submit()">
-                            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                            <option value="fa" class="option-rtl" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>
-                                فارسی
-                            </option>
-                            <option value="ar" class="option-rtl" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>
-                                العربیة
-                            </option>
-                            <option value="tr" {% if LANGUAGE_CODE == 'tr' %}selected{% endif %}>Türkçe</option>
-                            <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>Русский</option>
-                            <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
-                            <option value="zh-hans" {% if LANGUAGE_CODE == 'zh' %}selected{% endif %}>中文</option>
-                            <option value="ko" {% if LANGUAGE_CODE == 'ko' %}selected{% endif %}>한국어</option>
-                            <option value="ja" {% if LANGUAGE_CODE == 'ja' %}selected{% endif %}>日本語</option>
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
                         </select>
                     </label>
 
