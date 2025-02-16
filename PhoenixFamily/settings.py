@@ -178,7 +178,7 @@ LANGUAGES = [
     ('tr', _('Turkish')),
     ('ru', _('Russian')),
     ('hi', _('Hindi')),
-    ('zh', _('Chinese')),
+    ('zh-hans', _('Chinese (Simplified)')),
     ('ja', _('Japanese')),
     ('ko', _('Korean')),
 ]
