@@ -22,7 +22,6 @@ SITE_NAME = 'PhoenixFamily'
 
 SITE_ID = 1
 
-
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
@@ -45,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',  # برای ساخت Sitemap
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'rest_framework',
-    'django_user_agents',       # helper package that allow to work with User/views
+    'django_user_agents',  # helper package that allow to work with User/views
     'Home',
     'About',
     'Blog',
@@ -65,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django_user_agents.middleware.UserAgentMiddleware',    # for get device info (User/Views)
+    'django_user_agents.middleware.UserAgentMiddleware',  # for get device info (User/Views)
 ]
 
 ROOT_URLCONF = 'PhoenixFamily.urls'
@@ -96,10 +95,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'phoenixf_PhoenixFamily',  # نام دیتابیس
-        'USER': 'phoenixf_db',       # نام کاربری دیتابیس
-        'PASSWORD': 'Y^R+cB{MA1n%',   # رمز عبور دیتابیس
-        'HOST': 'localhost',           # آدرس سرور MySQL (یا آدرس دلخواه)
-        'PORT': '3306',                # پورت MySQL (پورت پیش‌فرض: 3306)
+        'USER': 'phoenixf_db',  # نام کاربری دیتابیس
+        'PASSWORD': 'Y^R+cB{MA1n%',  # رمز عبور دیتابیس
+        'HOST': 'localhost',  # آدرس سرور MySQL (یا آدرس دلخواه)
+        'PORT': '3306',  # پورت MySQL (پورت پیش‌فرض: 3306)
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
@@ -170,7 +169,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 
 
 LANGUAGES = [
