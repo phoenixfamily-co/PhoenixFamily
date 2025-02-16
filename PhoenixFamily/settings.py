@@ -171,6 +171,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 
+LANGUAGE_CODE = 'en'
+
 LANGUAGES = [
     ('en', _('English')),
     ('fa', _('Persian')),
@@ -182,8 +184,6 @@ LANGUAGES = [
     ('ja', _('Japanese')),
     ('ko', _('Korean')),
 ]
-
-LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
