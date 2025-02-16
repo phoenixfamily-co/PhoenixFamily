@@ -8,64 +8,112 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-15 19:30+0330\n"
+"POT-Creation-Date: 2025-02-16 20:37+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: zh\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: .\PhoenixFamily\settings.py:110
+#: .\Blog\views.py:53
+msgid "Discover Insights, Stories, and Innovations."
+msgstr ""
+
+#: .\Blog\views.py:57
+msgid "phoenixfamily, blog, post, article, Insights, Stories, Innovations "
+msgstr ""
+
+#: .\Blog\views.py:60
+msgid "blogs"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:109
 msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:111
+#: .\PhoenixFamily\settings.py:110
 msgid ""
 "PhoenixFamily provides tools for realizing creative ideas and delivering "
 "unique entertainment products."
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:114
+#: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:115
+#: .\PhoenixFamily\settings.py:114
 msgid "Realizing Ideas"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:116
+#: .\PhoenixFamily\settings.py:115
 msgid "bringing Ideas to life"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:117
+#: .\PhoenixFamily\settings.py:116
 msgid "unique entertainment"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:118
+#: .\PhoenixFamily\settings.py:117
 msgid "creative entertainment"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:119
+#: .\PhoenixFamily\settings.py:118
 msgid "website builder"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:120
+#: .\PhoenixFamily\settings.py:119
 msgid "web builder"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:121
+#: .\PhoenixFamily\settings.py:120
 msgid "application builder"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:122
+#: .\PhoenixFamily\settings.py:121
 msgid "app builder"
 msgstr ""
 
-#: .\PhoenixFamily\settings.py:123
+#: .\PhoenixFamily\settings.py:122
 msgid "entertainment platform"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:175
+msgid "English"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:176
+msgid "Persian"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:177
+msgid "Arabic"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:178
+msgid "Turkish"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:179
+msgid "Russian"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:180
+msgid "Hindi"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:181
+msgid "Chinese"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:182
+msgid "Japanese"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:183
+msgid "Korean"
 msgstr ""
 
 #: .\templates\about.html:10 .\templates\about.html:37
@@ -138,7 +186,7 @@ msgstr ""
 msgid "Follow Us"
 msgstr ""
 
-#: .\templates\base.html:85
+#: .\templates\base.html:80
 msgid "All rights reserved."
 msgstr ""
 
