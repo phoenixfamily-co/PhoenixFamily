@@ -151,7 +151,7 @@ msgstr "Свяжитесь с нами! 🎉"
 
 #: .\templates\contact.html:55
 msgid ""
-" Got an exciting idea for collaboration? Or maybe a question you can’t wait "
+"Got an exciting idea for collaboration? Or maybe a question you can’t wait "
 "to get an answer to? We are here and ready to connect with you!"
 msgstr "Есть захватывающая идея для сотрудничества? Или вопрос, на который вы ждете ответа? Мы здесь и готовы связаться с вами!"
 

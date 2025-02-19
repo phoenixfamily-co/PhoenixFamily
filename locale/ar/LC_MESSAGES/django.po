@@ -135,9 +135,10 @@ msgid "Get in Touch! 🎉"
 msgstr "تواصل معنا! 🎉"
 
 msgid ""
-" Got an exciting idea for collaboration? Or maybe a question you can’t wait "
+"Got an exciting idea for collaboration? Or maybe a question you can’t wait "
 "to get an answer to? We are here and ready to connect with you!"
 msgstr "هل لديك فكرة رائعة للتعاون؟ أو ربما سؤال لا يمكنك الانتظار للحصول على إجابة عليه؟ نحن هنا وجاهزون للتواصل معك!"
+
 
 msgid "Telegram"
 msgstr "تيليجرام"
