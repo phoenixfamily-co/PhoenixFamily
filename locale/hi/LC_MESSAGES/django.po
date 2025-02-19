@@ -100,7 +100,9 @@ msgstr "खोजें"
 msgid "Get in Touch! 🎉"
 msgstr "संपर्क करें! 🎉"
 
-msgid "Got an exciting idea for collaboration? Or maybe a question you can’t wait to get an answer to? We are here and ready to connect with you!"
+msgid ""
+" Got an exciting idea for collaboration? Or maybe a question you can’t wait "
+"to get an answer to? We are here and ready to connect with you!"
 msgstr "सहयोग के लिए कोई रोमांचक विचार है? या ऐसा कोई सवाल जिसका जवाब आप तुरंत चाहते हैं? हम यहाँ हैं और आपसे जुड़ने के लिए तैयार हैं!"
 
 msgid "Telegram"
