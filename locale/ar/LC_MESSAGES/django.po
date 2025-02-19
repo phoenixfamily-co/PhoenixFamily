@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-12 01:11+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Abbas Lotfinasab <info@phoenixfamily.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "توفر PhoenixFamily أدوات لتحقيق الأفكار الإبد
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
-msgstr "PhoenixFamily"
+msgstr "عائلة فينيكس"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "Realizing Ideas"
@@ -105,362 +105,243 @@ msgstr "المنتجات"
 #: .\templates\home.html:37 .\templates\home.html:263
 #: .\templates\products.html:36 .\templates\products.html:120
 msgid "Contact Us"
-msgstr ""
+msgstr "اتصل بنا"
 
-#: .\templates\about.html:38 .\templates\blogs.html:54
-#: .\templates\contact.html:39 .\templates\home.html:40
-#: .\templates\products.html:39
 msgid "Blogs"
-msgstr ""
+msgstr "المدونات"
 
-#: .\templates\about.html:58
 msgid "FAQ"
-msgstr ""
+msgstr "الأسئلة الشائعة"
 
-#: .\templates\about.html:60
 msgid "Find answers to the most frequently asked questions below."
-msgstr ""
+msgstr "ابحث عن إجابات للأسئلة الأكثر شيوعًا أدناه."
 
-#: .\templates\about.html:99 .\templates\blogs.html:159
-#: .\templates\contact.html:93 .\templates\contact.html:152
-#: .\templates\home.html:265 .\templates\products.html:122
 msgid "Phone"
-msgstr ""
+msgstr "الهاتف"
 
-#: .\templates\about.html:102 .\templates\blogs.html:162
-#: .\templates\contact.html:89 .\templates\contact.html:155
-#: .\templates\home.html:268 .\templates\products.html:125
 msgid "Email"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
-#: .\templates\about.html:108 .\templates\blogs.html:168
-#: .\templates\contact.html:161 .\templates\home.html:274
-#: .\templates\products.html:131
 msgid "Follow Us"
-msgstr ""
+msgstr "تابعنا"
 
-#: .\templates\base.html:82
 msgid "All rights reserved."
-msgstr ""
+msgstr "جميع الحقوق محفوظة."
 
-#: .\templates\blogs.html:65
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
-#: .\templates\contact.html:53
 msgid "Get in Touch! 🎉"
-msgstr ""
+msgstr "تواصل معنا! 🎉"
 
-#: .\templates\contact.html:55
 msgid ""
 " Got an exciting idea for collaboration? Or maybe a question you can’t wait "
 "to get an answer to? We are here and ready to connect with you!"
 msgstr ""
+"هل لديك فكرة رائعة للتعاون؟ أو ربما سؤال لا يمكنك الانتظار للحصول على إجابة عليه؟ نحن هنا وجاهزون للتواصل معك!"
 
-#: .\templates\contact.html:62
 msgid "Telegram"
-msgstr ""
+msgstr "تيليجرام"
 
-#: .\templates\contact.html:64
 msgid "Whatsapp"
-msgstr ""
+msgstr "واتساب"
 
-#: .\templates\contact.html:67
 msgid "Instagram"
-msgstr ""
+msgstr "إنستجرام"
 
-#: .\templates\contact.html:68
 msgid "Linkdin"
-msgstr ""
+msgstr "لينكدإن"
 
-#: .\templates\contact.html:71
 msgid ""
 "Fill out the form and send us your message. Our team will eagerly get back "
 "to you!"
 msgstr ""
+"املأ النموذج وأرسل لنا رسالتك. سيقوم فريقنا بالرد عليك بحماس!"
 
-#: .\templates\contact.html:74
 msgid "We’re Looking Forward to Hearing from You! 💬"
-msgstr ""
+msgstr "نتطلع إلى سماعك! 💬"
 
-#: .\templates\contact.html:76
 msgid "Write to us and let the magic of entertainment amaze you! 🌟"
-msgstr ""
+msgstr "اكتب إلينا ودع سحر الترفيه يدهشك! 🌟"
 
-#: .\templates\contact.html:85
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
 
-#: .\templates\contact.html:97
 msgid "Message"
-msgstr ""
+msgstr "الرسالة"
 
-#: .\templates\contact.html:101
 msgid "Upload"
-msgstr ""
+msgstr "رفع"
+
 
 #: .\templates\contact.html:104
 msgid "Send"
-msgstr ""
+msgstr "إرسال"
 
-#: .\templates\home.html:62 .\templates\products.html:58
 msgid "Your browser does not support this format."
-msgstr ""
+msgstr "متصفحك لا يدعم هذا التنسيق."
 
-#: .\templates\home.html:77
 msgid "Create Your Entertainment"
-msgstr ""
+msgstr "أنشئ ترفيهك الخاص"
 
-#: .\templates\home.html:100
 msgid "Crime Cases Platform"
-msgstr ""
+msgstr "منصة قضايا الجرائم"
 
-#: .\templates\home.html:103 .\templates\products.html:94
 msgid "Go to Crime"
-msgstr ""
+msgstr "انتقل إلى الجريمة"
 
-#: .\templates\home.html:107
 msgid ""
 "Enter our world, investigate complex criminal cases, find the clues, and "
 "catch the killer."
 msgstr ""
+"ادخل إلى عالمنا، حقق في القضايا الجنائية المعقدة، ابحث عن الأدلة، وألقِ القبض على القاتل."
 
-#: .\templates\home.html:113 .\templates\home.html:115
-#: .\templates\home.html:126 .\templates\home.html:128
-#: .\templates\home.html:139 .\templates\home.html:141
-#: .\templates\home.html:152 .\templates\home.html:154
-#: .\templates\home.html:165 .\templates\home.html:167
 msgid "Red Trap"
-msgstr ""
+msgstr "الفخ الأحمر"
 
-#: .\templates\home.html:116 .\templates\home.html:129
-#: .\templates\home.html:142 .\templates\home.html:155
-#: .\templates\home.html:168
 msgid "A mysterious case where no clue of the killer is found at the scene"
-msgstr ""
+msgstr "قضية غامضة لم يُعثر فيها على أي دليل يشير إلى القاتل في موقع الجريمة"
 
-#: .\templates\home.html:119 .\templates\home.html:132
-#: .\templates\home.html:145 .\templates\home.html:158
-#: .\templates\home.html:171
 msgid "Investigate"
-msgstr ""
+msgstr "تحقيق"
 
-#: .\templates\home.html:180
 msgid "Features of PhoenixFamily"
-msgstr ""
+msgstr "مميزات PhoenixFamily"
 
-#: .\templates\home.html:182
 msgid "Features that discern us from others"
-msgstr ""
+msgstr "المميزات التي تميزنا عن الآخرين"
 
-#: .\templates\home.html:218
 msgid "Verify Idea"
-msgstr ""
+msgstr "تحقق من الفكرة"
 
-#: .\templates\home.html:229
 msgid "PhoenixFamily Vision"
-msgstr ""
+msgstr "رؤية PhoenixFamily"
 
-#: .\templates\home.html:231
 msgid "Empowering creativity and innovation for a brighter tomorrow."
-msgstr ""
+msgstr "تمكين الإبداع والابتكار من أجل غدٍ أكثر إشراقًا."
 
-#: .\templates\products.html:93
 msgid "Are you ready to start?"
-msgstr ""
+msgstr "هل أنت مستعد للبدء؟"
 
-#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "الرسائل"
 
-#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "خرائط الموقع"
 
-#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "الملفات الثابتة"
 
-#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "التوزيع"
 
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: .\venv\Lib\site-packages\django\core\paginator.py:30
 msgid "…"
-msgstr ""
+msgstr "…"
 
-#: .\venv\Lib\site-packages\django\core\paginator.py:50
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "رقم الصفحة هذا ليس عددًا صحيحًا"
 
-#: .\venv\Lib\site-packages\django\core\paginator.py:52
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "رقم الصفحة أقل من 1"
 
-#: .\venv\Lib\site-packages\django\core\paginator.py:54
 msgid "That page contains no results"
-msgstr ""
+msgstr "هذه الصفحة لا تحتوي على أي نتائج"
 
-#: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "أدخل قيمة صالحة."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:104
-#: .\venv\Lib\site-packages\django\forms\fields.py:752
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "أدخل عنوان URL صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:165
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "أدخل عددًا صحيحًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:176
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "أدخل عنوان بريد إلكتروني صالحًا."
 
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: .\venv\Lib\site-packages\django\core\validators.py:259
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
+msgstr "أدخل “slug” صالحًا يتكون من أحرف وأرقام وشرطات سفلية أو واصلات."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:267
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
 
-#: .\venv\Lib\site-packages\django\core\validators.py:279
-#: .\venv\Lib\site-packages\django\core\validators.py:287
-#: .\venv\Lib\site-packages\django\core\validators.py:316
+msgid "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or hyphens."
+msgstr "أدخل “slug” صالحًا يتكون من أحرف Unicode، أرقام، شرطات سفلية أو واصلات."
+
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "أدخل عنوان IPv4 صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:296
-#: .\venv\Lib\site-packages\django\core\validators.py:317
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "أدخل عنوان IPv6 صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:308
-#: .\venv\Lib\site-packages\django\core\validators.py:315
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "أدخل عنوان IPv4 أو IPv6 صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:351
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "أدخل أرقامًا فقط مفصولة بفواصل."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:357
-#, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة هي %(limit_value)s (القيمة الحالية %(show_value)s)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:392
-#, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة أقل من أو تساوي %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:401
-#, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة أكبر من أو تساوي %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:410
-#, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "تأكد من أن هذه القيمة مضاعف لحجم الخطوة %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:420
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "تأكد من أن هذه القيمة تحتوي على ما لا يقل عن %(limit_value)d حرفًا (تحتوي حاليًا على %(show_value)d)."
+msgstr[1] "تأكد من أن هذه القيمة تحتوي على ما لا يقل عن %(limit_value)d حرفًا (تحتوي حاليًا على %(show_value)d)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:438
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "تأكد من أن هذه القيمة تحتوي على ما لا يزيد عن %(limit_value)d حرفًا (تحتوي حاليًا على %(show_value)d)."
+msgstr[1] "تأكد من أن هذه القيمة تحتوي على ما لا يزيد عن %(limit_value)d حرفًا (تحتوي حاليًا على %(show_value)d)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:461
-#: .\venv\Lib\site-packages\django\forms\fields.py:347
-#: .\venv\Lib\site-packages\django\forms\fields.py:386
 msgid "Enter a number."
-msgstr ""
+msgstr "أدخل رقمًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:463
-#, python-format
 msgid "Ensure that there are no more than %(max)s digit in total."
 msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s رقمًا إجمالًا."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s أرقام إجمالًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:468
-#, python-format
 msgid "Ensure that there are no more than %(max)s decimal place."
 msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s خانة عشرية."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s خانات عشرية."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:473
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural "Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] "تأكد من عدم وجود أكثر من %(max)s رقمًا قبل الفاصلة العشرية."
+msgstr[1] "تأكد من عدم وجود أكثر من %(max)s أرقام قبل الفاصلة العشرية."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:544
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
+msgid "File extension “%(extension)s” is not allowed. Allowed extensions are: %(allowed_extensions)s."
+msgstr "امتداد الملف “%(extension)s” غير مسموح به. الامتدادات المسموح بها هي: %(allowed_extensions)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:605
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "الأحرف الفارغة غير مسموح بها."
 
-#: .\venv\Lib\site-packages\django\db\models\base.py:1423
-#: .\venv\Lib\site-packages\django\forms\models.py:893
 msgid "and"
-msgstr ""
+msgstr "و"
 
-#: .\venv\Lib\site-packages\django\db\models\base.py:1425
-#, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s بهذا %(field_labels)s موجود بالفعل."
 
-#: .\venv\Lib\site-packages\django\db\models\constraints.py:17
-#, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "تم انتهاك القيد “%(name)s”."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:128
-#, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "القيمة %(value)r ليست خيارًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:129
 msgid "This field cannot be null."
-msgstr ""
+msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:130
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:131
 #, python-format

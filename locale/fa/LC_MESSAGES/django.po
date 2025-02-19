@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-12 01:08+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Abbas Lotfinasab <info@phoenixfamily.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -219,7 +219,7 @@ msgstr "پلتفرم پرونده‌های جنایی"
 
 #: .\templates\home.html:103 .\templates\products.html:94
 msgid "Go to Crime"
-msgstr "برو به پرونده‌های جنایی"
+msgstr "برو به جنایت"
 
 #: .\templates\home.html:107
 msgid ""
