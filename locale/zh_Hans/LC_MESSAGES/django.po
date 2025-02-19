@@ -406,22 +406,22 @@ msgstr "请输入仅由逗号分隔的数字。"
 #: .\venv\Lib\site-packages\django\core\validators.py:357
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr "确保该值为%(limit_value)s（当前为%(show_value)s）。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:392
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr "确保该值小于或等于%(limit_value)s。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:401
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr "确保该值大于或等于%(limit_value)s。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:410
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr "确保该值是步长%(limit_value)s的倍数。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:420
 #, python-format
@@ -449,7 +449,7 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\forms\fields.py:347
 #: .\venv\Lib\site-packages\django\forms\fields.py:386
 msgid "Enter a number."
-msgstr "请输入一个数字。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:463
 #, python-format
@@ -479,39 +479,39 @@ msgstr[1] ""
 msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
-msgstr "文件扩展名“%(extension)s”不被允许。允许的扩展名有：%(allowed_extensions)s。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:605
 msgid "Null characters are not allowed."
-msgstr "不允许使用空字符。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1423
 #: .\venv\Lib\site-packages\django\forms\models.py:893
 msgid "and"
-msgstr "和"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1425
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr "%(model_name)s 已经存在具有此 %(field_labels)s。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\constraints.py:17
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr "约束“%(name)s”被违反。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:128
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr "值 %(value)r 不是有效选项。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:129
 msgid "This field cannot be null."
-msgstr "该字段不能为空。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:130
 msgid "This field cannot be blank."
-msgstr "该字段不能为空白。"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:131
 #, python-format
