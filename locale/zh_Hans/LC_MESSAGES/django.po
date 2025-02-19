@@ -201,7 +201,7 @@ msgstr "联系我们！🎉"
 
 #: .\templates\contact.html:55
 msgid ""
-" Got an exciting idea for collaboration? Or maybe a question you can’t wait "
+"Got an exciting idea for collaboration? Or maybe a question you can’t wait "
 "to get an answer to? We are here and ready to connect with you!"
 msgstr "有一个激动人心的合作想法？还是有个迫不及待想要得到答案的问题？我们在这里，准备好与您联系！"
 
