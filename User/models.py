@@ -16,8 +16,8 @@ class CustomAccountManager(BaseUserManager):
 
         return self.create_user(number, password, **other_fields)
 
-    def create_user(self, number, password, **other_fields):
-        user = self.model(number=number, **other_fields)
+    def create_user(self, email, password, **other_fields):
+        user = self.model(email=email, **other_fields)
         user.set_password(password)
         user.save()
         return user
@@ -32,8 +32,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     # نام خانوادگی
     last_name = models.CharField(max_length=50, blank=True, null=True)
 
+    username = models.CharField(max_length=50, unique=True, blank=True, null=True)  # New username field
+
     # ایمیل
-    email = models.EmailField(unique=True, blank=True, null=True)
+    email = models.EmailField(unique=True, null=True, blank=True)
 
     # شماره تلفن (اعتبارسنجی شماره تلفن)
     phone_regex = RegexValidator(
@@ -61,12 +63,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True, verbose_name='فعال')
     is_admin = models.BooleanField(default=False, verbose_name='ادمین')
 
+    # **New field for email verification**
+    is_verified = models.BooleanField(default=False)
+
     # زمان ایجاد و به‌روزرسانی
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    USERNAME_FIELD = 'number'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'birth_date', 'gender']
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'number', 'birth_date', 'gender']
 
     objects = CustomAccountManager()
 
@@ -76,6 +81,16 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = "User Profile"
         verbose_name_plural = "User Profiles"
+
+    def assign_username(self):
+        """Assigns username after email verification."""
+        if not self.username:
+            self.username = self.email.split('@')[0]
+
+    def save(self, *args, **kwargs):
+        if self.is_verified and not self.username:
+            self.assign_username()
+        super().save(*args, **kwargs)
 
 
 class UserDeviceInfo(models.Model):
