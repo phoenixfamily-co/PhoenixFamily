@@ -13,20 +13,33 @@
 <body>
 
 {% block header %}
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-               aria-expanded="false">{% trans "Products" %}</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://crime.phoenixfamily.co/">Crime</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
-    </ul>
+    <a class="navbar-brand" href="//phoenixfamily.co">
+        <img src="{{ About.logo.url }}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+        <i class="fa-solid fa-bars custom-toggler"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                   aria-expanded="false">{% trans "Products" %}</a>
+                <ul class="dropdown-menu">
+                    {% for x in Products %}
+                        <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link"
+                                    href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
+        </ul>
+    </div>
 {% endblock %}
 
 
@@ -34,22 +47,18 @@
 
     <section class="section container py-5">
 
-        <div class="row align-items-center">
+        <div class="row align-items-center align-items-stretch">
             <!-- ویدیو -->
             <div class="col-12 col-lg-6 d-flex justify-content-center position-relative">
-                <div class="video-container">
-                    <!-- تصویر پیش‌نمایش -->
-                    <img id="video-thumbnail" src="{% static 'images/phoenix.jpeg' %}" alt="پیش‌نمایش ویدیو"
-                         class="video-thumbnail">
-
+                <div class="video-container" style="aspect-ratio: 16/10">
                     <!-- دکمه پلی -->
                     <button id="play-btn" class="play-button">
                         <i class="fa-solid fa-play" style="color: #ffffff;"></i>
                     </button>
 
                     <!-- ویدیو -->
-                    <video id="brand-video" class="brand-video" width="100%">
-                        <source src="{% static 'videos/brand-intro.mp4' %}" type="video/mp4">
+                    <video id="brand-video" poster="{{ About.image.url }}" class="brand-video" width="100%">
+                        <source src="{{ About.video.url }}" type="video/mp4">
                         {% trans 'Your browser does not support this format.' %}
                     </video>
 
@@ -60,9 +69,9 @@
             <!-- متن با افکت Glassmorphism -->
             <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
                 <div class="card p-4 rounded shadow glass-card">
-                    <h2 class="display-6 fw-bold section-title">{% trans 'Entertainment Reborn, Like a Phoenix' %}</h2>
+                    <h2 class="display-6 fw-bold section-title"> {{ About.alt }}</h2>
                     <p class="lead">
-                        {% trans 'A new world of entertainment. We challenge you here. This is where entertainment rises from its ashes.We offer unique entertainment platforms that immerse you in a world of endless excitement.' %}
+                        {{ About.context }}
                     </p>
                     <a href="{% url 'contact:contact-view' %}"
                        class="btn btn-lg px-4 py-2 shadow">{% trans 'Create Your Entertainment' %}</a>
@@ -75,15 +84,13 @@
     <script>
         document.getElementById("play-btn").addEventListener("click", function () {
             let video = document.getElementById("brand-video");
-            let thumbnail = document.getElementById("video-thumbnail");
 
-            video.style.display = "block";  // نمایش ویدیو
             video.controls = true;          // فعال کردن کنترل‌های ویدیو
             video.play();                   // اجرای ویدیو
 
-            thumbnail.style.display = "none"; // پنهان کردن تصویر پیش‌نمایش
-            this.style.display = "none";      // مخفی کردن دکمه پلی
+            this.style.display = 'none';    // پنهان کردن دکمه پلی
         });
+
 
     </script>
 
@@ -92,19 +99,19 @@
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="display-6 fw-bold section-title text-start text-md-end">{% trans 'Crime Cases Platform' %}</h2>
             <div class="mt-4 text-start text-md-end">
-               <a href="//crime.phoenixfamily.co/"
-                           class="btn btn-lg px-4 py-2 mt-3 shadow-lg text-truncate">{% trans 'Go to Crime' %}</a>
+                <a href="//crime.phoenixfamily.co/"
+                   class="btn btn-lg px-4 py-2 mt-3 shadow-lg text-truncate">{% trans 'Go to Crime' %}</a>
             </div>
         </div>
 
-        <p class="lead text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans 'Enter our world, investigate complex criminal cases, find the clues, and catch the killer.' %}</p>
+        <p class="lead text-mute {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans 'Enter our world, investigate complex criminal cases, find the clues, and catch the killer.' %}</p>
 
         <div class="case-container d-flex gap-4 overflow-x-auto py-3 px-2 ">
 
             <div class="case-card card rounded shadow">
                 <img src="//crime.phoenixfamily.co/static/images/banner.webp" class="card-img-top"
                      alt="{% trans 'Red Trap' %}">
-                <div class="card-body rounded shadow glass-card">
+                <div class="card-body">
                     <h5 class="card-title">{% trans 'Red Trap' %}</h5>
                     <p class="card-text">{% trans 'A mysterious case where no clue of the killer is found at the scene' %}</p>
                     <div class="d-flex justify-content-center">  <!-- دکمه را وسط قرار می‌دهد -->
@@ -172,55 +179,48 @@
         <div class="header">
             <h3 class="text-center text-danger fw-bold">{% trans 'Features of PhoenixFamily' %}</h3>
         </div>
-        <p class="text-center text-muted">{% trans 'Features that discern us from others' %}</p>
+        <p class="text-center text-mute">{% trans 'Features that discern us from others' %}</p>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="card p-4 rounded shadow value-card">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <h3>{% trans 'Innovation in entertainment' %}</h3>
-                    <p>{% trans 'Providing new and creative experiences in the world of entertainment' %}</p>
-                </div>
-            </div>
+            {% for x in Features %}
 
-            <div class="col-md-4">
-                <div class="card p-4 rounded shadow  value-card">
-                    <i class="fa-solid fa-users"></i>
-                    <h3>{% trans 'Social interaction' %}</h3>
-                    <p>{% trans 'An opportunity to work in a group and competitively.' %}</p>
+                <div class="col-md-4">
+                    <div class="card p-4 rounded shadow value-card">
+                        <i class="{{ x.icon }}"></i>
+                        <h3>{{ x.title }}</h3>
+                        <p>{{ x.description }}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card p-4 rounded shadow  value-card">
-                    <i class="fa-solid fa-vr-cardboard"></i>
-                    <h3>{% trans 'Modern technologies' %}</h3>
-                    <p>{% trans 'Using augmented reality (AR) and artificial intelligence (AI)' %}</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 
     <section class="section container py-5">
         <div class="row align-items-center">
-            <!-- تصویر -->
-            <div class="col-12 col-lg-6 d-flex justify-content-center">
-                <div class="image-container position-relative">
-                    <img src="/static/images/entertainment-world..webp" alt="Entertainment World"
-                         class=" img-fluid rounded shadow-lg">
-                </div>
-            </div>
 
-            <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                <div class="card p-4 rounded shadow glass-card">
-                    <h2 class="display-6 fw-bold section-title">{% trans 'We make your Entertainment Come True!' %}</h2>
-                    <p class="lead">
-                        {% trans 'Do you have an idea for a fun and unique experience? We turn it into a real and functional platform. With our team, you can bring your creative ideas to life and build a world of entertainment and new experiences. Its time to make your hobby a reality and allow others to enjoy it' %}
-                    </p>
-                    <a href="{% url 'contact:contact-view' %}"
-                       class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
+            {% for x in Content %}
+                <!-- تصویر -->
+                <div class="col-12 col-lg-6 d-flex justify-content-center my-2">
+                    <div class="image-container position-relative">
+                        <img src="{{ x.image.url }}" alt="Entertainment World"
+                             class=" img-fluid rounded shadow-lg">
+                    </div>
                 </div>
-            </div>
+
+                <div class="col-12 col-lg-6 {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %} my-2">
+                    <div class="card p-4 rounded shadow glass-card">
+                        <h2 class="display-6 fw-bold section-title"> {{ x.title }}</h2>
+                        <p class="lead">
+                            {{ x.description }}
+                        </p>
+                        <a href="{% url 'contact:contact-view' %}"
+                           class="btn btn-lg px-4 py-2 shadow">{% trans 'Verify Idea' %}</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+
         </div>
     </section>
 
@@ -228,39 +228,20 @@
         <div class="header">
             <h3 class="text-danger fw-bold">{% trans 'PhoenixFamily Vision' %}</h3>
         </div>
-        <p class="text-muted">{% trans 'Empowering creativity and innovation for a brighter tomorrow.' %}</p>
+        <p class="text-mute">{% trans 'Empowering creativity and innovation for a brighter tomorrow.' %}</p>
 
         <!-- نوار زمان (Timeline) با اسکرول افقی -->
         <div class="vision-container d-flex gap-4 overflow-x-auto py-3 px-2 ">
-            <div class="vision-card card p-4 shadow">
-                <div class="fs-4 fw-bold text-danger">2025</div>
-                <h5 class="mt-2">{% trans 'Launching Our First Platform' %}</h5>
-                <p class="mt-2">{% trans 'We are stepping into the world of digital entertainment with our first product—a mystery crime platform...' %}</p>
-            </div>
+            {% for x in Vision %}
 
-            <div class="vision-card card p-4 shadow">
-                <div class="fs-4 fw-bold text-danger">2027</div>
-                <h5 class="mt-2">{% trans 'Integrating AI, AR, and VR into Entertainment' %}</h5>
-                <p class="mt-2">{% trans 'We aim to push the boundaries of imagination...' %}</p>
-            </div>
+                <div class="vision-card card p-4 shadow">
+                    <div class="fs-4 fw-bold text-danger">{{ x.year }}</div>
+                    <h5 class="mt-2"> {{ x.title }}</h5>
+                    <p class="mt-2">{{ x.description }}</p>
+                </div>
 
-            <div class="vision-card card p-4 shadow">
-                <div class="fs-4 fw-bold text-danger">2030</div>
-                <h5 class="mt-2">{% trans 'Expanding into Podcasts, Comics, and Film & TV Productions' %}</h5>
-                <p class="mt-2">{% trans 'Great stories are not confined to a single format...' %}</p>
-            </div>
+            {% endfor %}
 
-            <div class="vision-card card  p-4 shadow">
-                <div class="fs-4 fw-bold text-danger">2033</div>
-                <h5 class="mt-2">{% trans 'Building a Seamlessly Connected Entertainment Ecosystem' %}</h5>
-                <p class="mt-2">{% trans 'Our users are not just spectators—they are part of the story...' %}</p>
-            </div>
-
-            <div class="vision-card card p-4 shadow">
-                <div class="fs-4 fw-bold text-danger">2035</div>
-                <h5 class="mt-2">{% trans 'Establishing PhoenixFamily as a Global Entertainment Brand' %}</h5>
-                <p class="mt-2">{% trans 'We are not just a startup—we are a new movement in the entertainment industry...' %}</p>
-            </div>
         </div>
     </section>
 
@@ -268,6 +249,37 @@
 {% endblock %}
 
 {% block footer %}
+    <div class="row align-items-center">
+        <!-- لوگوی شرکت -->
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+            <a href="//phoenixfamily.co">
+                <img src="{{ About.logo.url }}" alt="{{ About.name }}" class="img-fluid"
+                     style="max-width: 150px;">
+            </a>
+        </div>
+
+        <!-- اطلاعات تماس -->
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
+            <p class="mb-1">
+                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: {{ About.number }}
+            </p>
+            <p class="mb-0">
+                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: {{ About.email }}
+            </p>
+        </div>
+
+        <!-- شبکه‌های اجتماعی -->
+        <div class="col-md-4 text-center right">
+            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
+            <div class="social-icons">
+                <a href="{{ About.instagram }}" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="{{ About.telegram }}" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                <a href="{{ About.whatsApp }}" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="{{ About.linkedin }}"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 

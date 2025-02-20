@@ -1,18 +1,27 @@
 from django.shortcuts import render
-from django.utils.translation import get_language
+from django.utils.translation import get_language, get_language_bidi
 from django.views.decorators.cache import cache_page
 from django.core.mail import EmailMessage
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-
+from About.models import AboutUs
 from Contact.forms import ContactForm
+from Product.models import Product
 
 
 @cache_page(60 * 15)
 def contact(request):
     current_language = get_language()
-    return render(request, 'contact.html', {'LANGUAGE_CODE': current_language})
+    is_bidi = get_language_bidi()
+    aboutUs = AboutUs.objects.first()
+    products = Product.objects.all()
+
+    return render(request, 'contact.html', {'LANGUAGE_CODE': current_language,
+                                            'LANGUAGE_BIDI': is_bidi,
+                                            'About': aboutUs,
+                                            'Products': products,
+                                            })
 
 
 class EmailView(APIView):
@@ -47,4 +56,3 @@ class EmailView(APIView):
                 return Response({"error": f"Error sending email: {str(e)}"}, status=500)
 
         return Response({"error": form.errors}, status=400)
-

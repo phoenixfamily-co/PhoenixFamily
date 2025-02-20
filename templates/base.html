@@ -17,124 +17,114 @@
 
     </style>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const themeSwitch = document.getElementById("theme-switch");
-          const isDark = localStorage.getItem("theme") === "dark";
-
-          document.documentElement.classList.toggle("dark-mode", isDark);
-          themeSwitch.checked = isDark;
-
-          themeSwitch.addEventListener("change", function () {
-              document.documentElement.classList.toggle("dark-mode", this.checked);
-              localStorage.setItem("theme", this.checked ? "dark" : "light");
-          });
-      });
-
-    </script>
-
 </head>
 <body>
 
-    <header>
+<header>
 
     <nav class="navbar navbar-expand-lg shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="//phoenixfamily.co">
-            <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
-            <i class="fa-solid fa-bars custom-toggler"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-         {% block header %}
-
-        {% endblock %}
+        <div class="container">
+            {% block header %}
+            {% endblock %}
             <!-- دکمه تغییر تم -->
             <div class="ms-3 d-flex align-items-center">
-                <i class="fas fa-sun"></i>
+                <i class="fas fa-sun" id="sun-icon"></i>
                 <div class="ms-2 form-check form-switch">
                     <label for="theme-switch"></label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="theme-switch" aria-label="Toggle theme" />
+                    <input class="form-check-input" type="checkbox" role="switch" id="theme-switch"
+                           aria-label="Toggle theme"/>
                 </div>
-                <i class="fas fa-moon"></i>
+                <i class="fas fa-moon" id="moon-icon"></i>
             </div>
             <!-- فرم تغییر زبان -->
             <div class="ms-3">
                 <form action="{% url 'set_language' %}" method="post">
                     {% csrf_token %}
                     <label>
-                        <select name="language" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
-                        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                        <option value="fa" class="option-rtl" {% if LANGUAGE_CODE == 'fa' %}selected{% endif %}>فارسی</option>
-                        <option value="ar" class="option-rtl" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربیة</option>
-                        <option value="tr" {% if LANGUAGE_CODE == 'tr' %}selected{% endif %}>Türkçe</option>
-                        <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>Русский</option>
-                        <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
-                        <option value="zh" {% if LANGUAGE_CODE == 'zh' %}selected{% endif %}>中文</option>
-                    </select>
+                        <select name="language" class="form-select form-select-sm d-inline w-auto"
+                                onchange="this.form.submit()" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
                     </label>
                 </form>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    </header>
-    <!-- محتوای متغیر -->
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
+</header>
+<!-- محتوای متغیر -->
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
 
-    <footer>
-                <div class="container py-4">
-                    <div class="row align-items-center">
-                        <!-- لوگوی شرکت -->
-                        <div class="col-md-4 text-center mb-3 mb-md-0">
-                            <a href="//phoenixfamily.co">
-                                <img src="{% static 'images/logo.png' %}" alt="{% trans 'Company Logo' %}" class="img-fluid" style="max-width: 150px;">
-                            </a>
-                        </div>
-
-                        <!-- اطلاعات تماس -->
-                        <div class="col-md-4 text-center mb-3 mb-md-0">
-                            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
-                            <p class="mb-1">
-                                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: +989022981378
-                            </p>
-                            <p class="mb-0">
-                                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: info@phoenixfamily.co
-                            </p>
-                        </div>
-
-                        <!-- شبکه‌های اجتماعی -->
-                        <div class="col-md-4 text-center right">
-                            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
-                            <div class="social-icons">
-                            <a href="//instagram.com/phoenixfamily.co?igsh=ZzRpb2owOHdnMWd5" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                            <a href="//t.me/Abbas_lotfinasab" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
-                            <a href="//wa.link/9x7e5p" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
-                            <a href="//linkedin.com/company/phoenixfamily/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کپی‌رایت -->
-                    <div class="row mt-4">
-                        <div class="col-12 text-center">
-                            <p class="mb-0 copyright">
-                                &copy; 2024 PhoenixFamily. {% trans "All rights reserved." %}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+<footer>
+    <div class="container py-4">
         {% block footer %}
 
 
         {% endblock %}
-    </footer>
+
+        <!-- کپی‌رایت -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0 copyright">
+                    &copy; 2024 PhoenixFamily. {% trans "All rights reserved." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const themeSwitch = document.getElementById("theme-switch");
+        const sunIcon = document.getElementById("sun-icon");
+        const moonIcon = document.getElementById("moon-icon");
+
+        const isDark = localStorage.getItem("theme") === "dark";
+
+        // تغییر تم و نمایش آیکون‌ها
+        if (isDark) {
+            document.body.classList.add("dark-mode");
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline";
+        } else {
+            document.body.classList.remove("dark-mode");
+            sunIcon.style.display = "inline";
+            moonIcon.style.display = "none";
+        }
+
+        themeSwitch.checked = isDark;
+
+        themeSwitch.addEventListener("change", function () {
+            const isDark = this.checked;
+            document.body.classList.toggle("dark-mode", isDark);
+
+            if (isDark) {
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "inline";
+            } else {
+                sunIcon.style.display = "inline";
+                moonIcon.style.display = "none";
+            }
+
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        console.log(localStorage.getItem("theme"));
+        console.log(document.documentElement.classList);
+
+    });
+</script>
+
 </body>
 
 </html>

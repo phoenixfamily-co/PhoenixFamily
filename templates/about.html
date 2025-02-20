@@ -14,30 +14,40 @@
 
 
 {% block header %}
+    <a class="navbar-brand" href="//phoenixfamily.co">
+            <img src="{{ About.logo.url }}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+            <i class="fa-solid fa-bars custom-toggler"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                aria-expanded="false">{% trans "Products" %}</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://crime.phoenixfamily.co/">Crime</a></li>
+                {% for x in Products %}
+                <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name }}</a></li>
+                {% endfor %}
             </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
         </li>
-        <li class="nav-item"><a class="nav-link active" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
     </ul>
+        </div>
 {% endblock %}
+
 
 {% block content %}
 
     <section class="section container py-5">
         <div class="card p-4 rounded shadow glass-card">
-            <h2 class="display-6 fw-bold section-title">{% trans 'Where Ideas and Connections Are Reborn' %}</h2>
+            <h2 class="display-6 fw-bold section-title">{{ About.title }}</h2>
             <p class="lead">
-                {% trans 'PhoenixFamily is a company inspired by the mythical story of the phoenix, a creature that is always alone.We have decided to be a family for this legendary bird,embedding this philosophy at the core of our mission: supporting creativity and fostering meaningfulconnections.Our goal is to create a space where individuals can bring their ideas to life without feeling alone orunsupported.Additionally, we provide products that bring excitement and entertainment into the lives of ouraudience.At PhoenixFamily, we believe that every idea can be reborn, just like the phoenix rising from its ashes.Our family is here to accompany you on your journey to creating ideas and experiencing uniqueentertainment.' %}
+                {{ About.description }}
             </p>
         </div>
     </section>
@@ -47,90 +57,24 @@
         <div class="header text-center ">
             <h3 class="text-danger fw-bold">{% trans 'FAQ' %}</h3>
         </div>
-        <p class="text-muted text-center">{% trans 'Find answers to the most frequently asked questions below.' %}</p>
+        <p class="text-mute text-center">{% trans 'Find answers to the most frequently asked questions below.' %}</p>
 
 
         <div class="row">
             <!-- FAQ Items -->
+        {% for x in FAQ %}
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card vision-card rounded shadow">
                     <div class="card-body text-center">
-                        <i class="fa-solid fa-fire fa-2x text-danger mb-3 "></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "Why was the name PhoenixFamily chosen?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            The phoenix is a mythical bird known for its solitude, having no family. Our vision is to be
-                            the family this bird never had.
+                        <i class="{{ x.icon }} fa-2x text-danger mb-3 "></i>
+                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{{ x.title }}</h6>
+                        <p class="text-mute {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
+                            {{ x.description }}
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What does your company do?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            PhoenixFamily specializes in creating entertainment platforms and transforming ideas into
-                            reality through websites and mobile applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-bullseye fa-2x text-success mb-3"></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What is your main mission?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            Our mission is to foster creativity, bring people together, and offer engaging entertainment
-                            experiences powered by cutting-edge technology.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-wand-sparkles fa-2x text-warning mb-3"></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "What makes PhoenixFamily unique?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            We stand out by blending entertainment with emerging technologies such as AI, AR, and VR,
-                            all while maintaining a focus on creativity and innovation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-store fa-2x text-info mb-3"></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "How can I use your products or contact you?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            You can explore our products in the <a href="{% url 'products:product-view' %}"
-                                                                   class="text-primary">Products</a> section.
-                            To reach us, visit the <a href="{% url 'contact:contact-view' %}" class="text-primary">Contact
-                            Us</a> page.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card vision-card rounded shadow">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-hands-helping fa-2x text-dark mb-3"></i>
-                        <h6 class="fw-bold {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">{% trans "Do you accept client projects?" %}</h6>
-                        <p class="text-muted {% if LANGUAGE_BIDI %}text-end{% else %}text-start{% endif %}">
-                            <strong>Absolutely!</strong> We are happy to offer solutions to anyone interested in our
-                            services.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
         </div>
     </section>
     <!-- End of FAQ Section -->
@@ -138,7 +82,38 @@
 
 {% endblock %}
 
+
 {% block footer %}
+    <div class="row align-items-center">
+                        <!-- لوگوی شرکت -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <a href="//phoenixfamily.co">
+                                <img src="{{ About.logo.url }}" alt="{{ About.name }}" class="img-fluid" style="max-width: 150px;">
+                            </a>
+                        </div>
+
+                        <!-- اطلاعات تماس -->
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <h6 class="mb-2">{% trans "Contact Us" %}</h6>
+                            <p class="mb-1">
+                                <i class="fas fa-phone-alt contact-icon  me-2"></i>{% trans "Phone" %}: {{ About.number }}
+                            </p>
+                            <p class="mb-0">
+                                <i class="fas fa-envelope contact-icon me-2"></i>{% trans "Email" %}: {{ About.email }}
+                            </p>
+                        </div>
+
+                        <!-- شبکه‌های اجتماعی -->
+                        <div class="col-md-4 text-center right">
+                            <h6 class="mb-2">{% trans "Follow Us" %}</h6>
+                            <div class="social-icons">
+                            <a href="{{ About.instagram }}" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="{{ About.telegram }}" class="me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                            <a href="{{ About.whatsApp }}" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                            <a href="{{ About.linkedin }}"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
 {% endblock %}
 

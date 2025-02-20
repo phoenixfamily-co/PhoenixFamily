@@ -5,6 +5,8 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from Blog.sitemap import *
 from PhoenixFamily import settings
+from django.conf.urls.i18n import set_language
+
 
 sitemaps = {
     'blog_list': BlogPostListSitemap,
@@ -13,7 +15,7 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # مسیر پنل ادمین
-    path('set_language/', include('django.conf.urls.i18n')),  # مسیر تغییر زبان
+    path('set_language/', set_language, name='set_language'),  # به جای include از set_language استفاده کنید
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 
 ]
