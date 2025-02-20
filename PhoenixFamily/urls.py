@@ -7,6 +7,7 @@ from Blog.sitemap import *
 from PhoenixFamily import settings
 from django.conf.urls.i18n import set_language
 
+from PhoenixFamily.views import robots_txt
 
 sitemaps = {
     'blog_list': BlogPostListSitemap,
@@ -17,6 +18,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # مسیر پنل ادمین
     path('set_language/', set_language, name='set_language'),  # به جای include از set_language استفاده کنید
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+    path("robots.txt", robots_txt, name="robots_txt"),
 
 ]
 

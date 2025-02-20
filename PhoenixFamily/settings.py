@@ -20,8 +20,17 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 DOMAIN = 'phoenixfamily.co'
 SITE_NAME = 'PhoenixFamily'
+SITE_URL = "https://phoenixfamily.com"
 
 SITE_ID = 1
+
+META_SITE_PROTOCOL = "https"
+META_USE_OG_PROPERTIES = True
+META_USE_TWITTER_PROPERTIES = True
+META_USE_SCHEMAORG_PROPERTIES = True
+
+CSRF_TRUSTED_ORIGINS = ["https://phoenixfamily.com", "https://www.phoenixfamily.com"]
+
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -30,6 +39,8 @@ ALLOWED_HOSTS = [
     'www.phoenixfamily.co'
 
 ]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")  # برای فورس کردن HTTPS
 
 # Application definition
 
@@ -46,6 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'rest_framework',
     'django_user_agents',  # helper package that allow to work with User/views
+    'meta'
+    'django_seo',
     'Home',
     'About',
     'Blog',
@@ -107,27 +120,31 @@ DATABASES = {
     }
 }
 
-# Custom SEO Tags (برای صفحات دینامیک)
-SEO_DEFAULT_TITLE = _("PhoenixFamily | Bringing Ideas to Life and Unique Entertainment")
-SEO_DEFAULT_DESCRIPTION = _("PhoenixFamily provides tools for realizing creative ideas and delivering unique "
-                            "entertainment products.")
-SEO_DEFAULT_KEYWORDS = [
-    _("PhoenixFamily"),
-    _("Realizing Ideas"),
-    _("bringing Ideas to life"),
-    _("unique entertainment"),
-    _("creative entertainment"),
-    _("website builder"),
-    _("web builder"),
-    _("application builder"),
-    _("app builder"),
-    _("entertainment platform"),
-]
+SEO = {
+    'default': {
+        'title': _('PhoenixFamily | Bringing Ideas to Life and Unique Entertainment'),
+        'description': _(
+            'PhoenixFamily provides tools for realizing creative ideas and delivering unique entertainment products.'),
+        'keywords': [
+            _('PhoenixFamily'),
+            _('Realizing Ideas'),
+            _('bringing Ideas to life'),
+            _('unique entertainment'),
+            _('creative entertainment'),
+            _('website builder'),
+            _('web builder'),
+            _('application builder'),
+            _('app builder'),
+            _('entertainment platform'),
+        ],
+        'robots': 'index, follow',  # یا 'noindex, nofollow' برای جلوگیری از ایندکس
+    }
+}
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/var/tmp/django_cache',
     }
 }
 
@@ -207,6 +224,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',  # مسیر پوشه‌ی locale
