@@ -60,7 +60,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, blank=True, null=True)
 
     is_staff = models.BooleanField(default=False, verbose_name="مدیر")
-    is_active = models.BooleanField(default=True, verbose_name='فعال')
+    is_active = models.BooleanField(default=False, verbose_name='فعال')
     is_admin = models.BooleanField(default=False, verbose_name='ادمین')
 
     # **New field for email verification**
