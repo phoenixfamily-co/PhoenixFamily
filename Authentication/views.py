@@ -65,8 +65,9 @@ class VerifyOTPView(APIView):
             user = User.objects.get(email=email)
 
             user.is_verified = True
+            user.is_active = True
             user.assign_username()
-            user.save(update_fields=["is_verified", "username"])
+            user.save(update_fields=["is_verified", "username", "is_active"])
 
             OTPVerification.objects.filter(user=user).delete()  # Remove OTP record
 
