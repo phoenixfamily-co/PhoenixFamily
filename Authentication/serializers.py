@@ -78,18 +78,18 @@ class VerifyOTPSerializer(serializers.Serializer):
         return data
 
 class LoginSerializer(serializers.Serializer):
-    number = serializers.CharField()
+    email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
 
     def validate(self, data):
-        """Authenticate user with phone number & password."""
-        number = data.get('number')
+        """Authenticate user with email & password."""
+        email = data.get('email')
         password = data.get('password')
 
-        user = authenticate(username=number, password=password)
+        user = authenticate(username=email, password=password)
 
         if not user:
-            raise serializers.ValidationError("Invalid phone number or password.")
+            raise serializers.ValidationError("Invalid email or password.")
 
         if not user.is_active:
             raise serializers.ValidationError("This account is inactive.")
