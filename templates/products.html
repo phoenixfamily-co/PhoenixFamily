@@ -66,7 +66,7 @@
                     <h2 class="display-6 fw-bold section-title">{{ Item.title }}</h2>
                     <p class="lead">{{ Item.content }}</p>
                     <hr style="height: 2px">
-                    <h3 class="mb-1">Key Features:</h3>
+                    <h3 class="mb-1">{% trans 'Key Features:' %}</h3>
                     {% for x in Features %}
                         <h5 class="mt-1">{{ forloop.counter }}-{{ x.title }}</h5>
                         <p class="lead">{{ x.description }}</p>
