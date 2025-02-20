@@ -272,12 +272,8 @@ msgstr "توانمندسازی خلاقیت و نوآوری برای فردای�
 msgid "Are you ready to start?"
 msgstr "آیا برای شروع آماده‌اید؟"
 
-#: .\templates\products.html:93
-msgid "Are you ready to start?"
-msgstr "آیا برای شروع آماده‌اید؟"
 
-
-#: .\templates\products.html:93
+#: .\templates\products.html:95
 msgid "Key Features:"
 msgstr "ویژگی های کلیدی"
 
