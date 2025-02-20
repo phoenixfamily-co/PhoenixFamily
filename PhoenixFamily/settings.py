@@ -57,8 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',  # برای نمایش بهتر اعداد و تاریخ‌ها
     'rest_framework',
     'django_user_agents',  # helper package that allow to work with User/views
-    'meta'
-    'django_seo',
+    'meta',
     'Home',
     'About',
     'Blog',
