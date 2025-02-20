@@ -295,6 +295,10 @@ msgstr "मान %(value)r एक मान्य विकल्प नही�
 msgid "This field cannot be null."
 msgstr "यह फ़ील्ड नल (Null) नहीं हो सकता।"
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr "मुख्य विशेषताएँ:"
+
 msgid "This field cannot be blank."
 msgstr "यह फ़ील्ड खाली नहीं हो सकता।"
 

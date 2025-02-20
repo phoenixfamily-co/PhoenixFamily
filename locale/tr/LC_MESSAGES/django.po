@@ -89,6 +89,11 @@ msgstr "Telefon"
 msgid "Email"
 msgstr "E-posta"
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr "Ana Özellikler:"
+
+
 msgid "Follow Us"
 msgstr "Bizi Takip Edin"
 

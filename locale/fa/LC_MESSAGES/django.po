@@ -275,7 +275,7 @@ msgstr "آیا برای شروع آماده‌اید؟"
 
 #: .\templates\products.html:95
 msgid "Key Features:"
-msgstr "ویژگی های کلیدی"
+msgstr "ویژگی های کلیدی:"
 
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15

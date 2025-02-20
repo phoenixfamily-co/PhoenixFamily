@@ -140,6 +140,10 @@ msgid ""
 msgstr "هل لديك فكرة رائعة للتعاون؟ أو ربما سؤال لا يمكنك الانتظار للحصول على إجابة عليه؟ نحن هنا وجاهزون للتواصل معك!"
 
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr " الميزات الرئيسية:"
+
 msgid "Telegram"
 msgstr "تيليجرام"
 

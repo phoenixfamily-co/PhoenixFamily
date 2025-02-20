@@ -143,6 +143,11 @@ msgstr "フォローしてください"
 msgid "All rights reserved."
 msgstr "全著作権所有"
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr "主要な特徴:"
+
+
 #: .\templates\blogs.html:65
 msgid "Search"
 msgstr "検索"

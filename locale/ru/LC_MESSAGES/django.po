@@ -111,6 +111,11 @@ msgstr "Свяжитесь с нами"
 msgid "Blogs"
 msgstr "Блоги"
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr "Ключевые особенности:"
+
+
 #: .\templates\about.html:58
 msgid "FAQ"
 msgstr "Часто задаваемые вопросы"

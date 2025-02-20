@@ -60,6 +60,11 @@ msgstr "独特娱乐"
 msgid "creative entertainment"
 msgstr "创意娱乐"
 
+#: .\templates\products.html:95
+msgid "Key Features:"
+msgstr " 主要特点:"
+
+
 #: .\PhoenixFamily\settings.py:118
 msgid "website builder"
 msgstr "网站构建器"
