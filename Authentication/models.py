@@ -9,6 +9,7 @@ User = get_user_model()
 
 
 class OTPVerification(models.Model):
+    """Model for tracking OTP each user requests."""
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="otp_verification")
 
     otp_hash = models.CharField(max_length=128)  # Store hashed OTP
