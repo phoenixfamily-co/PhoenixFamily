@@ -5,7 +5,7 @@ from .models import Product
 from django.urls import reverse
 
 
-class BlogPostListSitemap(Sitemap):
+class ProductSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.8
 
@@ -16,7 +16,7 @@ class BlogPostListSitemap(Sitemap):
         return reverse(item)
 
 
-class BlogPostDetailSitemap(Sitemap):
+class ProductDetailSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.9
 
