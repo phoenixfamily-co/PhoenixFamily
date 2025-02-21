@@ -9,7 +9,7 @@ class ProductSitemap(Sitemap):
     protocol = 'https'  # اگر سایتت SSL داره
 
     def items(self):
-        return Product.objects.filter(is_active=True)  # فقط محصولات فعال رو بگیر
+        return Product.objects.all()  # فقط محصولات فعال رو بگیر
 
     def location(self, item):
         return reverse('product_detail', args=[item.id])  # اگه از ID استفاده می‌کنی
