@@ -31,7 +31,6 @@ META_USE_SCHEMAORG_PROPERTIES = True
 
 CSRF_TRUSTED_ORIGINS = ["https://phoenixfamily.com", "https://www.phoenixfamily.com"]
 
-
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
@@ -126,10 +125,14 @@ SEO = {
             'PhoenixFamily provides entertainment products.'),
         'keywords': [
             _('phoenixfamily'),
-            _('entertainment'),
+            _('family entertainment'),
             _('entertainment online'),
             _('entertainment apps'),
-            _('entertainment platform'),
+            _('digital entertainment'),
+            _('family board games'),
+            _('board game online'),
+            _('board game apps'),
+            _('digital board game'),
         ],
         'robots': 'index, follow',  # یا 'noindex, nofollow' برای جلوگیری از ایندکس
     }
