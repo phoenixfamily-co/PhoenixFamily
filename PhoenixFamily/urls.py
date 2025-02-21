@@ -8,10 +8,13 @@ from PhoenixFamily import settings
 from django.conf.urls.i18n import set_language
 
 from PhoenixFamily.views import robots_txt
+from Seo.sitemaps import StaticViewSitemap
 
 sitemaps = {
     'blog_list': BlogPostListSitemap,
     'blog_details': BlogPostDetailSitemap,
+    'static': StaticViewSitemap(),
+    'products': ProductSitemap(),
 }
 
 urlpatterns = [

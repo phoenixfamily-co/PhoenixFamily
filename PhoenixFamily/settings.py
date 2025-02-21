@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'Contact',
     'Product',
     'User',
+    'Seo'
     'Authentication',
 
 ]
@@ -78,6 +79,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',  # for get device info (User/Views)
+    'django.middleware.gzip.GZipMiddleware',
+
 ]
 
 ROOT_URLCONF = 'PhoenixFamily.urls'
