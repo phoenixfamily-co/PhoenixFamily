@@ -121,19 +121,14 @@ DATABASES = {
 
 SEO = {
     'default': {
-        'title': _('PhoenixFamily | Bringing Ideas to Life and Unique Entertainment'),
+        'title': _('PhoenixFamily | Entertainment Company'),
         'description': _(
-            'PhoenixFamily provides tools for realizing creative ideas and delivering unique entertainment products.'),
+            'PhoenixFamily provides entertainment products.'),
         'keywords': [
-            _('PhoenixFamily'),
-            _('Realizing Ideas'),
-            _('bringing Ideas to life'),
-            _('unique entertainment'),
-            _('creative entertainment'),
-            _('website builder'),
-            _('web builder'),
-            _('application builder'),
-            _('app builder'),
+            _('phoenixfamily'),
+            _('entertainment'),
+            _('entertainment online'),
+            _('entertainment apps'),
             _('entertainment platform'),
         ],
         'robots': 'index, follow',  # یا 'noindex, nofollow' برای جلوگیری از ایندکس
