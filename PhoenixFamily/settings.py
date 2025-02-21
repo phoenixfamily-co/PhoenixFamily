@@ -20,7 +20,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 DOMAIN = 'phoenixfamily.co'
 SITE_NAME = 'PhoenixFamily'
-SITE_URL = "https://phoenixfamily.com"
+SITE_URL = "https://phoenixfamily.co"
 
 SITE_ID = 1
 
@@ -29,7 +29,7 @@ META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
 META_USE_SCHEMAORG_PROPERTIES = True
 
-CSRF_TRUSTED_ORIGINS = ["https://phoenixfamily.com", "https://www.phoenixfamily.com"]
+CSRF_TRUSTED_ORIGINS = ["https://phoenixfamily.co", "https://www.phoenixfamily.co"]
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
