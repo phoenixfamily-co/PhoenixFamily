@@ -12,7 +12,7 @@ class ProductSitemap(Sitemap):
         return Product.objects.all()  # فقط محصولات فعال رو بگیر
 
     def location(self, item):
-        return reverse('product_detail', args=[item.id])  # اگه از ID استفاده می‌کنی
+        return reverse('product:product-view', args=[item.id])  # اگه از ID استفاده می‌کنی
 
         # اگر از Slug استفاده می‌کنی، این رو جایگزین کن:
         # return reverse('product_detail', args=[item.slug])
