@@ -63,8 +63,8 @@ INSTALLED_APPS = [
     'Contact',
     'Product',
     'User',
-    'Seo'
     'Authentication',
+    'Seo',
 
 ]
 
