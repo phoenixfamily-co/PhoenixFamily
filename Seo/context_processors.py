@@ -1,3 +1,5 @@
+from urllib.parse import quote
+
 from PhoenixFamily import settings
 from .models import SEOPage
 from django.utils.translation import gettext_lazy as _
@@ -19,4 +21,6 @@ def seo_context(request):
         'seo_title': seo_data.title,
         'seo_description': seo_data.description,
         'seo_keywords': ", ".join([kw.name for kw in seo_data.keywords.all()]),
+        'canonical_url': quote(request.build_absolute_uri(), safe=':/')
+
     }
