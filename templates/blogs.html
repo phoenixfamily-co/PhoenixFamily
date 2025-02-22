@@ -2,26 +2,8 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<html >
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow"> <!-- اجازه ایندکس و دنبال کردن لینک‌ها -->
-    <link rel="canonical" href="{{ canonical_url }}"> <!-- URL canonical برای جلوگیری از محتوای تکراری -->
-
-    <meta property="og:title" content="{{ page_title }}">
-    <meta property="og:description" content="{{ page_description }}">
-    <meta property="og:image" content="{% static 'images/logo.png' %}">
-    <meta property="og:url" content="{{ canonical_url }}">
-
-    <meta name="twitter:title" content="{{ page_title }}">
-    <meta name="twitter:description" content="{{ page_description  }}">
-    <meta name="twitter:image" content="{% static 'images/logo.png' %}">
-    <meta name="twitter:card" content="summary_large_image">
-
-
 </head>
 <body>
 
@@ -119,21 +101,6 @@
             post.style.display = "none";
         }
     }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ page_title }}",
-  "description": "{{ page_description }}",
-  "author": {
-    "@type": "Person",
-    "name": "AbbasLotfinasab"
-  },
-  "datePublished": "{{ page_date_published }}",
-  "image": "{% static 'images/logo.png' %}"
 }
 </script>
 
