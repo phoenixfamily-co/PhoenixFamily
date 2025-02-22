@@ -97,6 +97,8 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',  # فعال‌سازی پردازشگر i18n
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Seo.context_processors.seo_context',  # افزودن این خط
+
             ],
         },
     },
