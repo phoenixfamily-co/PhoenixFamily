@@ -1,4 +1,6 @@
+from PhoenixFamily import settings
 from .models import SEOPage
+from django.utils.translation import gettext_lazy as _
 
 
 def seo_context(request):
@@ -6,14 +8,14 @@ def seo_context(request):
     seo_data = SEOPage.objects.filter(page=path).first()
 
     if not seo_data:
-        seo_data = {
-            'title': 'Default Title',
-            'description': 'Default Description',
-            'keywords': 'default, keywords'
+        return {
+            'seo_title': _(settings.SEO['default']['title']),
+            'seo_description': _(settings.SEO['default']['description']),
+            'seo_keywords': ", ".join([_(kw) for kw in settings.SEO['default']['keywords']]),  # تبدیل لیست به استرینگ
         }
 
     return {
-        'seo_title': getattr(seo_data, 'title', "Default Title"),
-        'seo_description': getattr(seo_data, 'description', "Default Description"),
-        'seo_keywords': getattr(seo_data, 'keywords', "default, keywords"),
+        'seo_title': seo_data.title,
+        'seo_description': seo_data.description,
+        'seo_keywords': seo_data.keywords,
     }
