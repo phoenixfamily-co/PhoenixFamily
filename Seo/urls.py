@@ -4,7 +4,7 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'seo', views.SEOPageView, basename='seo')
-
+router.register(r'keyword', views.KeywordView, basename='keyword')
 
 app_name = 'seo'
 
