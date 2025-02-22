@@ -35,6 +35,8 @@ urlpatterns += i18n_patterns(
     path('products/', include('Product.urls', namespace='products')),  # مسیر URLهای اپلیکیشن Product
     path('user/', include('User.urls', namespace='user')),  # مسیر URLهای اپلیکیشن User
     path('auth/', include('Authentication.urls', namespace='authentication')),  # مسیر URLهای اپلیکیشن Authentication
+    path('seo/', include('Seo.urls', namespace='seo')),  # مسیر URLهای اپلیکیشن Authentication
+
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

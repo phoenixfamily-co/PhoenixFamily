@@ -1,5 +1,18 @@
 from django.contrib import admin
-from .models import Product
+from modeltranslation.admin import TranslationAdmin
 
-# Register your models here.
-admin.site.register(Product)
+from .models import Product, Features
+
+
+class ProductAdmin(TranslationAdmin):
+    list_display = ('title', 'description', 'name', 'header', 'content')
+
+
+admin.site.register(Product, ProductAdmin)
+
+
+class FeaturesAdmin(TranslationAdmin):
+    list_display = ('title', 'description')
+
+
+admin.site.register(Features, FeaturesAdmin)
