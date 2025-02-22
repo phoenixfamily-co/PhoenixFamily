@@ -215,7 +215,7 @@ LANGUAGES = [
     ('hi', _('Hindi')),
     ('ja', _('Japanese')),
     ('ko', _('Korean')),
-    ('zh-hans', _('Simplified Chinese')),  # چینی ماندارین ساده‌شده
+    # ('zh-hans', _('Simplified Chinese')),  # چینی ماندارین ساده‌شده
 
 ]
 
