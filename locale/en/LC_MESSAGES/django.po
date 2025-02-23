@@ -18,54 +18,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\PhoenixFamily\settings.py:109
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr ""
+
 #: .\PhoenixFamily\settings.py:110
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr ""
-
-#: .\PhoenixFamily\settings.py:111
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
 msgstr ""
+""
 
-#: .\PhoenixFamily\settings.py:114
+#: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr ""
 
+#: .\PhoenixFamily\settings.py:114
+msgid "family entertainment"
+msgstr ""
+
 #: .\PhoenixFamily\settings.py:115
-msgid "Realizing Ideas"
+msgid "entertainment online"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:116
-msgid "bringing Ideas to life"
+msgid "entertainment apps"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:117
-msgid "unique entertainment"
+msgid "family board games"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:118
-msgid "creative entertainment"
+msgid "board game online'"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:119
-msgid "website builder"
+msgid "board game apps"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:120
-msgid "web builder"
+msgid "game apps"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:121
-msgid "application builder"
+msgid "best entertainment apps"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:122
-msgid "app builder"
-msgstr ""
-
-#: .\PhoenixFamily\settings.py:123
-msgid "entertainment platform"
+msgid "best board games for adults"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:177

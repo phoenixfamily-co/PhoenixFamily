@@ -18,55 +18,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : (n == 2) ? 1 : 2"
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "PhoenixFamily | تحقيق الأفكار وتقديم الترفيه الفريد"
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "PhoenixFamily | أفضل تطبيقات الترفيه العائلية"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
-msgstr "توفر PhoenixFamily أدوات لتحقيق الأفكار الإبداعية وتقديم منتجات ترفيهية فريدة."
-
-#: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
-msgstr "عائلة فينيكس"
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+msgstr ""
+"اكتشف PhoenixFamily – وجهتك النهائية للترفيه العائلي! من الترفيه عبر الإنترنت إلى تطبيقات الترفيه وألعاب الطاولة الرقمية، المتعة بانتظارك!"
 
 #: .\PhoenixFamily\settings.py:114
-msgid "Realizing Ideas"
-msgstr "تحقيق الأفكار"
+msgid "family entertainment"
+msgstr "ترفيه عائلي"
 
 #: .\PhoenixFamily\settings.py:115
-msgid "bringing Ideas to life"
-msgstr "إحياء الأفكار"
+msgid "entertainment online"
+msgstr "ترفيه عبر الإنترنت"
 
 #: .\PhoenixFamily\settings.py:116
-msgid "unique entertainment"
-msgstr "ترفيه فريد"
+msgid "entertainment apps"
+msgstr "تطبيقات الترفيه"
 
 #: .\PhoenixFamily\settings.py:117
-msgid "creative entertainment"
-msgstr "ترفيه إبداعي"
+msgid "family board games"
+msgstr "ألعاب الطاولة العائلية"
 
 #: .\PhoenixFamily\settings.py:118
-msgid "website builder"
-msgstr "منشئ مواقع إلكترونية"
+msgid "board game online"
+msgstr "لعبة الطاولة عبر الإنترنت"
 
 #: .\PhoenixFamily\settings.py:119
-msgid "web builder"
-msgstr "منشئ ويب"
+msgid "board game apps"
+msgstr "تطبيقات ألعاب الطاولة"
 
 #: .\PhoenixFamily\settings.py:120
-msgid "application builder"
-msgstr "منشئ تطبيقات"
+msgid "game apps"
+msgstr "تطبيقات الألعاب"
 
 #: .\PhoenixFamily\settings.py:121
-msgid "app builder"
-msgstr "منشئ تطبيقات"
+msgid "best entertainment apps"
+msgstr "أفضل تطبيقات الترفيه"
 
 #: .\PhoenixFamily\settings.py:122
-msgid "entertainment platform"
-msgstr "منصة ترفيهية"
+msgid "best board games for adults"
+msgstr "أفضل ألعاب الطاولة للكبار"
 
 #: .\templates\about.html:10 .\templates\about.html:37
 #: .\templates\blogs.html:53 .\templates\contact.html:38

@@ -31,59 +31,57 @@ msgid "blogs"
 msgstr "博客"
 
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "凤凰家族 | 实现创意与独特娱乐"
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "凤凰家族 | 终极家庭娱乐应用"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
-msgstr "凤凰家族提供实现创意想法和提供独特娱乐产品的工具。"
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+msgstr "探索凤凰家族——您的终极家庭娱乐目的地！从在线娱乐到娱乐应用和数字棋盘游戏，乐趣无穷！"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr "凤凰家族"
 
 #: .\PhoenixFamily\settings.py:114
-msgid "Realizing Ideas"
-msgstr "实现创意"
+msgid "family entertainment"
+msgstr "家庭娱乐"
 
 #: .\PhoenixFamily\settings.py:115
-msgid "bringing Ideas to life"
-msgstr "将创意变为现实"
+msgid "entertainment online"
+msgstr "在线娱乐"
 
 #: .\PhoenixFamily\settings.py:116
-msgid "unique entertainment"
-msgstr "独特娱乐"
+msgid "entertainment apps"
+msgstr "娱乐应用"
 
 #: .\PhoenixFamily\settings.py:117
-msgid "creative entertainment"
-msgstr "创意娱乐"
+msgid "family board games"
+msgstr "家庭棋盘游戏"
+
+#: .\PhoenixFamily\settings.py:118
+msgid "board game online'"
+msgstr "在线棋盘游戏"
+
+#: .\PhoenixFamily\settings.py:119
+msgid "board game apps"
+msgstr "棋盘游戏应用"
+
+#: .\PhoenixFamily\settings.py:120
+msgid "game apps"
+msgstr "游戏应用"
+
+#: .\PhoenixFamily\settings.py:121
+msgid "best entertainment apps"
+msgstr "最佳娱乐应用"
+
+#: .\PhoenixFamily\settings.py:122
+msgid "best board games for adults"
+msgstr "最佳成人棋盘游戏"
 
 #: .\templates\products.html:95
 msgid "Key Features:"
 msgstr " 主要特点:"
-
-
-#: .\PhoenixFamily\settings.py:118
-msgid "website builder"
-msgstr "网站构建器"
-
-#: .\PhoenixFamily\settings.py:119
-msgid "web builder"
-msgstr "网页构建器"
-
-#: .\PhoenixFamily\settings.py:120
-msgid "application builder"
-msgstr "应用程序构建器"
-
-#: .\PhoenixFamily\settings.py:121
-msgid "app builder"
-msgstr "应用构建器"
-
-#: .\PhoenixFamily\settings.py:122
-msgid "entertainment platform"
-msgstr "娱乐平台"
 
 #: .\PhoenixFamily\settings.py:175
 msgid "English"

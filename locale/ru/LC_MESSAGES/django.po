@@ -18,54 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 1 : 2"
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "PhoenixFamily | Воплощение идей в жизнь и уникальные развлечения"
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "Семья Феникс | Лучшие приложения для семейных развлечений"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
-msgstr "PhoenixFamily предоставляет инструменты для реализации креативных идей и создания уникальных развлекательных продуктов."
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+msgstr ""
+"Откройте для себя Семья Феникс – ваш лучший выбор для семейных развлечений! От онлайн-развлечений до развлекательных приложений и цифровых настольных игр – веселье уже ждет вас!"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr "PhoenixFamily"
 
 #: .\PhoenixFamily\settings.py:114
-msgid "Realizing Ideas"
-msgstr "Реализация идей"
+msgid "family entertainment"
+msgstr "семейные развлечения"
 
 #: .\PhoenixFamily\settings.py:115
-msgid "bringing Ideas to life"
-msgstr "воплощение идей в жизнь"
+msgid "entertainment online"
+msgstr "онлайн-развлечения"
 
 #: .\PhoenixFamily\settings.py:116
-msgid "unique entertainment"
-msgstr "уникальные развлечения"
+msgid "entertainment apps"
+msgstr "развлекательные приложения"
 
 #: .\PhoenixFamily\settings.py:117
-msgid "creative entertainment"
-msgstr "креативные развлечения"
+msgid "family board games"
+msgstr "семейные настольные игры"
 
 #: .\PhoenixFamily\settings.py:118
-msgid "website builder"
-msgstr "конструктор сайтов"
+msgid "board game online'"
+msgstr "онлайн настольные игры"
 
 #: .\PhoenixFamily\settings.py:119
-msgid "web builder"
-msgstr "веб-конструктор"
+msgid "board game apps"
+msgstr "приложения для настольных игр"
 
 #: .\PhoenixFamily\settings.py:120
-msgid "application builder"
-msgstr "конструктор приложений"
+msgid "game apps"
+msgstr "игровые приложения"
 
 #: .\PhoenixFamily\settings.py:121
-msgid "app builder"
-msgstr "создатель приложений"
+msgid "best entertainment apps"
+msgstr "лучшие развлекательные приложения"
 
 #: .\PhoenixFamily\settings.py:122
-msgid "entertainment platform"
-msgstr "развлекательная платформа"
+msgid "best board games for adults"
+msgstr "лучшие настольные игры для взрослых"
+
 
 #: .\templates\about.html:10 .\templates\about.html:37
 #: .\templates\blogs.html:53 .\templates\contact.html:38

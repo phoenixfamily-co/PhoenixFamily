@@ -18,41 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0"
 
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "PhoenixFamily | 아이디어를 실현하고 독창적인 엔터테인먼트를 제공합니다."
+#: .\PhoenixFamily\settings.py:109
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "피닉스패밀리 | 궁극의 가족 엔터테인먼트 앱"
 
-msgid "PhoenixFamily provides tools for realizing creative ideas and delivering unique entertainment products."
-msgstr "PhoenixFamily는 창의적인 아이디어를 실현하고 독창적인 엔터테인먼트 제품을 제공하는 도구를 제공합니다."
+#: .\PhoenixFamily\settings.py:110
+msgid ""
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+msgstr ""
+"피닉스패밀리를 발견하세요 – 가족 엔터테인먼트의 궁극적인 목적지! 온라인 엔터테인먼트부터 엔터테인먼트 앱, 디지털 보드게임까지, 즐거움이 기다리고 있습니다!"
 
+#: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
-msgstr "PhoenixFamily"
+msgstr "피닉스패밀리"
 
-msgid "Realizing Ideas"
-msgstr "아이디어 실현"
+#: .\PhoenixFamily\settings.py:114
+msgid "family entertainment"
+msgstr "가족 엔터테인먼트"
 
-msgid "bringing Ideas to life"
-msgstr "아이디어를 현실로"
+#: .\PhoenixFamily\settings.py:115
+msgid "entertainment online"
+msgstr "온라인 엔터테인먼트"
 
-msgid "unique entertainment"
-msgstr "독창적인 엔터테인먼트"
+#: .\PhoenixFamily\settings.py:116
+msgid "entertainment apps"
+msgstr "엔터테인먼트 앱"
 
-msgid "creative entertainment"
-msgstr "창의적인 엔터테인먼트"
+#: .\PhoenixFamily\settings.py:117
+msgid "family board games"
+msgstr "가족 보드게임"
 
-msgid "website builder"
-msgstr "웹사이트 제작 도구"
+#: .\PhoenixFamily\settings.py:118
+msgid "board game online'"
+msgstr "온라인 보드게임"
 
-msgid "web builder"
-msgstr "웹 제작 도구"
+#: .\PhoenixFamily\settings.py:119
+msgid "board game apps"
+msgstr "보드게임 앱"
 
-msgid "application builder"
-msgstr "애플리케이션 제작 도구"
+#: .\PhoenixFamily\settings.py:120
+msgid "game apps"
+msgstr "게임 앱"
 
-msgid "app builder"
-msgstr "앱 제작 도구"
+#: .\PhoenixFamily\settings.py:121
+msgid "best entertainment apps"
+msgstr "최고의 엔터테인먼트 앱"
 
-msgid "entertainment platform"
-msgstr "엔터테인먼트 플랫폼"
+#: .\PhoenixFamily\settings.py:122
+msgid "best board games for adults"
+msgstr "성인을 위한 최고의 보드게임"
 
 msgid "About Us"
 msgstr "회사 소개"

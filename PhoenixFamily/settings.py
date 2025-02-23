@@ -125,19 +125,21 @@ DATABASES = {
 
 SEO = {
     'default': {
-        'title': _('PhoenixFamily | Entertainment Company'),
+        'title': _('PhoenixFamily | The Ultimate Family Entertainment Platform'),
         'description': _(
-            'PhoenixFamily provides entertainment products.'),
+            'Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to'
+            ' entertainment apps and digital board games, fun awaits!'),
         'keywords': [
             _('phoenixfamily'),
             _('family entertainment'),
             _('entertainment online'),
             _('entertainment apps'),
-            _('digital entertainment'),
             _('family board games'),
             _('board game online'),
             _('board game apps'),
-            _('digital board game'),
+            _('game apps'),
+            _('best entertainment apps'),
+            _('best board games for adults'),
         ],
         'robots': 'index, follow',  # یا 'noindex, nofollow' برای جلوگیری از ایندکس
     }

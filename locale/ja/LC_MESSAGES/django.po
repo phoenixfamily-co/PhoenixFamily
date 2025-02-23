@@ -17,56 +17,57 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0"
+
+#: .\PhoenixFamily\settings.py:109
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "フェニックスファミリー | 究極のファミリーエンターテイメントアプリ"
+
 #: .\PhoenixFamily\settings.py:110
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "フェニックスファミリー | アイデアを実現し、ユニークなエンターテイメントを提供"
-
-#: .\PhoenixFamily\settings.py:111
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
 msgstr ""
-"フェニックスファミリーは、クリエイティブなアイデアを実現し、ユニークなエンターテイメント製品を提供するためのツールを提供します。"
+"フェニックスファミリーを発見しよう – 家族向けエンターテイメントの究極の目的地！オンラインエンターテイメントからエンターテイメントアプリ、デジタルボードゲームまで、楽しさがあなたを待っています！"
 
-#: .\PhoenixFamily\settings.py:114
+#: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr "フェニックスファミリー"
 
+#: .\PhoenixFamily\settings.py:114
+msgid "family entertainment"
+msgstr "ファミリーエンターテイメント"
+
 #: .\PhoenixFamily\settings.py:115
-msgid "Realizing Ideas"
-msgstr "アイデアの実現"
+msgid "entertainment online"
+msgstr "オンラインエンターテイメント"
 
 #: .\PhoenixFamily\settings.py:116
-msgid "bringing Ideas to life"
-msgstr "アイデアを実現する"
+msgid "entertainment apps"
+msgstr "エンターテイメントアプリ"
 
 #: .\PhoenixFamily\settings.py:117
-msgid "unique entertainment"
-msgstr "ユニークなエンターテイメント"
+msgid "family board games"
+msgstr "ファミリーボードゲーム"
 
 #: .\PhoenixFamily\settings.py:118
-msgid "creative entertainment"
-msgstr "クリエイティブなエンターテイメント"
+msgid "board game online'"
+msgstr "オンラインボードゲーム"
 
 #: .\PhoenixFamily\settings.py:119
-msgid "website builder"
-msgstr "ウェブサイトビルダー"
+msgid "board game apps"
+msgstr "ボードゲームアプリ"
 
 #: .\PhoenixFamily\settings.py:120
-msgid "web builder"
-msgstr "ウェブビルダー"
+msgid "game apps"
+msgstr "ゲームアプリ"
 
 #: .\PhoenixFamily\settings.py:121
-msgid "application builder"
-msgstr "アプリケーションビルダー"
+msgid "best entertainment apps"
+msgstr "最高のエンターテイメントアプリ"
 
 #: .\PhoenixFamily\settings.py:122
-msgid "app builder"
-msgstr "アプリビルダー"
+msgid "best board games for adults"
+msgstr "大人向けの最高のボードゲーム"
 
-#: .\PhoenixFamily\settings.py:123
-msgid "entertainment platform"
-msgstr "エンターテイメントプラットフォーム"
 
 #: .\templates\about.html:10 .\templates\about.html:37
 #: .\templates\blogs.html:53 .\templates\contact.html:38

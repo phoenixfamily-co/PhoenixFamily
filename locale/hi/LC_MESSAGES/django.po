@@ -18,41 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)"
 
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "फीनिक्स फैमिली | विचारों को जीवन में लाना और अनोखा मनोरंजन"
+#: .\PhoenixFamily\settings.py:109
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "फ़ीनिक्स परिवार | परम पारिवारिक मनोरंजन ऐप्स"
 
-msgid "PhoenixFamily provides tools for realizing creative ideas and delivering unique entertainment products."
-msgstr "फीनिक्स फैमिली रचनात्मक विचारों को साकार करने और अनोखे मनोरंजन उत्पाद प्रदान करने के लिए उपकरण उपलब्ध कराता है।"
+#: .\PhoenixFamily\settings.py:110
+msgid ""
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+msgstr ""
+"फ़ीनिक्स परिवार की खोज करें – पारिवारिक मनोरंजन के लिए आपका परम गंतव्य! ऑनलाइन मनोरंजन से लेकर मनोरंजन ऐप्स और डिजिटल बोर्ड गेम्स तक, मज़ा आपका इंतजार कर रहा है!"
 
 msgid "PhoenixFamily"
 msgstr "फीनिक्स फैमिली"
 
-msgid "Realizing Ideas"
-msgstr "विचारों को साकार करना"
+#: .\PhoenixFamily\settings.py:114
+msgid "family entertainment"
+msgstr "पारिवारिक मनोरंजन"
 
-msgid "bringing Ideas to life"
-msgstr "विचारों को जीवन में लाना"
+#: .\PhoenixFamily\settings.py:115
+msgid "entertainment online"
+msgstr "ऑनलाइन मनोरंजन"
 
-msgid "unique entertainment"
-msgstr "अनोखा मनोरंजन"
+#: .\PhoenixFamily\settings.py:116
+msgid "entertainment apps"
+msgstr "मनोरंजन ऐप्स"
 
-msgid "creative entertainment"
-msgstr "रचनात्मक मनोरंजन"
+#: .\PhoenixFamily\settings.py:117
+msgid "family board games"
+msgstr "पारिवारिक बोर्ड गेम्स"
 
-msgid "website builder"
-msgstr "वेबसाइट बिल्डर"
+#: .\PhoenixFamily\settings.py:118
+msgid "board game online"
+msgstr "ऑनलाइन बोर्ड गेम"
 
-msgid "web builder"
-msgstr "वेब बिल्डर"
+#: .\PhoenixFamily\settings.py:119
+msgid "board game apps"
+msgstr "बोर्ड गेम ऐप्स"
 
-msgid "application builder"
-msgstr "एप्लिकेशन बिल्डर"
+#: .\PhoenixFamily\settings.py:120
+msgid "game apps"
+msgstr "गेम ऐप्स"
 
-msgid "app builder"
-msgstr "ऐप बिल्डर"
+#: .\PhoenixFamily\settings.py:121
+msgid "best entertainment apps"
+msgstr "सर्वश्रेष्ठ मनोरंजन ऐप्स"
 
-msgid "entertainment platform"
-msgstr "मनोरंजन मंच"
+#: .\PhoenixFamily\settings.py:122
+msgid "best board games for adults"
+msgstr "वयस्कों के लिए सर्वश्रेष्ठ बोर्ड गेम्स"
+
 
 msgid "About Us"
 msgstr "हमारे बारे में"

@@ -19,55 +19,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)"
 
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | Bringing Ideas to Life and Unique Entertainment"
-msgstr "فینیکس فامیلی | ایده‌ها را به زندگی می‌آورد و سرگرمی منحصر به فرد"
+msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
+msgstr "خانواده ققنوس | بهترین اپلیکیشن‌های سرگرمی بانوان"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"PhoenixFamily provides tools for realizing creative ideas and delivering "
-"unique entertainment products."
+"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
 msgstr ""
-"فینیکس فامیلی ابزارهایی برای تحقق ایده‌های خلاقانه و ارائه محصولات سرگرمی منحصر به فرد فراهم می‌کند."
+"خانواده ققنوس را کشف کنید – مقصد نهایی شما برای سرگرمی چند نفر! از سرگرمی های آنلاین تا سرگرمی تفریحی و سرگرمی ترسناک، لحظات هیجان‌انگیزی در انتظار شماست! 🚀"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
 msgstr "خانواده ققنوس"
-
 #: .\PhoenixFamily\settings.py:114
-msgid "Realizing Ideas"
-msgstr "پیاده سازی ایده"
+msgid "family entertainment"
+msgstr "سرگرمی بانوان"
 
 #: .\PhoenixFamily\settings.py:115
-msgid "bringing Ideas to life"
-msgstr "ایده‌ها را به زندگی می‌آورد"
+msgid "entertainment online"
+msgstr "سرگرمی بانوان ترسناک"
 
 #: .\PhoenixFamily\settings.py:116
-msgid "unique entertainment"
-msgstr "سرگرمی منحصر به فرد"
+msgid "entertainment apps"
+msgstr "سرگرمی برای افراد تنها"
 
 #: .\PhoenixFamily\settings.py:117
-msgid "creative entertainment"
-msgstr "سرگرمی خلاق"
+msgid "family board games"
+msgstr "سرگرمی در خانه"
 
 #: .\PhoenixFamily\settings.py:118
-msgid "website builder"
-msgstr "طراحی وب‌سایت"
+msgid "board game online"
+msgstr "بردگیم آنلاین"
 
 #: .\PhoenixFamily\settings.py:119
-msgid "web builder"
-msgstr "طراحی سایت"
+msgid "board game apps"
+msgstr "بردگیم آنلاین"
 
 #: .\PhoenixFamily\settings.py:120
-msgid "application builder"
-msgstr "طراحی اپلیکیشن"
+msgid "game apps"
+msgstr "بازی سرگرمی"
 
 #: .\PhoenixFamily\settings.py:121
-msgid "app builder"
-msgstr "طراحی اپ"
+msgid "best entertainment apps"
+msgstr "بردگیم چند نفره"
 
 #: .\PhoenixFamily\settings.py:122
-msgid "entertainment platform"
-msgstr "پلتفرم سرگرمی"
+msgid "best board games for adults"
+msgstr "بازی ترسناک"
+
 
 #: .\templates\about.html:10 .\templates\about.html:37
 #: .\templates\blogs.html:53 .\templates\contact.html:38
