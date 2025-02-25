@@ -125,12 +125,12 @@ DATABASES = {
 
 SEO = {
     'default': {
-        'title': _('PhoenixFamily | The Ultimate Family Entertainment Apps'),
+        'title': _('Phoenix Family | Board Games, Entertainment Apps & More!'),
         'description': _(
-            'Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to'
-            ' entertainment apps and digital board games, fun awaits!'),
+            'Discover Phoenix Family – your ultimate destination for family entertainment! From online entertainment to'
+            ' entertainment apps and best board games for adults, fun awaits!'),
         'keywords': [
-            _('phoenixfamily'),
+            _('phoenix family'),
             _('family entertainment'),
             _('entertainment online'),
             _('entertainment apps'),

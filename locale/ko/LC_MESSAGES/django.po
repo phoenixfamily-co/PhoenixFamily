@@ -19,14 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0"
 
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
-msgstr "피닉스패밀리 | 궁극의 가족 엔터테인먼트 앱"
+msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
+msgstr "피닉스 패밀리 | 보드 게임, 엔터테인먼트 앱 및 더 많은 즐거움!"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+"Discover Phoenix Family – your ultimate destination for family entertainment! From online entertainment to entertainment apps and and best board games for adults, fun awaits!"
 msgstr ""
-"피닉스패밀리를 발견하세요 – 가족 엔터테인먼트의 궁극적인 목적지! 온라인 엔터테인먼트부터 엔터테인먼트 앱, 디지털 보드게임까지, 즐거움이 기다리고 있습니다!"
+"피닉스 패밀리를 만나보세요 – 최고의 가족 엔터테인먼트 공간! 온라인 엔터테인먼트부터 엔터테인먼트 앱, 그리고 성인을 위한 최고의 보드 게임까지, 재미가 기다리고 있습니다!"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"

@@ -31,13 +31,13 @@ msgid "blogs"
 msgstr "博客"
 
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
-msgstr "凤凰家族 | 终极家庭娱乐应用"
+msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
+msgstr "凤凰家族 | 桌游、娱乐应用及更多精彩内容！"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
-msgstr "探索凤凰家族——您的终极家庭娱乐目的地！从在线娱乐到娱乐应用和数字棋盘游戏，乐趣无穷！"
+"Discover Phoenix Family – your ultimate destination for family entertainment! From online entertainment to entertainment apps and and best board games for adults, fun awaits!"
+msgstr "探索凤凰家族 – 您的终极家庭娱乐目的地！从在线娱乐到娱乐应用，以及适合成人的最佳桌游，精彩尽在其中！"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"

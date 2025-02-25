@@ -19,14 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)"
 
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
-msgstr "خانواده ققنوس | بهترین اپلیکیشن‌های سرگرمی بانوان"
+msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
+msgstr "خانواده ققنوس | بازی‌های بردگیم، اپلیکیشن‌های سرگرمی و بیشتر!"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+"Discover Phoenix Family – your ultimate destination for family entertainment! From online entertainment to entertainment apps and and best board games for adults, fun awaits!"
 msgstr ""
-"خانواده ققنوس را کشف کنید – مقصد نهایی شما برای سرگرمی چند نفر! از سرگرمی های آنلاین تا سرگرمی تفریحی و سرگرمی ترسناک، لحظات هیجان‌انگیزی در انتظار شماست! 🚀"
+"خانواده ققنوس را کشف کنید – مقصد نهایی شما برای سرگرمی خانوادگی! از سرگرمی آنلاین تا اپلیکیشن‌های سرگرمی و بهترین بازی‌های بردگیم برای بانوان، لحظات هیجان‌انگیزی در انتظار شماست! 🚀"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"

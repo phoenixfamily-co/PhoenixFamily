@@ -18,14 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 1 : 2"
 #: .\PhoenixFamily\settings.py:109
-msgid "PhoenixFamily | The Ultimate Family Entertainment Apps"
-msgstr "Семья Феникс | Лучшие приложения для семейных развлечений"
+msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
+msgstr "Семья Феникс | Настольные игры, развлекательные приложения и многое другое!"
 
 #: .\PhoenixFamily\settings.py:110
 msgid ""
-"Discover PhoenixFamily – your ultimate destination for family entertainment! From online entertainment to entertainment apps and digital board games, fun awaits!"
+"Discover Phoenix Family – your ultimate destination for family entertainment! From online entertainment to entertainment apps and and best board games for adults, fun awaits!"
 msgstr ""
-"Откройте для себя Семья Феникс – ваш лучший выбор для семейных развлечений! От онлайн-развлечений до развлекательных приложений и цифровых настольных игр – веселье уже ждет вас!"
+"Откройте для себя Семью Феникс – ваше лучшее место для семейных развлечений! От онлайн-развлечений до развлекательных приложений и лучших настольных игр для взрослых – веселье уже ждет!"
 
 #: .\PhoenixFamily\settings.py:113
 msgid "PhoenixFamily"
