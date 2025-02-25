@@ -23,7 +23,7 @@
                    aria-expanded="false">{% trans "Products" %}</a>
                 <ul class="dropdown-menu">
                     {% for x in Products %}
-                        <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name }}</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name|capfirst }}</a></li>
                     {% endfor %}
                 </ul>
             </li>
