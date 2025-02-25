@@ -40,7 +40,7 @@ msgid ""
 msgstr "探索凤凰家族 – 您的终极家庭娱乐目的地！从在线娱乐到娱乐应用，以及适合成人的最佳桌游，精彩尽在其中！"
 
 #: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
+msgid "phoenix family"
 msgstr "凤凰家族"
 
 #: .\PhoenixFamily\settings.py:114

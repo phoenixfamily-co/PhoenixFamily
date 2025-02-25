@@ -29,6 +29,11 @@ msgid ""
 msgstr ""
 "اكتشف عائلة العنقاء – وجهتك النهائية للترفيه العائلي! من الترفيه عبر الإنترنت إلى تطبيقات الترفيه وأفضل ألعاب الطاولة للكبار، المتعة بانتظارك!"
 
+
+msgid "phoenix family"
+msgstr "عائلة العنقاء"
+
+
 #: .\PhoenixFamily\settings.py:114
 msgid "family entertainment"
 msgstr "ترفيه عائلي"

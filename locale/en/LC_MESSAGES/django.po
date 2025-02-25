@@ -29,7 +29,7 @@ msgstr ""
 ""
 
 #: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
+msgid "phoenix family"
 msgstr ""
 
 #: .\PhoenixFamily\settings.py:114

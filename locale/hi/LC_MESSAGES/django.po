@@ -28,8 +28,8 @@ msgid ""
 msgstr ""
 "फीनिक्स परिवार की खोज करें – पारिवारिक मनोरंजन के लिए आपकी अंतिम मंज़िल! ऑनलाइन मनोरंजन से लेकर एंटरटेनमेंट ऐप्स और वयस्कों के लिए बेहतरीन बोर्ड गेम्स तक, मज़ा आपका इंतजार कर रहा है!"
 
-msgid "PhoenixFamily"
-msgstr "फीनिक्स फैमिली"
+msgid "phoenix family"
+msgstr "फीनिक्स परिवार"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "family entertainment"

@@ -29,8 +29,8 @@ msgstr ""
 "Anka Ailesi’ni keşfedin – Aile eğlencesi için en iyi destinasyon! Online eğlenceden eğlence uygulamalarına ve yetişkinler için en iyi kutu oyunlarına kadar, eğlence sizi bekliyor!"
 
 #: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
-msgstr "PhoenixFamily"
+msgid "phoenix family"
+msgstr "Anka Ailesi"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "family entertainment"

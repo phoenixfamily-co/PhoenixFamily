@@ -28,8 +28,8 @@ msgstr ""
 "Откройте для себя Семью Феникс – ваше лучшее место для семейных развлечений! От онлайн-развлечений до развлекательных приложений и лучших настольных игр для взрослых – веселье уже ждет!"
 
 #: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
-msgstr "PhoenixFamily"
+msgid "phoenix family"
+msgstr "Семья Феникс"
 
 #: .\PhoenixFamily\settings.py:114
 msgid "family entertainment"

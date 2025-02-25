@@ -29,7 +29,7 @@ msgstr ""
 "フェニックスファミリーを発見しよう – 家族向けエンターテインメントの究極の目的地！オンラインエンターテイメントからアプリ、そして大人向けの最高のボードゲームまで、楽しさが待っています！"
 
 #: .\PhoenixFamily\settings.py:113
-msgid "PhoenixFamily"
+msgid "phoenix family"
 msgstr "フェニックスファミリー"
 
 #: .\PhoenixFamily\settings.py:114
