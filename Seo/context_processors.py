@@ -7,8 +7,8 @@ from django.utils.encoding import force_str
 
 
 def seo_context(request):
-    path = request.path.strip("/")
-    seo_data = SEOPage.objects.prefetch_related('keywords').filter(page_url=path).first()
+    path = request.path.strip("/")  # حذف اسلش اول و آخر
+    seo_data = SEOPage.objects.prefetch_related('keywords').filter(page_url=f"/{path}/").first()
 
     if not seo_data:
         return {
@@ -22,5 +22,4 @@ def seo_context(request):
         'seo_description': seo_data.description,
         'seo_keywords': ", ".join([kw.name for kw in seo_data.keywords.all()]),
         'canonical_url': quote(request.build_absolute_uri(), safe=':/')
-
     }
