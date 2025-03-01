@@ -3,7 +3,6 @@ from django.utils.translation import get_language
 from django.views.generic import ListView, DetailView
 from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from About.models import AboutUs
 from Blog.models import BlogPost
 from Blog.serializers import BlogPostSerializer
@@ -83,6 +82,3 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all().order_by('-published_date')  # لیست مقالات مرتب‌شده بر اساس تاریخ انتشار
     serializer_class = BlogPostSerializer
 
-    def perform_create(self, serializer):
-        # تنظیم نویسنده به کاربر جاری هنگام ایجاد مقاله
-        serializer.save(author=self.request.user)
