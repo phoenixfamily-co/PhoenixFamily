@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.utils.timezone import now
 from django.utils.translation import get_language
 from django.views.generic import ListView, DetailView
@@ -5,6 +6,8 @@ from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from django.utils.translation import gettext_lazy as _
+
+from About.models import AboutUs
 from Blog.models import BlogPost
 from Blog.serializers import BlogPostSerializer
 
@@ -18,33 +21,24 @@ class BlogPostListView(ListView):
 
     def get_queryset(self):
         queryset = BlogPost.objects.all().order_by("-published_date")
+        filters = Q()
         category = self.request.GET.get("category")
         author = self.request.GET.get("author")
-        search = self.request.GET.get("search")  # اضافه کردن جستجو
+        search = self.request.GET.get("search")
+
         if category:
-            queryset = queryset.filter(category__icontains=category)
+            filters &= Q(category__iexact=category)
         if author:
-            queryset = queryset.filter(author__username__icontains=author)
+            filters &= Q(author__username__icontains=author)
         if search:
-            queryset = queryset.filter(title__icontains=search)
-        return queryset
+            filters &= Q(title__icontains=search)
+
+        return queryset.filter(filters)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['current_language'] = get_language()  # زبان جاری
         context['total_posts'] = BlogPost.objects.count()  # تعداد کل مقالات
-
-        page_title = self.get_page_title()
-        page_description = self.get_page_description()
-        page_keywords = self.get_page_keywords()
-        canonical_url = self.request.build_absolute_uri(self.request.path)
-        page_date_published = self.get_page_date_published()
-
-        context['page_description'] = page_description
-        context['page_keywords'] = page_keywords
-        context['canonical_url'] = canonical_url
-        context['page_title'] = page_title
-        context['page_date_published'] = page_date_published
+        context['About'] = AboutUs.objects.first()
 
         return context
 
