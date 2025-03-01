@@ -59,7 +59,7 @@
     <!-- Blog Post Card -->
       {% for post in blog_posts %}
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 gap-4 overflow-x-auto py-3 px-2 ">
          <div class="case-card card rounded shadow">
              {% if post.image %}
                  <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}" />
@@ -75,7 +75,7 @@
           <div class="d-flex justify-content-center">  <!-- دکمه را وسط قرار می‌دهد -->
                         <a  href="{% url 'blogs:detail' post.slug  %}" target="_blank"
                            class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Read More' %}</a>
-                    </div>
+          </div>
     </div>
     </div>
       {% endfor %}
