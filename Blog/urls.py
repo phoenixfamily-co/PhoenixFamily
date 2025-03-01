@@ -9,7 +9,7 @@ router.register(r'blog', BlogPostViewSet, basename='blog')
 
 urlpatterns = [
     path('', BlogPostListView.as_view(), name='blog-view'),  # صفحه اصلی
-    path('blog/<slug:slug>/', BlogPostDetailView.as_view(), name='detail'),
+    path('blog/<int:pk>/', BlogPostDetailView.as_view(), name='detail'),
 
     path('api/', include(router.urls)),
 
