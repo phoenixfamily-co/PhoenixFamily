@@ -6,6 +6,7 @@ from rest_framework.generics import get_object_or_404
 from About.models import AboutUs
 from Blog.models import BlogPost
 from Blog.serializers import BlogPostSerializer
+from Product.models import Product
 
 
 # لیست مقالات
@@ -32,6 +33,7 @@ class BlogPostListView(ListView):
         context = super().get_context_data(**kwargs)
         context['total_posts'] = BlogPost.objects.count()  # تعداد کل مقالات
         context['About'] = AboutUs.objects.first()
+        context['products'] = Product.objects.all()
 
         return context
 
