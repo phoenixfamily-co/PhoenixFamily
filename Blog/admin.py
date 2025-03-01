@@ -5,7 +5,7 @@ from .models import *
 
 
 class BlogPostAdmin(TranslationAdmin):
-    list_display = ('title', 'description', 'slug', 'content', 'meta_title', 'meta_description')
+    list_display = ('title', 'content', 'slug', 'meta_title', 'meta_description')
 
 
 admin.site.register(BlogPost, BlogPostAdmin)
