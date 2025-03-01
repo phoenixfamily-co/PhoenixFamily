@@ -57,13 +57,13 @@
     <section class="section container py-5">
         <div class="row text-center">
             <div class="col-md-12">
-                <h2 class="mb-4 text-primary">Discover Insights, Stories, and Innovations</h2>
+                <h2 class="mb-4">Discover Insights, Stories, and Innovations</h2>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {% for post in blog_posts %}
                 <div class="col">
-                    <div class="card h-100 shadow-sm border-0 rounded-lg overflow-hidden">
+                    <div class="case-card card h-100 shadow-sm border-0 rounded-lg overflow-hidden">
                         <div class="position-relative">
                             {% if post.image %}
                                 <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}"/>
@@ -77,7 +77,7 @@
                             <p class="card-text text-muted">{{ post.content|truncatewords:20 }}</p>
                             <div class="mt-auto text-center">
                                 <a href="{% url 'blogs:detail' post.slug %}" target="_blank"
-                                   class="btn btn-primary shadow-lg px-4 py-2">{% trans 'Read More' %}</a>
+                                   class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Read More' %}</a>
                             </div>
                         </div>
                     </div>
