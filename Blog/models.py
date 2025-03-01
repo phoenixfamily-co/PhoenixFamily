@@ -16,7 +16,7 @@ class BlogPost(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts")  # نویسنده مقاله
     image = models.ImageField(upload_to='blog_images/', blank=True, null=True)  # تصویر شاخص
     meta_title = models.CharField(max_length=255, blank=True, null=True)  # عنوان برای SEO
-    meta_description = models.TextField(help_text="توضیحات متا (Meta Description)")  # توضیحات برای SEO
+    meta_description = models.TextField(blank=True, null=True, help_text="توضیحات متا (Meta Description)")  # توضیحات برای SEO
     meta_keywords = models.ManyToManyField(Keyword, blank=True, help_text="کلمات کلیدی (Keywords)")  # کلمات کلیدی برای SEO
 
     def save(self, *args, **kwargs):
