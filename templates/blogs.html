@@ -64,7 +64,6 @@
         <div class="case-container d-flex gap-4 overflow-x-auto py-3 px-2 ">
 
             {% for post in blog_posts %}
-                <div class="col">
                     <div class="case-card card h-100 shadow-sm border-0 rounded-lg overflow-hidden">
                         <div class="position-relative">
                             {% if post.image %}
@@ -82,7 +81,6 @@
                                    class="btn btn-lg px-4 py-2 mt-3 shadow-lg">{% trans 'Read More' %}</a>
                             </div>
                         </div>
-                    </div>
                 </div>
             {% endfor %}
         </div>
