@@ -11,6 +11,6 @@ urlpatterns = [
     path('', BlogPostListView.as_view(), name='blog-view'),  # صفحه اصلی
     path('blog/<slug:slug>/', BlogPostDetailView.as_view(), name='detail'),
 
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 
 ]

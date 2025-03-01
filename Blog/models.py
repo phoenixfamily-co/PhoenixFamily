@@ -1,6 +1,10 @@
 from django.db import models
 from django.utils.text import slugify
 from django.conf import settings
+
+from Seo.models import Keyword
+
+
 # from django.contrib.auth.models import User  # برای مدیریت نویسنده‌ها
 
 
@@ -10,11 +14,10 @@ class BlogPost(models.Model):
     content = models.TextField()
     published_date = models.DateTimeField(auto_now_add=True)  # تاریخ انتشار
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts")  # نویسنده مقاله
-    category = models.CharField(max_length=100, blank=True, null=True)  # دسته‌بندی
     image = models.ImageField(upload_to='blog_images/', blank=True, null=True)  # تصویر شاخص
     meta_title = models.CharField(max_length=255, blank=True, null=True)  # عنوان برای SEO
-    meta_description = models.CharField(max_length=160, blank=True, null=True)  # توضیحات برای SEO
-    meta_keywords = models.CharField(max_length=255, blank=True, null=True)  # کلمات کلیدی برای SEO
+    meta_description = models.TextField(help_text="توضیحات متا (Meta Description)")  # توضیحات برای SEO
+    meta_keywords = models.ManyToManyField(Keyword, blank=True, help_text="کلمات کلیدی (Keywords)")  # کلمات کلیدی برای SEO
 
     def save(self, *args, **kwargs):
         if not self.slug:

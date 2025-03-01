@@ -19,12 +19,9 @@ class BlogPostListView(ListView):
     def get_queryset(self):
         queryset = BlogPost.objects.all().order_by("-published_date")
         filters = Q()
-        category = self.request.GET.get("category")
         author = self.request.GET.get("author")
         search = self.request.GET.get("search")
 
-        if category:
-            filters &= Q(category__iexact=category)
         if author:
             filters &= Q(author__username__icontains=author)
         if search:
@@ -85,7 +82,6 @@ class BlogPostDetailView(DetailView):
 class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all().order_by('-published_date')  # لیست مقالات مرتب‌شده بر اساس تاریخ انتشار
     serializer_class = BlogPostSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]  # کاربران غیرمجاز فقط می‌توانند مقالات را مشاهده کنند
 
     def perform_create(self, serializer):
         # تنظیم نویسنده به کاربر جاری هنگام ایجاد مقاله
