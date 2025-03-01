@@ -51,13 +51,21 @@ class BlogPostDetailView(DetailView):
         context['current_language'] = get_language()  # زبان جاری را اضافه می‌کنیم
 
         page_title = self.get_page_title()  # عنوان صفحه
-        page_description = self.get_page_description()  # توصیف صفحه
-        page_keywords = self.get_page_keywords()  # کلمات کلیدی
+        page_content = self.get_page_content()  # توصیف صفحه
+        page_image = self.get_page_image()
+
+        meta_title = self.get_meta_title()  # عنوان صفحه
+        meta_description = self.get_meta_description()  # توصیف صفحه
+        meta_keywords = self.get_meta_keywords()  # کلمات کلیدی
         canonical_url = self.request.build_absolute_uri(self.request.path)
 
         context['page_title'] = page_title
-        context['page_description'] = page_description
-        context['page_keywords'] = page_keywords
+        context['page_content'] = page_content
+        context['page_image'] = page_image
+
+        context['meta_title'] = meta_title
+        context['meta_description'] = meta_description
+        context['meta_keywords'] = meta_keywords
         context['canonical_url'] = canonical_url
 
         return context
@@ -65,14 +73,29 @@ class BlogPostDetailView(DetailView):
     def get_page_title(self):
         # شما می‌توانید عنوان صفحه را بر اساس عنوان مقاله بسازید
         blog_post = self.get_object()
+        return blog_post.title
+
+    def get_page_content(self):
+        # توصیف صفحه می‌تواند از محتوای مقاله گرفته شود
+        blog_post = self.get_object()
+        return blog_post.content  # یا هر فیلدی که توصیف کوتاهی از مقاله باشد
+
+    def get_page_image(self):
+        # کلمات کلیدی می‌تواند بر اساس دسته‌بندی یا برچسب‌های مقاله باشد
+        blog_post = self.get_object()
+        return blog_post.image  # اگر مقاله دسته‌بندی‌ها داشته باشد
+
+    def get_meta_title(self):
+        # شما می‌توانید عنوان صفحه را بر اساس عنوان مقاله بسازید
+        blog_post = self.get_object()
         return blog_post.meta_title
 
-    def get_page_description(self):
+    def get_meta_description(self):
         # توصیف صفحه می‌تواند از محتوای مقاله گرفته شود
         blog_post = self.get_object()
         return blog_post.meta_description  # یا هر فیلدی که توصیف کوتاهی از مقاله باشد
 
-    def get_page_keywords(self):
+    def get_meta_keywords(self):
         # کلمات کلیدی می‌تواند بر اساس دسته‌بندی یا برچسب‌های مقاله باشد
         blog_post = self.get_object()
         return blog_post.meta_keywords  # اگر مقاله دسته‌بندی‌ها داشته باشد
@@ -81,4 +104,3 @@ class BlogPostDetailView(DetailView):
 class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all().order_by('-published_date')  # لیست مقالات مرتب‌شده بر اساس تاریخ انتشار
     serializer_class = BlogPostSerializer
-
