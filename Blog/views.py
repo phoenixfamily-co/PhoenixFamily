@@ -1,12 +1,9 @@
 from django.db.models import Q
-from django.utils.timezone import now
 from django.utils.translation import get_language
 from django.views.generic import ListView, DetailView
 from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from django.utils.translation import gettext_lazy as _
-
 from About.models import AboutUs
 from Blog.models import BlogPost
 from Blog.serializers import BlogPostSerializer
@@ -41,21 +38,6 @@ class BlogPostListView(ListView):
         context['About'] = AboutUs.objects.first()
 
         return context
-
-    def get_page_description(self):
-        # اینجا می‌توانید توصیف صفحه را بر اساس مدل یا داده‌های دیگر بسازید
-        return _("Discover Insights, Stories, and Innovations.")
-
-    def get_page_keywords(self):
-        # اینجا می‌توانید کلمات کلیدی را بر اساس مدل یا داده‌های دیگر بسازید
-        return _("phoenixfamily, blog, post, article, Insights, Stories, Innovations ")
-
-    def get_page_title(self):
-        return _("blogs")  # عنوان صفحه بر اساس زبان انتخابی
-
-    def get_page_date_published(self):
-        # برای صفحات جستجو یا دسته‌بندی می‌توانید از تاریخ فعلی استفاده کنید
-        return now().strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
 
 # جزئیات مقاله
