@@ -13,7 +13,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     content = models.TextField()
     published_date = models.DateTimeField(auto_now_add=True)  # تاریخ انتشار
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts", blank=True, null=True)  # نویسنده مقاله
+    # author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_posts", blank=True, null=True)  # نویسنده مقاله
     image = models.ImageField(upload_to='blog_images/', blank=True, null=True)  # تصویر شاخص
     meta_title = models.CharField(max_length=255, blank=True, null=True)  # عنوان برای SEO
     meta_description = models.TextField(blank=True, null=True, help_text="توضیحات متا (Meta Description)")  # توضیحات برای SEO
