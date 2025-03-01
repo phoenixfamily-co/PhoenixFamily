@@ -12,7 +12,6 @@ class BlogPostSerializer(serializers.ModelSerializer):
             "title",
             "slug",
             "content",
-            "author",
             "image",
             "meta_title",
             "meta_description",
