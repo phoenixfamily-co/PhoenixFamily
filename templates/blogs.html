@@ -15,7 +15,7 @@
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                aria-expanded="false">{% trans "Products" %}</a>
             <ul class="dropdown-menu">
-                {% for x in Products %}
+                {% for x in products %}
                     <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name|capfirst }}</a>
                     </li>
                 {% endfor %}
