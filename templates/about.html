@@ -8,33 +8,55 @@
 <body>
 
 {% block header %}
-    <a class="navbar-brand" href="//phoenixfamily.co">
-        <img src="{{ About.logo.url }}" alt="{% trans 'Logo' %}" class="d-inline-block align-text-top">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
-        <i class="fa-solid fa-bars custom-toggler"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                   aria-expanded="false">{% trans "Products" %}</a>
-                <ul class="dropdown-menu">
-                    {% for x in Products %}
-                        <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name|capfirst }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
-            </li>
-            <li class="nav-item"><a class="nav-link active"
-                                    href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
-        </ul>
-    </div>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="{% url 'home:home-view' %}">{% trans "Home" %}</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+               aria-expanded="false">{% trans "Products" %}</a>
+            <ul class="dropdown-menu">
+                {% for x in Products %}
+                    <li><a class="dropdown-item" href="{% url 'products:product-view' x.id %}">{{ x.name|capfirst }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact-view' %}">{% trans "Contact Us" %}</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about:about-view' %}">{% trans "About Us" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'blogs:blog-view' %}">{% trans "Blogs" %}</a></li>
+
+        <!-- دکمه تغییر تم -->
+        <li class="nav-item d-flex align-items-center">
+            <i class="fas fa-sun" id="sun-icon"></i>
+            <div class="ms-2 form-check form-switch">
+                <label for="theme-switch"></label>
+                <input class="form-check-input" type="checkbox" role="switch" id="theme-switch"
+                       aria-label="Toggle theme"/>
+            </div>
+            <i class="fas fa-moon" id="moon-icon"></i>
+        </li>
+
+        <!-- فرم تغییر زبان -->
+        <li class="nav-item">
+            <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center">
+                {% csrf_token %}
+                <label>
+                    <select name="language" class="form-select form-select-sm w-auto"
+                            onchange="this.form.submit()" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                    selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </label>
+            </form>
+        </li>
+    </ul>
 {% endblock %}
 
 
