@@ -3,6 +3,7 @@ from django.utils.translation import get_language, get_language_bidi
 
 from About.models import AboutUs
 from Product.models import Product
+from User.views import get_or_create_temporary_user, log_user_activity
 from .serializers import ContentSerializer, FeaturesSerializer, VisionSerializer
 from .models import Content, Vision, Features
 from rest_framework import viewsets
@@ -17,6 +18,13 @@ def home(request):
     about = AboutUs.objects.first()
     products = Product.objects.all()
 
+    if request.user.is_authenticated:
+        user = request.user
+    else:
+        user = get_or_create_temporary_user(request)
+
+    log = log_user_activity(request, request.build_absolute_uri(), user)
+
     return render(request, 'home.html',
                   {'LANGUAGE_CODE': current_language,
                    'LANGUAGE_BIDI': is_bidi,
@@ -25,6 +33,8 @@ def home(request):
                    'Features': features,
                    'About': about,
                    'Products': products,
+                   'activity_log_id': log.id,
+
                    },
                   )
 
