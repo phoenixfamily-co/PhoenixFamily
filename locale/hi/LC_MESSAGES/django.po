@@ -19,6 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)"
 
 #: .\PhoenixFamily\settings.py:109
+msgid "Read More"
+msgstr "और पढ़ें"
+
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Discover Insights, Stories, and Innovations"
+msgstr "अंतर्दृष्टि, कहानियाँ और नवाचार खोजें"
+
+
+#: .\PhoenixFamily\settings.py:109
 msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
 msgstr "फीनिक्स परिवार | बोर्ड गेम्स, एंटरटेनमेंट ऐप्स और भी बहुत कुछ!"
 

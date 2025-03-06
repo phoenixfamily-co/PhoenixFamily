@@ -18,6 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Read More"
+msgstr ""
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Discover Insights, Stories, and Innovations"
+msgstr ""
+
 #: .\PhoenixFamily\settings.py:109
 msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
 msgstr ""

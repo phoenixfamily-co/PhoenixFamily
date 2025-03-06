@@ -18,6 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Read More"
+msgstr "阅读更多"
+
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Discover Insights, Stories, and Innovations"
+msgstr "发现见解、故事和创新"
+
+
 #: .\Blog\views.py:53
 msgid "Discover Insights, Stories, and Innovations."
 msgstr "发现洞察、故事和创新。"
