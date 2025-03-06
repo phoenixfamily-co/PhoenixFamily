@@ -26,7 +26,7 @@ msgstr "اقرأ المزيد"
 
 
 #: .\Blog\views.py:53
-msgid "Discover Insights, Stories, and Innovations."
+msgid "Discover Insights, Stories, and Innovations"
 msgstr "اكتشف الرؤى والقصص والابتكارات"
 
 
