@@ -19,6 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : (n == 2) ? 1 : 2"
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
+
+#: .\PhoenixFamily\settings.py:109
+msgid "Read More"
+msgstr "قرأ المزيد"
+
+
+#: .\Blog\views.py:53
+msgid "Discover Insights, Stories, and Innovations."
+msgstr "اكتشف الرؤى والقصص والابتكارات"
+
+
 #: .\PhoenixFamily\settings.py:109
 msgid "Phoenix Family | Board Games, Entertainment Apps & More!"
 msgstr "عائلة العنقاء | ألعاب الطاولة، تطبيقات الترفيه والمزيد!"
