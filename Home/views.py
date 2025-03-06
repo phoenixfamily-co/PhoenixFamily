@@ -3,7 +3,7 @@ from django.utils.translation import get_language, get_language_bidi
 
 from About.models import AboutUs
 from Product.models import Product
-from User.views import get_or_create_temporary_user, log_user_activity
+from User.views import get_or_create_temporary_user, log_user_activity, save_user_device_info
 from .serializers import ContentSerializer, FeaturesSerializer, VisionSerializer
 from .models import Content, Vision, Features
 from rest_framework import viewsets
@@ -22,6 +22,7 @@ def home(request):
         user = request.user
     else:
         user = get_or_create_temporary_user(request)
+        save_user_device_info(request, user)
 
     log = log_user_activity(request, request.build_absolute_uri(), user)
 
