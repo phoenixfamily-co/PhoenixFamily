@@ -4,6 +4,7 @@ from django.views.decorators.cache import cache_page
 from rest_framework.viewsets import ModelViewSet
 
 from Product.models import Product
+from User.views import get_or_create_temporary_user, save_user_device_info, log_user_activity
 from .models import AboutUs, FAQ
 from .serializers import AboutUsSerializer, FAQSerializer
 
@@ -16,12 +17,20 @@ def about(request):
     faq = FAQ.objects.all()
     products = Product.objects.all()
 
+    if request.user.is_authenticated:
+        user = request.user
+    else:
+        user = get_or_create_temporary_user(request)
+        save_user_device_info(request, user)
+
+    log = log_user_activity(request, request.build_absolute_uri(), user)
+
     return render(request, 'about.html', {'LANGUAGE_CODE': current_language,
                                           'LANGUAGE_BIDI': is_bidi,
                                           'About': aboutUs,
                                           'FAQ': faq,
                                           'Products': products,
-
+                                          'activity_log_id': log.id,
                                           })
 
 

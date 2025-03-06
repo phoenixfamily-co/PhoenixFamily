@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 from About.models import AboutUs
 from Contact.forms import ContactForm
 from Product.models import Product
+from User.views import get_or_create_temporary_user, save_user_device_info, log_user_activity
 
 
 @cache_page(60 * 15)
@@ -17,10 +18,20 @@ def contact(request):
     aboutUs = AboutUs.objects.first()
     products = Product.objects.all()
 
+    if request.user.is_authenticated:
+        user = request.user
+    else:
+        user = get_or_create_temporary_user(request)
+        save_user_device_info(request, user)
+
+    log = log_user_activity(request, request.build_absolute_uri(), user)
+
     return render(request, 'contact.html', {'LANGUAGE_CODE': current_language,
                                             'LANGUAGE_BIDI': is_bidi,
                                             'About': aboutUs,
                                             'Products': products,
+                                            'activity_log_id': log.id,
+
                                             })
 
 
