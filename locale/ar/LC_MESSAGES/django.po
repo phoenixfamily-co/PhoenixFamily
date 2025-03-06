@@ -22,7 +22,7 @@ msgstr ""
 
 #: .\PhoenixFamily\settings.py:109
 msgid "Read More"
-msgstr "قرأ المزيد"
+msgstr "اقرأ المزيد"
 
 
 #: .\Blog\views.py:53
